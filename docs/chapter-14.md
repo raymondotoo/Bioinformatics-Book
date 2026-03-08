@@ -53,9 +53,9 @@ atom_b_coord = [4.0, 6.0, 8.0]
 import math
 
 def calculate_distance(coord1, coord2):
-    dx = coord1 - coord2
-    dy = coord1 - coord2
-    dz = coord1 - coord2
+    dx = coord1[0] - coord2[0]
+    dy = coord1[1] - coord2[1]
+    dz = coord1[2] - coord2[2]
     return math.sqrt(dx**2 + dy**2 + dz**2)
 
 distance = calculate_distance(atom_a_coord, atom_b_coord)

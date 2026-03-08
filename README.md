@@ -1,6 +1,8 @@
 # The Serial Bioinformatics
 
-![Book Cover](assets/THE%20serial.png)
+<p align="center">
+  <img src="assets/cover.png" alt="Book Cover" width="500">
+</p>
 
 A comprehensive guide from the central dogma to cutting-edge computational techniques in bioinformatics.
 

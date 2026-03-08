@@ -64,7 +64,7 @@ def calculate_n50(contig_lengths):
     return 0
 
 # Example: A fragmented assembly
-contigs = 
+contigs = [100, 300, 500, 50, 20, 800] 
 # Sorted: 800, 500, 300, 100, 50, 20. Total = 1770. Half = 885.
 # 800 < 885
 # 800 + 500 = 1300 (> 885). So N50 is 500.

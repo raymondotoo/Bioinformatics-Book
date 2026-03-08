@@ -47,14 +47,14 @@ def parse_vcf_line(line):
     parts = line.split()
     
     variant_info = {
-        "Chromosome": parts,
-        "Position": parts,
-        "ID": parts,
-        "Reference": parts,
-        "Alternate": parts,
-        "Quality": parts,
-        "Filter": parts,
-        "Info": parts
+        "Chromosome": parts[0],
+        "Position": parts[1],
+        "ID": parts[2],
+        "Reference": parts[3],
+        "Alternate": parts[4],
+        "Quality": parts[5],
+        "Filter": parts[6],
+        "Info": parts[7]
     }
     return variant_info
 

@@ -68,10 +68,10 @@ def calculate_shannon_entropy(counts):
 
 # Example:
 # Sample A: Very diverse (even spread)
-sample_A = 
+sample_A = [10, 10, 10, 10] 
 
 # Sample B: Low diversity (dominated by one species)
-sample_B =
+sample_B = [37, 1, 1, 1]
 
 entropy_A = calculate_shannon_entropy(sample_A)
 entropy_B = calculate_shannon_entropy(sample_B)

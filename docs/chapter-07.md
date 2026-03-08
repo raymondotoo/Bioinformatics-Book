@@ -60,8 +60,8 @@ seq2 = "GCATGCU"
 alignments = aligner.align(seq1, seq2)
 
 # Print the best alignment
-print(f"Score: {alignments.score}")
-print(alignments)
+print(f"Score: {alignments[0].score}")
+print(alignments[0])
 ```
 
 **Output:**

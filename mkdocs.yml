@@ -15,8 +15,8 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
-  logo: assets/THE serial.png
-  favicon: assets/THE serial.png
+  logo: 'assets/THE serial.png'
+  favicon: 'assets/THE serial.png'
 
 # Navigation: This creates the sidebar for your book
 nav:
