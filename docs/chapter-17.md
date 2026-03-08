@@ -1,71 +1,128 @@
-# Chapter 17: Integrated Clinical Proteomics: ADNI-ADRC Analysis
+# Chapter 17: Integrated Clinical Proteomics: The Full Analytical Pipeline
 
-## 17.1 Introduction to Clinical Proteomics
+## 17.1 Overview
 
-Clinical proteomics aims to identify protein biomarkers for disease diagnosis, prognosis, and therapy monitoring. By integrating proteomic data with rich clinical metadata, we can gain deeper insights into disease mechanisms.
+This chapter details the comprehensive computational workflow used to identify proteomic signatures of Alzheimer's Disease (AD) by integrating data from the **ADNI** and **ADRC** cohorts. The analysis proceeds sequentially from raw data cleaning to systems-level network analysis (WGCNA), functional enrichment, and machine learning.
 
-In this chapter, we will explore a case study involving the **Alzheimer's Disease Neuroimaging Initiative (ADNI)** and **Alzheimer's Disease Research Centers (ADRC)** datasets.
+## 17.2 Data Preprocessing and Harmonization
 
-## 17.2 The ADNI and ADRC Datasets
+**Scripts:** `00_Data_preprocessing.Rmd`, `02a_ADNI_ADRC_harmonized.Rmd`, `02b_PCA_full.Rmd`
 
-*   **ADNI:** A longitudinal multicenter study designed to develop clinical, imaging, genetic, and biochemical biomarkers for the early detection and tracking of Alzheimer's disease (AD).
-*   **ADRC:** A network of centers collecting data to support AD research.
+The initial phase focused on ensuring data quality and comparability between cohorts.
 
-Integrating these datasets allows for a comprehensive analysis of how protein expression levels correlate with clinical progression, cognitive scores, and imaging markers.
+### Quality Control and Cleaning
+Raw proteomic data often contains missing values and technical artifacts.
+*   **Missingness Filtering:** Proteins with high missingness (e.g., >20%) across samples were removed to ensure robust downstream analysis.
+*   **Sample Filtering:** Samples with incomplete core clinical metadata (Age, Sex, Diagnosis) were excluded.
 
-## 17.3 Step 1: Data Harmonization and Preprocessing
+### Cross-Cohort Harmonization
+To integrate the ADNI and ADRC datasets, which may have been processed at different times or sites, we applied harmonization techniques to mitigate batch effects.
+*   **Batch Correction:** Statistical methods were used to align the expression distributions of shared proteins between the two cohorts, ensuring that biological signals were preserved while technical differences were minimized.
 
-Before any visualization could occur, the heterogeneous data from ADNI and ADRC had to be unified. This was the most critical step in the pipeline.
-### Clinical Data Cleaning
-*   **Standardization:** Variable names (e.g., "Gender" vs. "Sex") were mapped to a common schema.
-*   **Diagnosis Grouping:** Patients were categorized into clinically meaningful groups: Control (CN), Mild Cognitive Impairment (MCI), and Alzheimer's Disease (AD).
-*   **Outlier Removal:** Patients with incomplete core metadata (age, sex, diagnosis) were excluded.
+### Exploratory Data Analysis (PCA)
+Principal Component Analysis (PCA) was performed on the harmonized data.
+*   **Variance Explained:** We assessed the proportion of variance captured by the top principal components.
+*   **Visualization:** PCA plots allowed us to visualize the separation between cohorts before and after harmonization, as well as to identify and remove potential outliers.
 
-### Proteomics Pipeline
-*   **Quality Control:** Proteins with high missingness (>20%) were removed.
-*   **Imputation:** Remaining missing values were imputed using K-Nearest Neighbors (KNN) to preserve data structure.
-*   **Normalization:** Log2 transformation and Z-score normalization were applied to ensure comparability between samples.
+## 17.3 Network Construction (WGCNA)
 
-## 17.4 Step 2: Statistical Modeling
+**Script:** `03_WGCNA_running.Rmd`
 
-Once the data was clean, we established the statistical backend that would power the app's insights.
+We employed Weighted Gene Co-expression Network Analysis (WGCNA) to identify clusters (modules) of co-expressed proteins. This systems biology approach moves beyond single-protein analysis to identify functional units.
 
-*   **Differential Expression:** We used linear models (Limma) to identify proteins significantly altered in disease states, adjusting for covariates like age and sex.
-*   **Correlation Matrices:** We pre-calculated Pearson and Spearman correlations between protein levels and clinical scores (MMSE, CDR-SB).
-*   **Survival Models:** Cox Proportional Hazards models were built to evaluate if specific protein levels predicted the time to progression from MCI to AD.
+### Soft Thresholding
+A key feature of WGCNA is **soft thresholding**.
+*   **Scale-Free Topology:** We analyzed the scale-free topology fit index for various powers ($\beta$).
+*   **Power Selection:** We selected the lowest power $\beta$ that resulted in a high scale-free topology fit ($R^2 > 0.85$ or similar), ensuring the network reflects biological reality (few hubs, many peripheral nodes).
+*   **Adjacency Matrix:** The correlation matrix was raised to the power $\beta$ ($|correlation|^\beta$) to create a weighted adjacency matrix, suppressing weak correlations and emphasizing strong ones.
 
-### Bioinformatics in Action: A Simplified Correlation Analysis
+### Module Detection
+*   **Topological Overlap Matrix (TOM):** The adjacency matrix was converted into a TOM to measure the interconnectedness of proteins.
+*   **Hierarchical Clustering:** We performed average linkage hierarchical clustering on the dissimilarity matrix (1-TOM).
+*   **Dynamic Tree Cut:** Modules were identified using the dynamic tree cut algorithm, which is capable of detecting nested clusters.
 
-Let's look at how we might calculate the correlation between a protein's expression and a clinical score using R, mirroring the actual analysis workflow.
+### Eigengene Calculation
+For each module, we calculated the **Module Eigengene (ME)**. The ME is the first principal component of the module's expression matrix and serves as a synthetic representative profile for the entire module.
+
+## 17.4 Functional Annotation and Enrichment
+
+**Scripts:** `04_Functional_Analysis.Rmd`, `07a_Functional_Analysis_GSEA.Rmd`, `07b_Functional_Analysis_ORA.Rmd`
+
+To understand the biological significance of the identified modules, we performed enrichment analyses.
+
+### Over-Representation Analysis (ORA)
+*   **Method:** We used hypergeometric testing to determine if specific Gene Ontology (GO) terms or KEGG pathways were present in a module more often than expected by chance.
+*   **Databases:** GO (Biological Process, Molecular Function, Cellular Component), Reactome, and KEGG.
+
+### Gene Set Enrichment Analysis (GSEA)
+*   **Ranked Lists:** Proteins were ranked based on their correlation with clinical traits or module membership.
+*   **Enrichment:** We performed GSEA to identify coordinated pathway alterations that might not be detected by ORA alone, as it considers the entire ranked list rather than a fixed threshold.
+
+## 17.5 Module Scoring and Feature Selection
+
+**Script:** `05_Module_Scoring_Selection.Rmd`
+
+We evaluated the predictive power of the identified modules and selected key features for modeling.
+
+*   **Module Scores:** Composite scores were calculated for each module (e.g., average expression or eigengene value) to relate module activity to clinical traits.
+*   **Hub Identification:** We calculated **Module Membership (kME)**, which is the correlation between a protein's expression and the module eigengene. Proteins with high kME are considered "hubs" and are likely drivers of the module's biological function.
+
+## 17.6 Machine Learning for Biomarker Discovery
+
+**Script:** `06_ADNI_ADRC_ML.Rmd`
+
+We trained machine learning models to predict AD status and clinical outcomes using the identified proteomic signatures.
+
+### Model: Elastic Net Regularized Regression
+We utilized the **Elastic Net** algorithm (`glmnet` package), which combines L1 (Lasso) and L2 (Ridge) penalties. This is particularly effective for omics data where features (proteins) are correlated.
+
+### Workflow
+1.  **Data Splitting:** The dataset was split into training (e.g., 70%) and testing (e.g., 30%) sets using `createDataPartition` from the `caret` package to ensure balanced class distributions.
+2.  **Feature Scaling:** Features were centered and scaled (Z-score) to ensure equal contribution to the model.
+3.  **Cross-Validation:** We performed k-fold cross-validation (e.g., 5-fold) on the training set to optimize the regularization parameter ($\lambda$).
+4.  **Performance Evaluation:** The final model was evaluated on the held-out test set using metrics such as **AUC (Area Under the ROC Curve)**, Sensitivity, and Specificity.
 
 ```r
-# Simulated data representing a slice of the ADNI dataset
-data <- data.frame(
-  Patient_ID = c('P001', 'P002', 'P003', 'P004', 'P005'),
-  Protein_X_Level = c(10.5, 12.1, 9.8, 15.2, 11.0),
-  MMSE_Score = c(28, 24, 29, 18, 26) # Mini-Mental State Examination (lower is worse)
+# Example: Elastic Net Training with Caret and Glmnet
+cv_fit <- cv.glmnet(
+  x = as.matrix(X_train),
+  y = y_train,
+  family = "binomial",
+  alpha = 0.5, # Elastic Net mixing parameter
+  nfolds = 5
 )
-
-# Calculate Pearson correlation
-result <- cor.test(data$Protein_X_Level, data$MMSE_Score, method = "pearson")
-
-print(paste("Correlation between Protein X and MMSE:", round(result$estimate, 2)))
-print(paste("P-value:", format.pval(result$p.value, digits = 4)))
-
-if (result$p.value < 0.05) {
-  print("Significant correlation found.")
-} else {
-  print("No significant correlation.")
-}
+best_lambda <- cv_fit$lambda.min
 ```
 
-**Output:**
-```text
-Correlation between Protein X and MMSE: -0.96
-P-value: 0.0088
-Significant correlation found.
+## 17.7 Robustness and Sensitivity Analysis
+
+**Script:** `08_Supplementary_analysis_v3.Rmd`
+
+A critical component of this study was validating the findings. We performed rigorous sensitivity analyses to ensure the results were robust and reproducible.
+
+### Module Preservation
+We tested whether modules discovered in the ADNI cohort were preserved in the independent ADRC cohort using the `modulePreservation` function from WGCNA. This generates a **Z-summary** statistic; a Z-summary > 10 indicates strong evidence of preservation.
+
+### Adjusted Regression Models
+To isolate specific signals (e.g., vascular contributions) from general AD pathology, we ran adjusted regression models controlling for covariates such as Age, Sex, and APOE genotype.
+
+```r
+# Example: Running Module Preservation (ADNI as Reference)
+multiExpr_Recip <- list(
+  ADNI = list(data = expr_ADNI),
+  ADRC = list(data = expr_ADRC)
+)
+
+pres <- modulePreservation(
+  multiExpr_Recip,
+  multiColor = multiColor_Recip,
+  referenceNetworks = 1,
+  nPermutations = 500,
+  networkType = "signed",
+  randomSeed = 123
+)
 ```
 
 ## Summary
 
-Integrated clinical proteomics represents the frontier of precision medicine. By combining large-scale datasets like ADNI and ADRC with rigorous statistical modeling, we can uncover the molecular signatures of complex diseases like Alzheimer's. In the next chapter, we will discuss how to visualize these complex results using an interactive R Shiny application.
+This pipeline transforms raw proteomic data into biologically meaningful modules. By following these four steps—Preprocessing, Network Construction, Module Detection, and Trait Correlation—we identify systems-level protein signatures associated with Alzheimer's Disease.
