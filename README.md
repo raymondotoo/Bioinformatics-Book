@@ -53,6 +53,8 @@ This book is structured to guide the reader from the fundamental principles of m
 *   [**Chapter 14: Structural Bioinformatics**](docs/chapter-14.md)
 *   [**Chapter 15: Systems Biology: Integrating the 'Omics'**](docs/chapter-15.md)
 *   [**Chapter 16: Bioinformatics in Medicine**](docs/chapter-16.md)
+*   [**Chapter 17: Integrated Clinical Proteomics**](docs/chapter-17.md)
+*   [**Chapter 18: Interactive Visualization with R Shiny**](docs/chapter-18.md)
 
 ---
 
