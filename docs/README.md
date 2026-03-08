@@ -75,3 +75,19 @@ To read this book on your own computer or to check your changes before contribut
     python3 -m mkdocs serve
     ```
 3.  **View:** Open your browser to `http://127.0.0.1:8000`.
+
+---
+
+## Deploying to GitHub Pages
+
+To publish or update the live version of the book:
+
+1.  **Commit your changes:** Make sure all your latest work is saved.
+    ```bash
+    git add .
+    git commit -m "Update book content"
+    ```
+2.  **Run the deploy command:**
+    ```bash
+    python3 -m mkdocs gh-deploy
+    ```
