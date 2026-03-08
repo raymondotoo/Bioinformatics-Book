@@ -1,8 +1,8 @@
 site_name: The Serial Bioinformatics
 site_description: A comprehensive guide from the central dogma to cutting-edge computational techniques in bioinformatics.
 
-# Use the root directory for documentation files, so you don't have to move anything.
-docs_dir: .
+# Use the 'docs' subdirectory for all documentation files.
+docs_dir: docs
 
 # Theme configuration for a professional look and feel
 theme:
@@ -15,29 +15,31 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
+  logo: assets/THE serial.png
+  favicon: assets/THE serial.png
 
 # Navigation: This creates the sidebar for your book
 nav:
   - Home: README.md
-  - Part 1: The Biological Foundation:
-    - Chapter 1: Introduction to the Central Dogma: chapter-01/chapter.md
-    - Chapter 2: The Genome and its Variations: chapter-02/chapter.md
-    - Chapter 3: Proteins - The Functional Units: chapter-03/chapter.md
-  - Part 2: Foundational Computational Skills:
-    - Chapter 4: Command Line for Biologists: chapter-04/chapter.md
-    - Chapter 5: Python for Bioinformatics: chapter-05/chapter.md
-    - Chapter 6: Navigating Biological Databases: chapter-06/chapter.md
-  - Part 3: Core Bioinformatics Analysis:
-    - Chapter 7: Sequence Alignment: chapter-07/chapter.md
-    - Chapter 8: Phylogenetics: chapter-08/chapter.md
-    - Chapter 9: Genome Assembly and Annotation: chapter-09/chapter.md
-  - Part 4: High-Throughput "Omics":
-    - Chapter 10: Introduction to NGS: chapter-10/chapter.md
-    - Chapter 11: Transcriptomics: chapter-11/chapter.md
-    - Chapter 12: Proteomics and Metabolomics: chapter-12/chapter.md
-    - Chapter 13: Microbiomics: chapter-13/chapter.md
-  - Part 5: Advanced Topics and Applications:
-    - Chapter 14: Structural Bioinformatics: chapter-14/chapter.md
-    - Chapter 15: Systems Biology: chapter-15/chapter.md
-    - Chapter 16: Bioinformatics in Medicine: chapter-16/chapter.md
+  - 'Part 1: The Biological Foundation':
+    - 'Chapter 1: Introduction to the Central Dogma': chapter-01/chapter.md
+    - 'Chapter 2: The Genome and its Variations': chapter-02/chapter.md
+    - 'Chapter 3: Proteins - The Functional Units': chapter-03/chapter.md
+  - 'Part 2: Foundational Computational Skills':
+    - 'Chapter 4: Command Line for Biologists': chapter-04/chapter.md
+    - 'Chapter 5: Python for Bioinformatics': chapter-05/chapter.md
+    - 'Chapter 6: Navigating Biological Databases': chapter-06/chapter.md
+  - 'Part 3: Core Bioinformatics Analysis':
+    - 'Chapter 7: Sequence Alignment': chapter-07/chapter.md
+    - 'Chapter 8: Phylogenetics': chapter-08/chapter.md
+    - 'Chapter 9: Genome Assembly and Annotation': chapter-09/chapter.md
+  - 'Part 4: High-Throughput "Omics"':
+    - 'Chapter 10: Introduction to NGS': chapter-10/chapter.md
+    - 'Chapter 11: Transcriptomics': chapter-11/chapter.md
+    - 'Chapter 12: Proteomics and Metabolomics': chapter-12/chapter.md
+    - 'Chapter 13: Microbiomics': chapter-13/chapter.md
+  - 'Part 5: Advanced Topics and Applications':
+    - 'Chapter 14: Structural Bioinformatics': chapter-14/chapter.md
+    - 'Chapter 15: Systems Biology': chapter-15/chapter.md
+    - 'Chapter 16: Bioinformatics in Medicine': chapter-16/chapter.md
   - Glossary: GLOSSARY.md

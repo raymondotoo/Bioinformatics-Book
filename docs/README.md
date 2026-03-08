@@ -1,6 +1,6 @@
 # The Serial Bioinformatics
 
-![Book Cover](assets/THE%20serial.png)
+![Book Cover](https://github.com/rayotoo/Bioinformatics-Book/blob/main/THE%20serial.png)
 
 A comprehensive guide from the central dogma to cutting-edge computational techniques in bioinformatics.
 
