@@ -1,4 +1,4 @@
-# The Serial Bioinformatics
+# The Serial Bioinformatician
 
 <p align="center">
   <img src="assets/THE%20serial.png" alt="Book Cover" width="500">
