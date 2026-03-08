@@ -1,7 +1,9 @@
 :root {
   /* Increase base font size (default is usually 0.8rem or 16px) */
-  --md-text-font-size: 1.1rem;
+  --md-text-font-size: 1.25rem;
+  --md-text-font-size: 1.4rem;
   
   /* Increase code block font size */
-  --md-code-font-size: 0.95rem;
+  --md-code-font-size: 1.05rem;
+  --md-code-font-size: 1.15rem;
 }
