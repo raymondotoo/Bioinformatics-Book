@@ -1393,14 +1393,14 @@
     parts = line.split()
 
     variant_info = {
-        &quot;Chromosome&quot;: parts,
-        &quot;Position&quot;: parts,
-        &quot;ID&quot;: parts,
-        &quot;Reference&quot;: parts,
-        &quot;Alternate&quot;: parts,
-        &quot;Quality&quot;: parts,
-        &quot;Filter&quot;: parts,
-        &quot;Info&quot;: parts
+        &quot;Chromosome&quot;: parts[0],
+        &quot;Position&quot;: parts[1],
+        &quot;ID&quot;: parts[2],
+        &quot;Reference&quot;: parts[3],
+        &quot;Alternate&quot;: parts[4],
+        &quot;Quality&quot;: parts[5],
+        &quot;Filter&quot;: parts[6],
+        &quot;Info&quot;: parts[7]
     }
     return variant_info
 
