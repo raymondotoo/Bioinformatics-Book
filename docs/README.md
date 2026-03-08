@@ -70,7 +70,7 @@ This book is structured to guide the reader from the fundamental principles of m
 *   [**Chapter 17: Bioinformatics in Medicine**](chapter-16.md)
 *   [**Chapter 18: Integrated Clinical Proteomics**](chapter-17.md)
 *   [**Chapter 19: Interactive Visualization with R Shiny**](chapter-18.md)
-*   **Chapter 20: Multiomics Data Integration**
+*   [**Chapter 20: Multiomics Data Integration**](chapter-20.md)
 
 ---
 
