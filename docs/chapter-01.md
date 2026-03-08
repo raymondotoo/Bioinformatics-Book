@@ -4,13 +4,13 @@ Welcome to the very beginning of our journey into bioinformatics! Before we can 
 
 Think of it as the core process, the assembly line, that turns the information stored in a cell's library into the functional machines that do all the work.
 
-## What is Bioinformatics?
+## 1.1 What is Bioinformatics?
 
 Imagine you have a library containing thousands of massive books, and you need to find specific sentences, compare paragraphs across different volumes, and understand the grammar of the language they're written in. Doing this by hand would be impossible.
 
 Bioinformatics is the field of using computers and statistics to solve biological problems. It's our computational toolkit for reading, understanding, and comparing the massive "books" of life—our DNA. We use it to find the "sentences" (genes) that cause diseases, compare the "grammar" (evolutionary relationships) between species, and much more.
 
-## DNA: The Blueprint of Life
+## 1.2 DNA: The Blueprint of Life
 
 At the heart of it all is **Deoxyribonucleic Acid (DNA)**.
 
@@ -20,7 +20,7 @@ At the heart of it all is **Deoxyribonucleic Acid (DNA)**.
 
 This entire cookbook for an organism is called its **genome**.
 
-## Transcription: From DNA to RNA
+## 1.3 Transcription: From DNA to RNA
 
 You wouldn't take the master cookbook into a messy kitchen, would you? You'd risk spilling something on it and ruining it forever. Instead, you would make a copy of the one recipe you need.
 
@@ -32,7 +32,7 @@ The cell does the same thing in a process called **transcription**.
 
 So, transcription is the process: **DNA → RNA**.
 
-## Translation: From RNA to Protein
+## 1.4 Translation: From RNA to Protein
 
 Now we have our recipe copy (the mRNA) in the kitchen. It's time for the chef to read the recipe and cook the dish. This process is called **translation**.
 

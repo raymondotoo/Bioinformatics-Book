@@ -15,8 +15,25 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
-  logo: 'assets/THE serial.png'
-  favicon: 'assets/THE serial.png'
+  logo: 'assets/cover.png'
+  favicon: 'assets/cover.png'
+
+plugins:
+  - search
+  - with-pdf:
+      cover: true
+      custom_template_path: templates
+      back_cover: false
+      cover_title: 'The Serial Bioinformatician'
+      cover_subtitle: 'A comprehensive guide from the central dogma to cutting-edge computational techniques in bioinformatics.'
+      author: 'Raymond Otoo, Ph.D.'
+      number_headings: false
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css
 
 # Navigation: This creates the sidebar for your book
 nav:

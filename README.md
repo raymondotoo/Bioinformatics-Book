@@ -1,7 +1,7 @@
 # The Serial Bioinformatician
 
 <p align="center">
-  <img src="docs/assets/THE%20serial.png" alt="Book Cover" width="500">
+  <img src="docs/assets/cover.png" alt="Book Cover" width="500">
 </p>
 
 A comprehensive guide from the central dogma to cutting-edge computational techniques in bioinformatics.
