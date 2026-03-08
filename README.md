@@ -8,6 +8,18 @@ A comprehensive guide from the central dogma to cutting-edge computational techn
 
 ---
 
+## About the Author
+
+**Raymond Otoo, Ph.D.** is a Bioinformatics Scientist specializing in multi-omics integration and biomarker discovery. His work focuses on applying systems biology approaches to unravel the complexities of neurodegenerative diseases and developing interactive tools to make these insights accessible to clinicians.
+
+## Introduction
+
+The journey of bioinformatics is one of translation. We start with a biological problem—a disease, a phenotype, or an unknown mechanism—and generate massive amounts of biological data.
+
+The main goal of this book is to guide you from the problem and raw biological data to robust molecular insights. It is these insights that provide the necessary directions for identifying novel therapeutic targets and advancing the field of precision medicine.
+
+---
+
 ## Book Structure & Table of Contents
 
 This book is structured to guide the reader from the fundamental principles of molecular biology to the practical application of bioinformatics tools and algorithms.
