@@ -44,9 +44,10 @@ This book is structured to guide the reader from the fundamental principles of m
 *   **Chapter 10: Introduction to Next-Generation Sequencing (NGS)**
 *   **Chapter 11: Transcriptomics: Analyzing Gene Expression (RNA-Seq)**
 *   **Chapter 12: Proteomics and Metabolomics**
+*   **Chapter 13: Microbiomics: Analyzing Microbial Communities (16S rRNA & QIIME 2)**
 
 ### Part 5: Advanced Topics and Applications
 
-*   **Chapter 13: Structural Bioinformatics**
-*   **Chapter 14: Systems Biology: Integrating the 'Omics'**
-*   **Chapter 15: Bioinformatics in Medicine**
+*   **Chapter 14: Structural Bioinformatics**
+*   **Chapter 15: Systems Biology: Integrating the 'Omics'**
+*   **Chapter 16: Bioinformatics in Medicine**
