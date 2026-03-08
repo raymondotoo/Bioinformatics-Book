@@ -14,6 +14,10 @@ In this chapter, we will focus on **Biopython**, the standard library for comput
 
 ## 5.2 Getting Started with Biopython
 
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Biopython:+Computational+Biology+Tools" alt="Illustration of Biopython">
+</p>
+
 Before we write code, you usually need to install the library. In your terminal (Chapter 4 skills!), you would run:
 
 ```bash

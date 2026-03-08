@@ -1,12 +1,12 @@
-# Chapter 16: Bioinformatics in Medicine
+# Chapter 17: Bioinformatics in Medicine
 
-## 16.1 From Bench to Bedside
+## 17.1 From Bench to Bedside
 
 We have reached the final chapter. How does all this code and biology actually help people?
 
 **Translational Bioinformatics** is the application of these technologies to healthcare. It is driving the shift toward **Precision Medicine**.
 
-## 16.2 Pharmacogenomics
+## 17.2 Pharmacogenomics
 
 One size does not fit all. A drug that cures one patient might kill another due to genetic differences in how they metabolize the drug.
 
@@ -16,7 +16,7 @@ One size does not fit all. A drug that cures one patient might kill another due 
 
 Bioinformatics allows doctors to screen a patient's genome *before* prescribing to ensure the right drug and right dose.
 
-## 16.3 Cancer Genomics
+## 17.3 Cancer Genomics
 
 Cancer is a disease of the genome. It is caused by accumulated mutations.
 
@@ -25,7 +25,11 @@ By sequencing a tumor (Tumor) and the patient's healthy blood (Normal), bioinfor
 2.  Identify the specific **Somatic Mutations** driving the cancer.
 3.  Select a targeted therapy that attacks cells with that specific mutation (e.g., using Herceptin for HER2+ breast cancer).
 
-## 16.4 GWAS: Genome-Wide Association Studies
+## 17.4 GWAS: Genome-Wide Association Studies
+
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=GWAS+Manhattan+Plot" alt="Illustration of GWAS Manhattan Plot">
+</p>
 
 How do we find the genes responsible for complex diseases like Diabetes or Alzheimer's?
 
@@ -33,7 +37,7 @@ We sequence thousands of people with the disease (Cases) and thousands without (
 
 The result is a **Manhattan Plot**, where spikes indicate genomic regions associated with the disease.
 
-## 16.5 Bioinformatics in Action: Interpreting a VCF
+## 17.5 Bioinformatics in Action: Interpreting a VCF
 
 The standard file format for storing genetic variations in medicine is the **VCF (Variant Call Format)**. It's cryptic, but you now have the skills to read it.
 

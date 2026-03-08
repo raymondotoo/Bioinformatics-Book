@@ -6,6 +6,10 @@ Think of it as the core process, the assembly line, that turns the information s
 
 ## 1.1 What is Bioinformatics?
 
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Bioinformatics:\nAnalyzing+Biological+Data" alt="Illustration of Bioinformatics Concept">
+</p>
+
 Imagine you have a library containing thousands of massive books, and you need to find specific sentences, compare paragraphs across different volumes, and understand the grammar of the language they're written in. Doing this by hand would be impossible.
 
 Bioinformatics is the field of using computers and statistics to solve biological problems. It's our computational toolkit for reading, understanding, and comparing the massive "books" of life—our DNA. We use it to find the "sentences" (genes) that cause diseases, compare the "grammar" (evolutionary relationships) between species, and much more.
@@ -14,6 +18,10 @@ Bioinformatics is the field of using computers and statistics to solve biologica
 
 At the heart of it all is **Deoxyribonucleic Acid (DNA)**.
 
+<p align="center">
+  <img src="https://placehold.co/600x400/E8F5E9/333333?text=DNA+Double+Helix\n(A-T,+C-G)" alt="Illustration of DNA Double Helix">
+</p>
+
 *   **The Cookbook:** DNA is the master cookbook of the cell. It contains all the recipes—called **genes**—needed to build and operate an entire organism.
 *   **The Alphabet:** This cookbook is written in a simple, four-letter alphabet: **A** (Adenine), **T** (Thymine), **C** (Cytosine), and **G** (Guanine).
 *   **The Structure:** These letters are arranged in a beautiful structure called a **double helix**. Imagine a twisted ladder. The two long backbones of the ladder are made of sugar and phosphate, and the "rungs" are made of pairs of our letters. A always pairs with T, and C always pairs with G.
@@ -21,6 +29,10 @@ At the heart of it all is **Deoxyribonucleic Acid (DNA)**.
 This entire cookbook for an organism is called its **genome**.
 
 ## 1.3 Transcription: From DNA to RNA
+
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Transcription:\nDNA+to+RNA" alt="Illustration of Transcription">
+</p>
 
 You wouldn't take the master cookbook into a messy kitchen, would you? You'd risk spilling something on it and ruining it forever. Instead, you would make a copy of the one recipe you need.
 
@@ -33,6 +45,10 @@ The cell does the same thing in a process called **transcription**.
 So, transcription is the process: **DNA → RNA**.
 
 ## 1.4 Translation: From RNA to Protein
+
+<p align="center">
+  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Translation:\nRNA+to+Protein" alt="Illustration of Translation at the Ribosome">
+</p>
 
 Now we have our recipe copy (the mRNA) in the kitchen. It's time for the chef to read the recipe and cook the dish. This process is called **translation**.
 
@@ -48,6 +64,10 @@ So, translation is the process: **RNA → Protein**.
 ---
 
 ## Summary
+
+<p align="center">
+  <img src="https://placehold.co/800x300/E8F5E9/333333?text=The+Central+Dogma:\nDNA+->+RNA+->+Protein" alt="Illustration of the Central Dogma">
+</p>
 
 The Central Dogma is the flow of information from the permanent storage in DNA, to a temporary messenger in RNA, to the final functional product in a protein.
 

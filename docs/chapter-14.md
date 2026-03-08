@@ -1,12 +1,16 @@
-# Chapter 14: Structural Bioinformatics
+# Chapter 15: Structural Bioinformatics
 
-## 14.1 Structure Determines Function
+## 15.1 Structure Determines Function
 
 In Chapter 3, we learned that proteins fold into complex 3D shapes. **Structural Bioinformatics** is the subfield dedicated to analyzing, predicting, and simulating these 3D structures.
 
 Why does this matter? Because if you know the shape of a lock (a protein involved in a disease), you can design a key (a drug) to fit it.
 
-## 14.2 The Protein Data Bank (PDB)
+## 15.2 The Protein Data Bank (PDB)
+
+<p align="center">
+  <img src="https://placehold.co/600x400/E8F5E9/333333?text=3D+Protein+Structure" alt="Illustration of 3D Protein Structure">
+</p>
 
 The **PDB** is the worldwide repository for 3D structural data of large biological molecules. Unlike GenBank (which stores sequences), PDB stores **coordinates** (X, Y, Z positions) for every atom in the molecule.
 
@@ -15,19 +19,19 @@ These structures are usually determined experimentally using:
 2.  **NMR Spectroscopy:** Using magnetic fields.
 3.  **Cryo-Electron Microscopy (Cryo-EM):** Freezing samples and using electron microscopes (the current hot technology).
 
-## 14.3 The AlphaFold Revolution
+## 15.3 The AlphaFold Revolution
 
 For 50 years, the "Protein Folding Problem" (predicting structure from sequence alone) was considered one of the hardest challenges in biology.
 
 In 2020, Google DeepMind's **AlphaFold** AI solved this problem for most proteins. It uses deep learning to predict structures with accuracy comparable to experimental methods. This has completely transformed the field, giving us structures for nearly every known protein.
 
-## 14.4 Molecular Docking
+## 15.4 Molecular Docking
 
 **Docking** is a computational simulation to predict how two molecules interact.
 *   **Protein-Ligand Docking:** Predicting how a small drug molecule binds to a protein target. This is the basis of **Structure-Based Drug Design**.
 *   **Protein-Protein Docking:** Predicting how two proteins form a complex.
 
-## 14.5 Bioinformatics in Action: Parsing PDB Files
+## 15.5 Bioinformatics in Action: Parsing PDB Files
 
 Biopython has a powerful module called `Bio.PDB` for manipulating these structures. Let's look at how to calculate the distance between two atoms.
 

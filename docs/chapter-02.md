@@ -6,6 +6,10 @@ In this chapter, we will zoom out from a single gene to the entire **genome** an
 
 ## 2.1 DNA Structure and Replication
 
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=DNA+Replication+Process" alt="Illustration of DNA Replication">
+</p>
+
 As we learned, DNA is a double helix. But this helix isn't just floating around in a straight line. The human genome, if stretched out, would be about 2 meters long! To fit inside a microscopic nucleus, it must be incredibly well-organized and compacted.
 
 ### DNA Replication: Copying the Entire Cookbook
@@ -75,6 +79,10 @@ Not all DNA is made of genes! In humans, genes make up only about 1-2% of the en
 ---
 
 ## 2.3 Genetic Variation: The Spice of Life
+
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Genetic+Variants:+SNPs+and+Indels" alt="Illustration of Genetic Variants">
+</p>
 
 If you compare the genome of any two humans, they are more than 99% identical. It's that tiny fraction of a percent that makes us all unique. These differences are called **genetic variants**.
 

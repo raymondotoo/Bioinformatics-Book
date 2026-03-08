@@ -1,6 +1,6 @@
-# Chapter 7: Sequence Alignment
+# Chapter 8: Sequence Alignment
 
-## 7.1 The Most Fundamental Algorithm
+## 8.1 The Most Fundamental Algorithm
 
 If you have two DNA sequences, the first question you usually ask is: "Are they similar?"
 
@@ -9,7 +9,11 @@ If you have two DNA sequences, the first question you usually ask is: "Are they 
 *   **Homology:** A binary state. Sequences are either homologous (share a common ancestor) or they are not.
 *   **Similarity:** A mathematical quantity (e.g., "85% similar"). We use similarity to infer homology.
 
-## 7.2 Global vs. Local Alignment
+## 8.2 Global vs. Local Alignment
+
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Sequence+Alignment:+Global+vs+Local" alt="Illustration of Sequence Alignment">
+</p>
 
 ### Global Alignment (Needleman-Wunsch)
 Attempts to align the *entire* length of two sequences.
@@ -19,14 +23,14 @@ Attempts to align the *entire* length of two sequences.
 Searches for the most similar *regions* within the sequences, ignoring the rest.
 *   **Use case:** Finding a small gene inside a massive chromosome, or finding a shared domain between two otherwise different proteins.
 
-## 7.3 Scoring the Alignment
+## 8.3 Scoring the Alignment
 
 Computers need a score to decide which alignment is "best".
 *   **Match (+):** Reward for identical letters.
 *   **Mismatch (-):** Penalty for different letters.
 *   **Gap (-):** Penalty for inserting a space (representing an insertion or deletion).
 
-## 7.4 BLAST: The Google of Biology
+## 8.4 BLAST: The Google of Biology
 
 Running a rigorous alignment (like Smith-Waterman) against millions of sequences is too slow.
 
@@ -36,7 +40,7 @@ Running a rigorous alignment (like Smith-Waterman) against millions of sequences
     *   E-value = 0.0: Perfect, statistically significant match.
     *   E-value = 10: Likely random noise.
 
-## 7.5 Bioinformatics in Action: Pairwise Alignment
+## 8.5 Bioinformatics in Action: Pairwise Alignment
 
 Let's use Biopython to perform a global alignment.
 

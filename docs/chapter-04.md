@@ -2,6 +2,10 @@
 
 ## 4.1 Breaking the GUI Habit
 
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=CLI+vs+GUI" alt="Illustration of CLI vs GUI">
+</p>
+
 Up until now, you have likely interacted with computers using a Graphical User Interface (GUI)—clicking icons, dragging folders, and using menus. While intuitive, GUIs have limits. They are hard to automate, struggle with massive files (try opening a 50GB genome file in Excel!), and are often unavailable on the powerful remote servers where actual bioinformatics work happens.
 
 Enter the **Command Line Interface (CLI)**, also known as the terminal or shell. It might look intimidating—a black screen with blinking text—but it is the most powerful tool in your arsenal.

@@ -1,12 +1,12 @@
-# Chapter 13: Microbiomics: Analyzing Microbial Communities
+# Chapter 14: Microbiomics: Analyzing Microbial Communities
 
-## 13.1 We Are Not Alone
+## 14.1 We Are Not Alone
 
 You are more bacteria than human. The **Microbiome** refers to the trillions of microorganisms living in and on us (and in the environment). These communities affect digestion, immunity, and even mental health.
 
 **Microbiomics** (or Metagenomics) is the study of these communities.
 
-## 13.2 16S rRNA: The Barcode of Bacteria
+## 14.2 16S rRNA: The Barcode of Bacteria
 
 To identify which bacteria are present, we don't sequence their whole genomes. We sequence one specific gene: **16S rRNA**.
 
@@ -15,7 +15,7 @@ To identify which bacteria are present, we don't sequence their whole genomes. W
 
 By sequencing this "barcode," we can identify the bacteria without growing them in a lab.
 
-## 13.3 The QIIME 2 Workflow
+## 14.3 The QIIME 2 Workflow
 
 **QIIME 2** (Quantitative Insights Into Microbial Ecology) is the industry-standard command-line platform for this analysis.
 
@@ -24,7 +24,11 @@ By sequencing this "barcode," we can identify the bacteria without growing them 
 3.  **Taxonomy Assignment:** Compare ASVs to a database (like **Silva** or **Greengenes**) to give them names (e.g., *E. coli*).
 4.  **Diversity Analysis:** Calculate how diverse the samples are.
 
-## 13.4 Diversity: Alpha vs. Beta
+## 14.4 Diversity: Alpha vs. Beta
+
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Microbiome+Diversity:+Alpha+vs+Beta" alt="Illustration of Microbiome Diversity">
+</p>
 
 This is the most important concept in microbiome analysis.
 
@@ -39,7 +43,7 @@ This is the most important concept in microbiome analysis.
 *   **Bray-Curtis:** Based on abundance.
 *   **UniFrac:** Based on the phylogenetic distance between bacteria.
 
-## 13.5 Bioinformatics in Action: Calculating Alpha Diversity
+## 14.5 Bioinformatics in Action: Calculating Alpha Diversity
 
 While QIIME 2 does this on a massive scale, let's write a Python function to understand the math behind **Shannon Entropy**, a common Alpha Diversity metric.
 

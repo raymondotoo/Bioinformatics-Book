@@ -1,6 +1,6 @@
-# Chapter 15: Systems Biology: Integrating the 'Omics'
+# Chapter 16: Systems Biology: Integrating the 'Omics'
 
-## 15.1 Reductionism vs. Holism
+## 16.1 Reductionism vs. Holism
 
 Traditional biology is **reductionist**: it breaks things down to study them (e.g., studying one gene at a time).
 
@@ -8,7 +8,11 @@ Traditional biology is **reductionist**: it breaks things down to study them (e.
 
 > "The whole is greater than the sum of its parts."
 
-## 15.2 Biological Networks
+## 16.2 Biological Networks
+
+<p align="center">
+  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Biological+Networks:+Nodes+and+Edges" alt="Illustration of Biological Networks">
+</p>
 
 We represent these systems using **Graphs** (Networks).
 *   **Nodes:** The biological entities (Genes, Proteins, Metabolites).
@@ -19,7 +23,7 @@ We represent these systems using **Graphs** (Networks).
 2.  **Gene Regulatory Networks (GRN):** Who is the boss? (Transcription factors controlling gene expression).
 3.  **Metabolic Networks:** The factory floor. (Enzymes converting Substrate A to Product B).
 
-## 15.3 Network Topology: Hubs and Bottlenecks
+## 16.3 Network Topology: Hubs and Bottlenecks
 
 Biological networks are not random. They are **Scale-Free Networks**.
 *   Most nodes have very few connections.
@@ -27,7 +31,7 @@ Biological networks are not random. They are **Scale-Free Networks**.
 
 **TP53** (the guardian of the genome) is a classic hub protein. If you knock out a random gene, the cell might survive. If you knock out a hub like TP53, the system collapses (often leading to cancer).
 
-## 15.4 Bioinformatics in Action: Network Analysis
+## 16.4 Bioinformatics in Action: Network Analysis
 
 We use the Python library `networkx` to analyze these graphs.
 

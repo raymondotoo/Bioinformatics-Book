@@ -48,27 +48,28 @@ This book is structured to guide the reader from the fundamental principles of m
 *   [**Chapter 4: Introduction to the Command Line for Biologists**](chapter-04.md)
 *   [**Chapter 5: Programming for Bioinformatics with Python**](chapter-05.md)
 *   [**Chapter 6: Navigating Biological Databases (NCBI, Ensembl, UniProt)**](chapter-06.md)
+*   [**Chapter 7: Statistics for Bioinformatics**](chapter-19.md)
 
 ### Part 3: Core Bioinformatics Analysis
 
-*   [**Chapter 7: Sequence Alignment**](chapter-07.md)
-*   [**Chapter 8: Phylogenetics: Understanding Evolutionary Relationships**](chapter-08.md)
-*   [**Chapter 9: Genome Assembly and Annotation**](chapter-09.md)
+*   [**Chapter 8: Sequence Alignment**](chapter-07.md)
+*   [**Chapter 9: Phylogenetics: Understanding Evolutionary Relationships**](chapter-08.md)
+*   [**Chapter 10: Genome Assembly and Annotation**](chapter-09.md)
 
 ### Part 4: High-Throughput "Omics"
 
-*   [**Chapter 10: Introduction to Next-Generation Sequencing (NGS)**](chapter-10.md)
-*   [**Chapter 11: Transcriptomics: Analyzing Gene Expression (RNA-Seq)**](chapter-11.md)
-*   [**Chapter 12: Proteomics and Metabolomics**](chapter-12.md)
-*   [**Chapter 13: Microbiomics: Analyzing Microbial Communities (16S rRNA & QIIME 2)**](chapter-13.md)
+*   [**Chapter 11: Introduction to Next-Generation Sequencing (NGS)**](chapter-10.md)
+*   [**Chapter 12: Transcriptomics: Analyzing Gene Expression (RNA-Seq)**](chapter-11.md)
+*   [**Chapter 13: Proteomics and Metabolomics**](chapter-12.md)
+*   [**Chapter 14: Microbiomics: Analyzing Microbial Communities (16S rRNA & QIIME 2)**](chapter-13.md)
 
 ### Part 5: Advanced Topics and Applications
 
-*   [**Chapter 14: Structural Bioinformatics**](chapter-14.md)
-*   [**Chapter 15: Systems Biology: Integrating the 'Omics'**](chapter-15.md)
-*   [**Chapter 16: Bioinformatics in Medicine**](chapter-16.md)
-*   [**Chapter 17: Integrated Clinical Proteomics**](chapter-17.md)
-*   [**Chapter 18: Interactive Visualization with R Shiny**](chapter-18.md)
+*   [**Chapter 15: Structural Bioinformatics**](chapter-14.md)
+*   [**Chapter 16: Systems Biology: Integrating the 'Omics'**](chapter-15.md)
+*   [**Chapter 17: Bioinformatics in Medicine**](chapter-16.md)
+*   [**Chapter 18: Integrated Clinical Proteomics**](chapter-17.md)
+*   [**Chapter 19: Interactive Visualization with R Shiny**](chapter-18.md)
 
 ---
 

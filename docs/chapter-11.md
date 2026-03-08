@@ -1,6 +1,6 @@
-# Chapter 11: Transcriptomics: Analyzing Gene Expression (RNA-Seq)
+# Chapter 12: Transcriptomics: Analyzing Gene Expression (RNA-Seq)
 
-## 11.1 What is the Transcriptome?
+## 12.1 What is the Transcriptome?
 
 The genome is the cell's complete set of DNA—a static blueprint. However, not all genes in the blueprint are active at the same time. A brain cell and a liver cell have the same DNA, but they use different sets of genes to perform their specialized functions.
 
@@ -8,9 +8,13 @@ The **transcriptome** is the complete set of all RNA molecules (transcripts) in 
 
 **Transcriptomics** is the study of this transcriptome, primarily to understand which genes are turned "on" or "off" under different conditions.
 
-## 11.2 The RNA-Seq Workflow
+## 12.2 The RNA-Seq Workflow
 
-The dominant technology for studying the transcriptome is **RNA-Seq (RNA Sequencing)**. It leverages the NGS technology we learned about in Chapter 10.
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=RNA-Seq+Workflow" alt="Illustration of RNA-Seq Workflow">
+</p>
+
+The dominant technology for studying the transcriptome is **RNA-Seq (RNA Sequencing)**. It leverages the NGS technology we learned about in Chapter 11.
 
 1.  **RNA Extraction:** Isolate all RNA from a cell sample.
 2.  **Reverse Transcription:** Convert the unstable RNA into more stable complementary DNA (cDNA).
@@ -18,7 +22,7 @@ The dominant technology for studying the transcriptome is **RNA-Seq (RNA Sequenc
 4.  **Mapping:** Align the sequencing reads to a reference genome to see which gene they came from.
 5.  **Quantification:** Count how many reads mapped to each gene. This count is a proxy for the gene's expression level.
 
-## 11.3 Mapping Reads to a Genome
+## 12.3 Mapping Reads to a Genome
 
 Unlike genome assembly where we build the puzzle from scratch, in RNA-Seq we usually have a reference genome to work with. We use specialized aligners to map our RNA reads back to it.
 
@@ -26,7 +30,7 @@ However, there's a complication: **splicing**. In eukaryotes, genes are composed
 
 Therefore, we need **splice-aware aligners** like **STAR** or **HISAT2** that can handle these large gaps.
 
-## 11.4 Quantifying and Normalizing
+## 12.4 Quantifying and Normalizing
 
 Simply counting the reads per gene is not enough. A longer gene will naturally get more reads than a shorter one, and a sample sequenced to a greater depth will have more reads overall. We must **normalize** these counts.
 
@@ -34,7 +38,11 @@ Common units include:
 *   **TPM (Transcripts Per Million):** Normalizes for both gene length and sequencing depth. This is the most common unit for comparing expression levels within a sample.
 *   **FPKM/RPKM:** Older metrics, largely replaced by TPM.
 
-## 11.5 Differential Expression Analysis
+## 12.5 Differential Expression Analysis
+
+<p align="center">
+  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Volcano+Plot:+Differential+Expression" alt="Illustration of Volcano Plot">
+</p>
 
 The most common goal of an RNA-Seq experiment is to find **Differentially Expressed Genes (DEGs)**.
 
@@ -48,7 +56,7 @@ We use statistical tools like **DESeq2** or **edgeR** that take the raw counts, 
 
 The final result is often visualized as a **Volcano Plot**, which plots the fold change against the p-value, making it easy to see the most significant DEGs.
 
-## 11.6 Bioinformatics in Action: A Conceptual Workflow
+## 12.6 Bioinformatics in Action: A Conceptual Workflow
 
 A full RNA-Seq analysis involves multiple command-line tools chained together. While the exact code is too complex for an introduction, the conceptual pipeline looks like this:
 

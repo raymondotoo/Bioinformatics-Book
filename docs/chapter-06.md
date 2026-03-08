@@ -6,6 +6,10 @@ Biology has transformed into a data-rich science. Experiments now generate terab
 
 ## 6.2 The Big Three
 
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Biological+Databases:+NCBI,+EMBL-EBI,+DDBJ" alt="Illustration of Major Databases">
+</p>
+
 While there are thousands of specialized databases, three major organizations host the primary data for the world:
 
 1.  **NCBI (National Center for Biotechnology Information):** Based in the USA. Home to **GenBank** (nucleotide sequences) and **PubMed** (scientific literature).

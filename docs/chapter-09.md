@@ -1,6 +1,10 @@
-# Chapter 9: Genome Assembly and Annotation
+# Chapter 10: Genome Assembly and Annotation
 
-## 9.1 The Jigsaw Puzzle
+## 10.1 The Jigsaw Puzzle
+
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Genome+Assembly:+Reads+to+Contigs" alt="Illustration of Genome Assembly">
+</p>
 
 When we sequence a genome, we do not read the chromosome from start to finish. Current technology cannot do that. Instead, we break the DNA into millions of tiny pieces, sequence them, and then try to put them back together.
 
@@ -8,7 +12,7 @@ This is **Genome Assembly**.
 
 Imagine shredding 100 copies of the *New York Times*, mixing them up, and trying to reconstruct the Sunday edition.
 
-## 9.2 Key Concepts in Assembly
+## 10.2 Key Concepts in Assembly
 
 ### Reads
 The raw, short sequences that come off the machine (e.g., 150 letters long).
@@ -24,7 +28,7 @@ The average number of times a specific base in the genome was sequenced.
 ### Repeats: The Villain
 Genomes are full of repetitive sequences (e.g., `ATATAT...` for thousands of bases). If a read is shorter than the repeat, the assembler doesn't know where it belongs. This is the hardest part of assembly.
 
-## 9.3 Assessing Quality: N50
+## 10.3 Assessing Quality: N50
 
 How do we know if an assembly is "good"? We use a metric called **N50**.
 
@@ -32,14 +36,14 @@ Imagine lining up all your contigs from longest to shortest. Walk down the line 
 *   **High N50** = Good (Long, continuous pieces).
 *   **Low N50** = Bad (Fragmented, tiny pieces).
 
-## 9.4 Genome Annotation
+## 10.4 Genome Annotation
 
 Once you have the sequence, you need to find the landmarks. **Annotation** is the process of identifying genes and features.
 
 *   **Ab Initio:** Using algorithms to find "gene-like" patterns (Start codon ... ORF ... Stop codon).
 *   **Homology-Based:** Aligning known proteins from other species to your new genome to find matches.
 
-## 9.5 Bioinformatics in Action: Calculating N50
+## 10.5 Bioinformatics in Action: Calculating N50
 
 Let's write a function to calculate N50 from a list of contig lengths.
 

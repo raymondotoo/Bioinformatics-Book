@@ -1,10 +1,10 @@
-# Chapter 17: Integrated Clinical Proteomics: The Full Analytical Pipeline
+# Chapter 18: Integrated Clinical Proteomics: The Full Analytical Pipeline
 
-## 17.1 Overview
+## 18.1 Overview
 
 This chapter details the comprehensive computational workflow used to identify proteomic signatures of Alzheimer's Disease (AD) by integrating data from the **ADNI** and **ADRC** cohorts. The analysis proceeds sequentially from raw data cleaning to systems-level network analysis (WGCNA), functional enrichment, and machine learning.
 
-## 17.2 Data Preprocessing and Harmonization
+## 18.2 Data Preprocessing and Harmonization
 
 **Scripts:** `00_Data_preprocessing.Rmd`, `02a_ADNI_ADRC_harmonized.Rmd`, `02b_PCA_full.Rmd`
 
@@ -24,9 +24,13 @@ Principal Component Analysis (PCA) was performed on the harmonized data.
 *   **Variance Explained:** We assessed the proportion of variance captured by the top principal components.
 *   **Visualization:** PCA plots allowed us to visualize the separation between cohorts before and after harmonization, as well as to identify and remove potential outliers.
 
-## 17.3 Network Construction (WGCNA)
+## 18.3 Network Construction (WGCNA)
 
 **Script:** `03_WGCNA_running.Rmd`
+
+<p align="center">
+  <img src="https://placehold.co/600x400/E8F5E9/333333?text=WGCNA+Network+Modules" alt="Illustration of WGCNA Modules">
+</p>
 
 We employed Weighted Gene Co-expression Network Analysis (WGCNA) to identify clusters (modules) of co-expressed proteins. This systems biology approach moves beyond single-protein analysis to identify functional units.
 
@@ -44,7 +48,7 @@ A key feature of WGCNA is **soft thresholding**.
 ### Eigengene Calculation
 For each module, we calculated the **Module Eigengene (ME)**. The ME is the first principal component of the module's expression matrix and serves as a synthetic representative profile for the entire module.
 
-## 17.4 Functional Annotation and Enrichment
+## 18.4 Functional Annotation and Enrichment
 
 **Scripts:** `04_Functional_Analysis.Rmd`, `07a_Functional_Analysis_GSEA.Rmd`, `07b_Functional_Analysis_ORA.Rmd`
 
@@ -58,7 +62,7 @@ To understand the biological significance of the identified modules, we performe
 *   **Ranked Lists:** Proteins were ranked based on their correlation with clinical traits or module membership.
 *   **Enrichment:** We performed GSEA to identify coordinated pathway alterations that might not be detected by ORA alone, as it considers the entire ranked list rather than a fixed threshold.
 
-## 17.5 Module Scoring and Feature Selection
+## 18.5 Module Scoring and Feature Selection
 
 **Script:** `05_Module_Scoring_Selection.Rmd`
 
@@ -67,7 +71,7 @@ We evaluated the predictive power of the identified modules and selected key fea
 *   **Module Scores:** Composite scores were calculated for each module (e.g., average expression or eigengene value) to relate module activity to clinical traits.
 *   **Hub Identification:** We calculated **Module Membership (kME)**, which is the correlation between a protein's expression and the module eigengene. Proteins with high kME are considered "hubs" and are likely drivers of the module's biological function.
 
-## 17.6 Machine Learning for Biomarker Discovery
+## 18.6 Machine Learning for Biomarker Discovery
 
 **Script:** `06_ADNI_ADRC_ML.Rmd`
 

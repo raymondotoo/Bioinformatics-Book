@@ -1,12 +1,16 @@
-# Chapter 12: Proteomics and Metabolomics
+# Chapter 13: Proteomics and Metabolomics
 
-## 12.1 Beyond the Genome
+## 13.1 Beyond the Genome
 
 Genomics tells us what *could* happen (the blueprint). Transcriptomics tells us what *appears* to be happening (the instructions). But **Proteomics** and **Metabolomics** tell us what is *actually* happening.
 
 Proteins are the functional units, and metabolites are the fuel and building blocks. Studying them gives us the closest view of the organism's phenotype.
 
-## 12.2 Proteomics: The Mass Spec Revolution
+## 13.2 Proteomics: The Mass Spec Revolution
+
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Mass+Spectrometry+Workflow" alt="Illustration of Mass Spectrometry">
+</p>
 
 Unlike DNA, we cannot "sequence" proteins easily. Instead, we weigh them.
 
@@ -17,14 +21,14 @@ Unlike DNA, we cannot "sequence" proteins easily. Instead, we weigh them.
 
 Bioinformatics software then takes these lists of masses and compares them against a database of known protein masses to identify which proteins are present.
 
-## 12.3 Metabolomics: The Chemical Fingerprint
+## 13.3 Metabolomics: The Chemical Fingerprint
 
 **Metabolomics** studies small molecules (sugars, lipids, amino acids, vitamins).
 
 *   **Targeted Metabolomics:** Looking for a specific set of known compounds (e.g., "How much glucose is in this blood sample?").
 *   **Untargeted Metabolomics:** Measuring everything to find new patterns (e.g., "What molecules are different in cancer patients vs healthy people?").
 
-## 12.4 Bioinformatics in Action: Protein Analysis
+## 13.4 Bioinformatics in Action: Protein Analysis
 
 While analyzing raw Mass Spec data requires specialized tools (like MaxQuant), we can use Biopython to analyze the properties of the proteins we identify.
 

@@ -1,8 +1,12 @@
-# Chapter 8: Phylogenetics: Understanding Evolutionary Relationships
+# Chapter 9: Phylogenetics: Understanding Evolutionary Relationships
 
-## 8.1 The Tree of Life
+## 9.1 The Tree of Life
 
 "Nothing in biology makes sense except in the light of evolution." - Theodosius Dobzhansky.
+
+<p align="center">
+  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Phylogenetic+Tree" alt="Illustration of a Phylogenetic Tree">
+</p>
 
 **Phylogenetics** is the study of evolutionary relationships among groups of organisms. We represent these relationships using a **Phylogenetic Tree**.
 
@@ -11,7 +15,7 @@
 *   **Branches:** The lines connecting nodes. The length often represents time or amount of genetic change.
 *   **Root:** The oldest point in the tree, representing the common ancestor of all species in the tree.
 
-## 8.2 Multiple Sequence Alignment (MSA)
+## 9.2 Multiple Sequence Alignment (MSA)
 
 Before you can build a tree, you must align your sequences. Since we are comparing more than two, we use **Multiple Sequence Alignment**.
 
@@ -19,7 +23,7 @@ Imagine stacking 10 DNA sequences on top of each other. You need to insert gaps 
 
 *   **Tools:** ClustalW, MUSCLE, MAFFT.
 
-## 8.3 Building the Tree
+## 9.3 Building the Tree
 
 There are two main approaches to building trees:
 
@@ -33,7 +37,7 @@ There are two main approaches to building trees:
     *   Calculates the probability of the tree given the data.
     *   *Pros:* Highly accurate. *Cons:* Computationally expensive (slow).
 
-## 8.4 Bioinformatics in Action: Drawing a Tree
+## 9.4 Bioinformatics in Action: Drawing a Tree
 
 Biopython can parse tree files (often in "Newick" format) and visualize them.
 

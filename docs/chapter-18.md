@@ -1,17 +1,21 @@
-# Chapter 18: Interactive Visualization of WGCNA Results
+# Chapter 19: Interactive Visualization of WGCNA Results
 
-## 18.1 Visualizing WGCNA Results
+## 19.1 Visualizing WGCNA Results
 
-While static plots are useful, WGCNA generates a wealth of data that is best explored interactively. In this chapter, we build a Shiny dashboard to explore the network analysis results from Chapter 17.
+While static plots are useful, WGCNA generates a wealth of data that is best explored interactively. In this chapter, we build a Shiny dashboard to explore the network analysis results from Chapter 18.
 
-## 18.2 Dashboard Structure
+## 19.2 Dashboard Structure
+
+<p align="center">
+  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Shiny+Dashboard+Layout" alt="Illustration of Shiny Dashboard">
+</p>
 
 We will use `shinydashboard` to organize the results into three main tabs:
 1.  **Network Topology:** Visualizing the soft thresholding and scale-free fit.
 2.  **Module Detection:** Exploring the dendrogram and module assignment.
 3.  **Module-Trait Relationships:** An interactive heatmap correlating modules with clinical variables.
 
-## 18.3 Bioinformatics in Action: The Shiny App
+## 19.3 Bioinformatics in Action: The Shiny App
 
 Here is the structure of the `app.R` file designed to visualize WGCNA outputs.
 

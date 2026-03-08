@@ -1,12 +1,16 @@
-# Chapter 10: Introduction to Next-Generation Sequencing (NGS)
+# Chapter 11: Introduction to Next-Generation Sequencing (NGS)
 
-## 10.1 The Sequencing Revolution
+## 11.1 The Sequencing Revolution
 
 For decades, **Sanger sequencing** was the gold standard. It was reliable but slow and expensive, sequencing one small piece of DNA at a time. The Human Genome Project took over 10 years and cost billions of dollars using this method.
 
 **Next-Generation Sequencing (NGS)** changed everything. Instead of one-by-one, NGS technologies sequence *millions or billions* of DNA fragments simultaneously. This massive parallelism has caused the cost of sequencing to plummet faster than the cost of computing (a trend that outpaces Moore's Law).
 
-## 10.2 The Core Principle: Massive Parallelism
+## 11.2 The Core Principle: Massive Parallelism
+
+<p align="center">
+  <img src="https://placehold.co/600x300/E8F5E9/333333?text=NGS+Workflow:+Massive+Parallelism" alt="Illustration of NGS Workflow">
+</p>
 
 While different NGS platforms (like Illumina, PacBio, or Oxford Nanopore) have unique chemistries, the general workflow is similar:
 
@@ -15,7 +19,7 @@ While different NGS platforms (like Illumina, PacBio, or Oxford Nanopore) have u
 3.  **Sequencing:** The fragments are loaded onto a flow cell (a glass slide) and sequenced in parallel. For Illumina, this involves taking a picture each time a new, fluorescently-tagged nucleotide is added to the growing strand.
 4.  **Data Output:** The machine outputs the sequence data for each fragment into a specific file format.
 
-## 10.3 The FASTQ File: Sequences and Quality
+## 11.3 The FASTQ File: Sequences and Quality
 
 The standard output file from most NGS machines is the **FASTQ file**. It's like a FASTA file, but with a crucial addition: a quality score for each base.
 
@@ -25,7 +29,7 @@ A FASTQ record has four lines:
 3.  `+`: A separator line, sometimes repeating the ID.
 4.  `#>>?A?...`: The quality string. Each character represents a quality score for the corresponding base in line 2.
 
-## 10.4 Phred Quality Scores
+## 11.4 Phred Quality Scores
 
 The characters in the quality string are not random; they are ASCII characters that encode a **Phred quality score (Q score)**. The score relates to the probability of an error in the base call.
 
@@ -35,7 +39,7 @@ The characters in the quality string are not random; they are ASCII characters t
 
 **Q30 is generally considered the benchmark for high-quality data.**
 
-## 10.5 Bioinformatics in Action: Parsing FASTQ with Biopython
+## 11.5 Bioinformatics in Action: Parsing FASTQ with Biopython
 
 Just like `SeqIO` can parse FASTA files, it can also handle FASTQ files, automatically interpreting the quality scores for you.
 

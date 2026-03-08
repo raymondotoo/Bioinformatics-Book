@@ -19,6 +19,10 @@ The specific sequence of these amino acids determines everything about the prote
 
 ## 3.2 The Hierarchy of Protein Structure
 
+<p align="center">
+  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Protein+Structure:+Primary+to+Quaternary" alt="Illustration of Protein Structure Levels">
+</p>
+
 A protein isn't just a floppy string; it folds into a precise shape. We describe this shape in four levels:
 
 ### 1. Primary Structure (The Sequence)
