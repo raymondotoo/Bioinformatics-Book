@@ -20,7 +20,7 @@ The specific sequence of these amino acids determines everything about the prote
 ## 3.2 The Hierarchy of Protein Structure
 
 <p align="center">
-    <img src="assets/illustrations/figure-template.svg" alt="Illustration of Protein Structure Levels">
+    <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Protein Structure Levels">
 </p>
 
 ## 3.4 Structure Prediction and Modern Tools
@@ -41,7 +41,7 @@ Here is a compact workflow:
 An illustrative diagram is available: 
 
 <p align="center">
-    <img src="assets/illustrations/alphafold.svg" alt="AlphaFold workflow">
+    <img src="../assets/illustrations/alphafold.svg" alt="AlphaFold workflow">
 </p>
 
 A protein isn't just a floppy string; it folds into a precise shape. We describe this shape in four levels:

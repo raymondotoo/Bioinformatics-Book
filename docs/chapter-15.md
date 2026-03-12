@@ -11,7 +11,7 @@ Traditional biology is **reductionist**: it breaks things down to study them (e.
 ## 16.2 Biological Networks
 
 <p align="center">
-  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Biological Networks">
+  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Biological Networks">
 </p>
 
 ## 15.4 Network Analysis and Pathway Enrichment

@@ -11,7 +11,7 @@ The **transcriptome** is the complete set of all RNA molecules (transcripts) in 
 ## 12.2 The RNA-Seq Workflow
 
 <p align="center">
-  <img src="assets/illustrations/figure-template.svg" alt="Illustration of RNA-Seq Workflow">
+  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of RNA-Seq Workflow">
 </p>
 
 The dominant technology for studying the transcriptome is **RNA-Seq (RNA Sequencing)**. It leverages the NGS technology we learned about in Chapter 11.
@@ -41,7 +41,7 @@ Common units include:
 ## 12.5 Differential Expression Analysis
 
 <p align="center">
-  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Volcano Plot">
+  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Volcano Plot">
 </p>
 
 The most common goal of an RNA-Seq experiment is to find **Differentially Expressed Genes (DEGs)**.

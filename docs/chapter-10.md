@@ -9,7 +9,7 @@ For decades, **Sanger sequencing** was the gold standard. It was reliable but sl
 ## 11.2 The Core Principle: Massive Parallelism
 
 <p align="center">
-  <img src="assets/illustrations/ngs-workflow.svg" alt="Illustration of NGS Workflow">
+  <img src="../assets/illustrations/ngs-workflow.svg" alt="Illustration of NGS Workflow">
 </p>
 
 While different NGS platforms (like Illumina, PacBio, or Oxford Nanopore) have unique chemistries, the general workflow is similar:

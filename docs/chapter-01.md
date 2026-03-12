@@ -7,7 +7,7 @@ Think of it as the core process, the assembly line, that turns the information s
 ## 1.1 What is Bioinformatics?
 
 <p align="center">
-  <img src="assets/illustrations/bioinformatics-concept.svg" alt="Illustration of Bioinformatics Concept">
+  <img src="../assets/illustrations/bioinformatics-concept.svg" alt="Illustration of Bioinformatics Concept">
 </p>
 
 Imagine you have a library containing thousands of massive books, and you need to find specific sentences, compare paragraphs across different volumes, and understand the grammar of the language they're written in. Doing this by hand would be impossible.
@@ -19,7 +19,7 @@ Bioinformatics is the field of using computers and statistics to solve biologica
 At the heart of it all is **Deoxyribonucleic Acid (DNA)**.
 
 <p align="center">
-  <img src="assets/illustrations/dna-double-helix.svg" alt="Illustration of DNA Double Helix">
+  <img src="../assets/illustrations/dna-double-helix.svg" alt="Illustration of DNA Double Helix">
 </p>
 
 *   **The Cookbook:** DNA is the master cookbook of the cell. It contains all the recipes—called **genes**—needed to build and operate an entire organism.
@@ -31,7 +31,7 @@ This entire cookbook for an organism is called its **genome**.
 ## 1.3 Transcription: From DNA to RNA
 
 <p align="center">
-  <img src="assets/illustrations/transcription.svg" alt="Illustration of Transcription">
+  <img src="../assets/illustrations/transcription.svg" alt="Illustration of Transcription">
 </p>
 
 You wouldn't take the master cookbook into a messy kitchen, would you? You'd risk spilling something on it and ruining it forever. Instead, you would make a copy of the one recipe you need.
@@ -47,7 +47,7 @@ So, transcription is the process: **DNA → RNA**.
 ## 1.4 Translation: From RNA to Protein
 
 <p align="center">
-  <img src="assets/illustrations/translation.svg" alt="Illustration of Translation at the Ribosome">
+  <img src="../assets/illustrations/translation.svg" alt="Illustration of Translation at the Ribosome">
 </p>
 
 Now we have our recipe copy (the mRNA) in the kitchen. It's time for the chef to read the recipe and cook the dish. This process is called **translation**.
@@ -66,7 +66,7 @@ So, translation is the process: **RNA → Protein**.
 ## Summary
 
 <p align="center">
-  <img src="assets/illustrations/central-dogma.svg" alt="Illustration of the Central Dogma">
+  <img src="../assets/illustrations/central-dogma.svg" alt="Illustration of the Central Dogma">
 </p>
 
 The Central Dogma is the flow of information from the permanent storage in DNA, to a temporary messenger in RNA, to the final functional product in a protein.

@@ -9,10 +9,10 @@ Bioinformatics is data-driven. When we observe a difference—say, gene A is exp
 The core of statistical inference is **Hypothesis Testing**.
 
 <p align="center">
-  <img src="assets/illustrations/pca.svg" alt="Illustration of PCA">
+  <img src="../assets/illustrations/pca.svg" alt="Illustration of PCA">
 </p>
 
-Explore an interactive PCA demo: [PCA Interactive Demo](interactive/pca.html)
+Explore an interactive PCA demo: [PCA Interactive Demo](../interactive/pca.html)
 
 1.  **Null Hypothesis ($H_0$):** There is no difference between the groups (e.g., Drug has no effect).
 2.  **Alternative Hypothesis ($H_1$):** There is a difference.
@@ -59,7 +59,7 @@ To fix this, we apply **Multiple Testing Correction**. The standard method in om
 Omics data is high-dimensional (thousands of genes per sample). **Principal Component Analysis (PCA)** reduces this complexity by finding new axes (Principal Components) that capture the most variance in the data.
 
 <p align="center">
-  <img src="assets/illustrations/pca.svg" alt="Illustration of PCA">
+  <img src="../assets/illustrations/pca.svg" alt="Illustration of PCA">
 </p>
 
 *   **PC1:** Captures the most variation.

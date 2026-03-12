@@ -7,7 +7,7 @@ Biology has transformed into a data-rich science. Experiments now generate terab
 ## 6.2 The Big Three
 
 <p align="center">
-  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Major Databases">
+  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Major Databases">
 </p>
 
 While there are thousands of specialized databases, three major organizations host the primary data for the world:

@@ -29,7 +29,7 @@ Principal Component Analysis (PCA) was performed on the harmonized data.
 **Script:** `03_WGCNA_running.Rmd`
 
 <p align="center">
-  <img src="assets/illustrations/figure-template.svg" alt="Illustration of WGCNA Modules">
+  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of WGCNA Modules">
 </p>
 
 We employed Weighted Gene Co-expression Network Analysis (WGCNA) to identify clusters (modules) of co-expressed proteins. This systems biology approach moves beyond single-protein analysis to identify functional units.

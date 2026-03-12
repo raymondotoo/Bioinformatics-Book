@@ -9,7 +9,7 @@ Why does this matter? Because if you know the shape of a lock (a protein involve
 ## 15.2 The Protein Data Bank (PDB)
 
 <p align="center">
-  <img src="assets/illustrations/alphafold.svg" alt="Illustration of 3D Protein Structure">
+  <img src="../assets/illustrations/alphafold.svg" alt="Illustration of 3D Protein Structure">
 </p>
 
 ## 14.4 Interpreting Predicted Structures and Downstream Analyses

@@ -3,7 +3,7 @@
 ## 4.1 Breaking the GUI Habit
 
 <p align="center">
-  <img src="assets/illustrations/figure-template.svg" alt="Illustration of CLI vs GUI">
+  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of CLI vs GUI">
 </p>
 
 ## 4.3 Practical CLI Best Practices
