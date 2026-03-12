@@ -51,19 +51,16 @@ plugins:
       cover: true
       cover_logo: assets/cover.png
       custom_template_path: templates
-      back_cover: true
+      back_cover: false
       cover_title: 'The Serial Bioinformatician'
       cover_subtitle: 'A Comprehensive Guide to Modern Bioinformatics'
       author: 'Raymond Otoo, Ph.D.'
-      copyright: '© 2026 Raymond Otoo. Licensed under CC BY-SA 4.0'
       toc_title: 'Table of Contents'
       heading_shift: false
       toc_level: 3
       ordered_chapter_level: 2
       exclude_pages:
         - 'CNAME.md'
-      two_columns_level: 3
-      render_js: false
       output_path: pdf/document.pdf
       debug_html: false
       verbose: false
