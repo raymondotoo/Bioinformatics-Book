@@ -1,0 +1,63 @@
+/* The Serial Bioinformatician – Custom Styles */
+
+:root {
+  /* Increase base font size for readability */
+  --md-text-font-size: 1.1rem;
+  /* Code block font size */
+  --md-code-font-size: 0.95rem;
+}
+
+/* Images: center and apply subtle border / shadow */
+p img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Interactive demo links */
+a[href*="interactive/"] {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--md-primary-fg-color);
+  color: #fff !important;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a[href*="interactive/"]:hover {
+  filter: brightness(1.1);
+}
+
+/* Code blocks: slightly softer background */
+.highlight {
+  border-radius: 6px;
+}
+
+/* Admonitions: slight adjustments */
+.admonition {
+  border-radius: 6px;
+}
+
+/* TOC sidebar: tighter line height */
+.md-nav__link {
+  line-height: 1.4;
+}
+
+/* Figure captions */
+figcaption, .caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  :root {
+    --md-text-font-size: 1rem;
+  }
+}

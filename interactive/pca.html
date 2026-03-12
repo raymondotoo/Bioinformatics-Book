@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PCA Interactive Demo</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>body{font-family:Arial,Helvetica,sans-serif} #plot{width:100%;height:600px}</style>
+</head>
+<body>
+  <h2>PCA Interactive Demo</h2>
+  <div id="plot"></div>
+  <script>
+    // Generate some sample PCA data
+    const traceA = {
+      x: [1,2,3,4,5,6,7,8],
+      y: [2,1,3,5,4,6,5,7],
+      mode: 'markers', type: 'scatter', name: 'Group A'
+    };
+
+    const traceB = {
+      x: [2,3,4,5,6,7,8,9],
+      y: [3,4,2,6,7,5,8,6],
+      mode: 'markers', type: 'scatter', name: 'Group B'
+    };
+
+    Plotly.newPlot('plot',[traceA,traceB],{title:'PC1 vs PC2', xaxis:{title:'PC1'}, yaxis:{title:'PC2'}});
+  </script>
+</body>
+</html>

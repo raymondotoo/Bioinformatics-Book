@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
+  <style>
+    .strand{fill:none;stroke:#1e88e5;stroke-width:6}
+    .rung{stroke:#ef6c00;stroke-width:4}
+    .label{font:600 14px 'Helvetica Neue', Arial, sans-serif; fill:#2a2a2a}
+  </style>
+  <rect width="100%" height="100%" fill="#fff"/>
+  <g transform="translate(50,20)">
+    <path class="strand" d="M0 0 C80 40 80 80 0 120 C-80 160 -80 200 0 240" />
+    <path class="strand" d="M120 0 C40 40 40 80 120 120 C200 160 200 200 120 240" />
+
+    <line class="rung" x1="10" y1="20" x2="110" y2="20" />
+    <line class="rung" x1="-10" y1="60" x2="130" y2="60" />
+    <line class="rung" x1="10" y1="100" x2="110" y2="100" />
+    <line class="rung" x1="-10" y1="140" x2="130" y2="140" />
+    <line class="rung" x1="10" y1="180" x2="110" y2="180" />
+    <line class="rung" x1="-10" y1="220" x2="130" y2="220" />
+  </g>
+  <text class="label" x="12" y="18">DNA Double Helix (A-T, C-G)</text>
+</svg>
