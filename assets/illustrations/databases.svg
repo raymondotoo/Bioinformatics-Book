@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="ncbiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#42A5F5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="uniprotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF8F00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB300;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pdbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43A047;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66BB6A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ensemblGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B1FA2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#AB47BC;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="geoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E53935;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF5350;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowDB" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1565C0">Major Biological Databases</text>
+  
+  <!-- Central hub -->
+  <g transform="translate(350, 210)">
+    <circle cx="50" cy="50" r="60" fill="white" stroke="#1565C0" stroke-width="3" filter="url(#shadowDB)"/>
+    <text x="50" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0">Biological</text>
+    <text x="50" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0">Data</text>
+    <text x="50" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1565C0">Hub</text>
+  </g>
+  
+  <!-- Connection lines -->
+  <line x1="400" y1="150" x2="400" y2="180" stroke="#1565C0" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="310" y1="260" x2="270" y2="260" stroke="#FF8F00" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="490" y1="260" x2="530" y2="260" stroke="#43A047" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="350" y1="320" x2="280" y2="380" stroke="#E53935" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="450" y1="320" x2="520" y2="380" stroke="#7B1FA2" stroke-width="2" stroke-dasharray="4"/>
+  
+  <!-- NCBI Card -->
+  <g transform="translate(280, 55)">
+    <rect x="0" y="0" width="240" height="95" fill="white" stroke="url(#ncbiGrad)" stroke-width="2" rx="10" filter="url(#shadowDB)"/>
+    <rect x="0" y="0" width="240" height="28" fill="url(#ncbiGrad)" rx="10"/>
+    <rect x="0" y="20" width="240" height="8" fill="url(#ncbiGrad)"/>
+    <text x="120" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">NCBI</text>
+    
+    <text x="15" y="48" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">GenBank</text>
+    <text x="15" y="62" font-family="Arial, sans-serif" font-size="9" fill="#666">• Nucleotide sequences</text>
+    <text x="15" y="75" font-family="Arial, sans-serif" font-size="9" fill="#666">• &gt;250M sequences</text>
+    
+    <text x="130" y="48" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">PubMed</text>
+    <text x="130" y="62" font-family="Arial, sans-serif" font-size="9" fill="#666">• Literature citations</text>
+    <text x="130" y="75" font-family="Arial, sans-serif" font-size="9" fill="#666">• &gt;35M articles</text>
+    
+    <text x="120" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#1565C0">ncbi.nlm.nih.gov</text>
+  </g>
+  
+  <!-- UniProt Card -->
+  <g transform="translate(30, 195)">
+    <rect x="0" y="0" width="230" height="130" fill="white" stroke="url(#uniprotGrad)" stroke-width="2" rx="10" filter="url(#shadowDB)"/>
+    <rect x="0" y="0" width="230" height="28" fill="url(#uniprotGrad)" rx="10"/>
+    <rect x="0" y="20" width="230" height="8" fill="url(#uniprotGrad)"/>
+    <text x="115" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">UniProt</text>
+    
+    <text x="15" y="48" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">Swiss-Prot</text>
+    <text x="15" y="62" font-family="Arial, sans-serif" font-size="9" fill="#666">• Manually curated</text>
+    <text x="15" y="75" font-family="Arial, sans-serif" font-size="9" fill="#666">• ~570K proteins</text>
+    
+    <text x="125" y="48" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">TrEMBL</text>
+    <text x="125" y="62" font-family="Arial, sans-serif" font-size="9" fill="#666">• Auto-annotated</text>
+    <text x="125" y="75" font-family="Arial, sans-serif" font-size="9" fill="#666">• &gt;200M proteins</text>
+    
+    <rect x="15" y="88" width="200" height="18" fill="#FFF3E0" rx="3"/>
+    <text x="115" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#E65100">Protein sequences, functions, domains</text>
+    
+    <text x="115" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#FF8F00">uniprot.org</text>
+  </g>
+  
+  <!-- PDB Card -->
+  <g transform="translate(540, 195)">
+    <rect x="0" y="0" width="230" height="130" fill="white" stroke="url(#pdbGrad)" stroke-width="2" rx="10" filter="url(#shadowDB)"/>
+    <rect x="0" y="0" width="230" height="28" fill="url(#pdbGrad)" rx="10"/>
+    <rect x="0" y="20" width="230" height="8" fill="url(#pdbGrad)"/>
+    <text x="115" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">PDB</text>
+    
+    <text x="15" y="48" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">Protein Data Bank</text>
+    
+    <!-- Mini 3D structure -->
+    <g transform="translate(140, 45)">
+      <ellipse cx="35" cy="25" rx="30" ry="20" fill="#A5D6A7"/>
+      <ellipse cx="30" cy="22" rx="20" ry="13" fill="#66BB6A"/>
+      <path d="M20,15 Q30,25 20,35" stroke="#1565C0" stroke-width="3" fill="none"/>
+      <path d="M35,10 L45,20 L35,30" stroke="#E53935" stroke-width="2" fill="none"/>
+    </g>
+    
+    <text x="15" y="62" font-family="Arial, sans-serif" font-size="9" fill="#666">• 3D structures</text>
+    <text x="15" y="75" font-family="Arial, sans-serif" font-size="9" fill="#666">• X-ray, NMR, Cryo-EM</text>
+    <text x="15" y="88" font-family="Arial, sans-serif" font-size="9" fill="#666">• &gt;210K structures</text>
+    
+    <rect x="15" y="95" width="200" height="18" fill="#E8F5E9" rx="3"/>
+    <text x="115" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2E7D32">Molecular visualization &amp; analysis</text>
+    
+    <text x="115" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#43A047">rcsb.org</text>
+  </g>
+  
+  <!-- GEO Card -->
+  <g transform="translate(50, 365)">
+    <rect x="0" y="0" width="220" height="110" fill="white" stroke="url(#geoGrad)" stroke-width="2" rx="10" filter="url(#shadowDB)"/>
+    <rect x="0" y="0" width="220" height="28" fill="url(#geoGrad)" rx="10"/>
+    <rect x="0" y="20" width="220" height="8" fill="url(#geoGrad)"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">GEO</text>
+    
+    <text x="15" y="48" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">Gene Expression Omnibus</text>
+    <text x="15" y="65" font-family="Arial, sans-serif" font-size="9" fill="#666">• Microarray data</text>
+    <text x="15" y="78" font-family="Arial, sans-serif" font-size="9" fill="#666">• RNA-seq datasets</text>
+    <text x="15" y="91" font-family="Arial, sans-serif" font-size="9" fill="#666">• &gt;4M samples</text>
+    
+    <text x="110" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#E53935">ncbi.nlm.nih.gov/geo</text>
+  </g>
+  
+  <!-- Ensembl Card -->
+  <g transform="translate(530, 365)">
+    <rect x="0" y="0" width="220" height="110" fill="white" stroke="url(#ensemblGrad)" stroke-width="2" rx="10" filter="url(#shadowDB)"/>
+    <rect x="0" y="0" width="220" height="28" fill="url(#ensemblGrad)" rx="10"/>
+    <rect x="0" y="20" width="220" height="8" fill="url(#ensemblGrad)"/>
+    <text x="110" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Ensembl</text>
+    
+    <text x="15" y="48" font-family="Arial, sans-serif" font-size="10" fill="#333" font-weight="bold">Genome Browser</text>
+    <text x="15" y="65" font-family="Arial, sans-serif" font-size="9" fill="#666">• Annotated genomes</text>
+    <text x="15" y="78" font-family="Arial, sans-serif" font-size="9" fill="#666">• Comparative genomics</text>
+    <text x="15" y="91" font-family="Arial, sans-serif" font-size="9" fill="#666">• &gt;300 species</text>
+    
+    <text x="110" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#7B1FA2">ensembl.org</text>
+  </g>
+  
+  <!-- Additional small database badges -->
+  <g transform="translate(300, 380)">
+    <rect x="0" y="0" width="65" height="25" fill="#00897B" rx="5"/>
+    <text x="32" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">KEGG</text>
+  </g>
+  
+  <g transform="translate(375, 380)">
+    <rect x="0" y="0" width="50" height="25" fill="#5C6BC0" rx="5"/>
+    <text x="25" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">GO</text>
+  </g>
+  
+  <g transform="translate(435, 380)">
+    <rect x="0" y="0" width="70" height="25" fill="#00ACC1" rx="5"/>
+    <text x="35" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">InterPro</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="400" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Primary resources for sequence, structure, expression, and annotation data</text>
+</svg>

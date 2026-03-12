@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF7043;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFAB91;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="secondaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42A5F5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#90CAF9;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="tertiaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#66BB6A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A5D6A7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="quaternaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#AB47BC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CE93D8;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow4" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+    <marker id="arrow4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1565C0">Protein Structure Hierarchy</text>
+  
+  <!-- Primary Structure -->
+  <g transform="translate(50, 70)">
+    <rect x="0" y="0" width="170" height="380" fill="white" stroke="#FF7043" stroke-width="2" rx="10" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="170" height="40" fill="url(#primaryGrad)" rx="10"/>
+    <rect x="0" y="30" width="170" height="10" fill="url(#primaryGrad)"/>
+    <text x="85" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Primary Structure</text>
+    
+    <!-- Amino acid chain -->
+    <g transform="translate(20, 60)">
+      <circle cx="15" cy="20" r="12" fill="#E53935"/>
+      <text x="15" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">M</text>
+      
+      <line x1="27" y1="20" x2="38" y2="20" stroke="#333" stroke-width="2"/>
+      
+      <circle cx="50" cy="20" r="12" fill="#1565C0"/>
+      <text x="50" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">K</text>
+      
+      <line x1="62" y1="20" x2="73" y2="20" stroke="#333" stroke-width="2"/>
+      
+      <circle cx="85" cy="20" r="12" fill="#43A047"/>
+      <text x="85" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">L</text>
+      
+      <line x1="97" y1="20" x2="108" y2="20" stroke="#333" stroke-width="2"/>
+      
+      <circle cx="120" cy="20" r="12" fill="#FB8C00"/>
+      <text x="120" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">V</text>
+    </g>
+    
+    <g transform="translate(20, 100)">
+      <circle cx="15" cy="20" r="12" fill="#7B1FA2"/>
+      <text x="15" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">A</text>
+      
+      <line x1="27" y1="20" x2="38" y2="20" stroke="#333" stroke-width="2"/>
+      
+      <circle cx="50" cy="20" r="12" fill="#00897B"/>
+      <text x="50" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">G</text>
+      
+      <line x1="62" y1="20" x2="73" y2="20" stroke="#333" stroke-width="2"/>
+      
+      <circle cx="85" cy="20" r="12" fill="#C62828"/>
+      <text x="85" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">F</text>
+      
+      <line x1="97" y1="20" x2="108" y2="20" stroke="#333" stroke-width="2"/>
+      
+      <circle cx="120" cy="20" r="12" fill="#1565C0"/>
+      <text x="120" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">S</text>
+    </g>
+    
+    <!-- Description -->
+    <text x="85" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Linear sequence of</text>
+    <text x="85" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">amino acids joined</text>
+    <text x="85" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">by peptide bonds</text>
+    
+    <!-- Key features -->
+    <rect x="15" y="225" width="140" height="60" fill="#FFF3E0" rx="5"/>
+    <text x="85" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#E65100" font-weight="bold">Key Features:</text>
+    <text x="85" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">• N-terminus to C-terminus</text>
+    <text x="85" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">• Encoded by DNA/mRNA</text>
+    
+    <!-- Example -->
+    <text x="85" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888" font-style="italic">MKLVAGFS...</text>
+    <text x="85" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">(1D - String)</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="230" y1="260" x2="250" y2="260" stroke="#666" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  <!-- Secondary Structure -->
+  <g transform="translate(260, 70)">
+    <rect x="0" y="0" width="170" height="380" fill="white" stroke="#42A5F5" stroke-width="2" rx="10" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="170" height="40" fill="url(#secondaryGrad)" rx="10"/>
+    <rect x="0" y="30" width="170" height="10" fill="url(#secondaryGrad)"/>
+    <text x="85" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Secondary Structure</text>
+    
+    <!-- Alpha helix -->
+    <text x="50" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1565C0" font-weight="bold">α-helix</text>
+    <g transform="translate(15, 75)">
+      <path d="M35,0 Q50,15 35,30 Q20,45 35,60 Q50,75 35,90 Q20,105 35,120" 
+            stroke="#1565C0" stroke-width="12" fill="none" stroke-linecap="round"/>
+      <path d="M35,0 Q50,15 35,30 Q20,45 35,60 Q50,75 35,90 Q20,105 35,120" 
+            stroke="#42A5F5" stroke-width="6" fill="none" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Beta sheet -->
+    <text x="120" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1565C0" font-weight="bold">β-sheet</text>
+    <g transform="translate(95, 75)">
+      <path d="M0,0 L0,35 L15,45 L15,0" fill="#1565C0" stroke="#0D47A1" stroke-width="1"/>
+      <path d="M20,0 L20,35 L35,45 L35,0" fill="#42A5F5" stroke="#1565C0" stroke-width="1"/>
+      <path d="M40,0 L40,35 L55,45 L55,0" fill="#1565C0" stroke="#0D47A1" stroke-width="1"/>
+      
+      <!-- Arrows indicating direction -->
+      <polygon points="7,50 7,70 0,70 15,85 30,70 23,70 23,50" fill="#1565C0"/>
+      <polygon points="27,85 27,65 20,65 35,50 50,65 43,65 43,85" fill="#42A5F5"/>
+    </g>
+    
+    <!-- Description -->
+    <text x="85" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Local folding patterns</text>
+    <text x="85" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">stabilized by hydrogen</text>
+    <text x="85" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">bonds</text>
+    
+    <!-- Key features -->
+    <rect x="15" y="260" width="140" height="75" fill="#E3F2FD" rx="5"/>
+    <text x="85" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1565C0" font-weight="bold">Key Features:</text>
+    <text x="85" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">• H-bonds (C=O...H-N)</text>
+    <text x="85" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">• Helices, sheets, turns</text>
+    <text x="85" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">• Ramachandran angles</text>
+    
+    <text x="85" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">(2D - Topology)</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="440" y1="260" x2="460" y2="260" stroke="#666" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  <!-- Tertiary Structure -->
+  <g transform="translate(470, 70)">
+    <rect x="0" y="0" width="170" height="380" fill="white" stroke="#66BB6A" stroke-width="2" rx="10" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="170" height="40" fill="url(#tertiaryGrad)" rx="10"/>
+    <rect x="0" y="30" width="170" height="10" fill="url(#tertiaryGrad)"/>
+    <text x="85" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Tertiary Structure</text>
+    
+    <!-- 3D protein blob -->
+    <g transform="translate(25, 55)">
+      <ellipse cx="60" cy="70" rx="55" ry="45" fill="#A5D6A7" filter="url(#shadow4)"/>
+      <ellipse cx="50" cy="60" rx="40" ry="30" fill="#66BB6A"/>
+      <ellipse cx="70" cy="75" rx="25" ry="20" fill="#43A047"/>
+      
+      <!-- Alpha helices inside -->
+      <path d="M30,50 Q40,60 30,70 Q20,80 30,90" stroke="#1565C0" stroke-width="5" fill="none" stroke-linecap="round"/>
+      
+      <!-- Beta strands -->
+      <path d="M55,45 L65,55 L55,65 L65,75 L55,85" stroke="#FF7043" stroke-width="4" fill="none"/>
+      
+      <!-- Active site pocket -->
+      <ellipse cx="80" cy="65" rx="12" ry="10" fill="#FFE0B2" stroke="#FB8C00" stroke-width="2"/>
+      <text x="80" y="69" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#E65100">site</text>
+    </g>
+    
+    <!-- Description -->
+    <text x="85" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Complete 3D fold of</text>
+    <text x="85" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">a single polypeptide</text>
+    <text x="85" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">chain</text>
+    
+    <!-- Key features -->
+    <rect x="15" y="240" width="140" height="90" fill="#E8F5E9" rx="5"/>
+    <text x="85" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2E7D32" font-weight="bold">Key Features:</text>
+    <text x="85" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">• Disulfide bonds</text>
+    <text x="85" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">• Hydrophobic core</text>
+    <text x="85" y="303" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">• Salt bridges</text>
+    <text x="85" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">• Van der Waals forces</text>
+    
+    <text x="85" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">(3D - Single chain)</text>
+  </g>
+  
+  <!-- Arrow -->
+  <line x1="650" y1="260" x2="670" y2="260" stroke="#666" stroke-width="2" marker-end="url(#arrow4)"/>
+  
+  <!-- Quaternary Structure -->
+  <g transform="translate(680, 70)">
+    <rect x="0" y="0" width="110" height="380" fill="white" stroke="#AB47BC" stroke-width="2" rx="10" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="110" height="40" fill="url(#quaternaryGrad)" rx="10"/>
+    <rect x="0" y="30" width="110" height="10" fill="url(#quaternaryGrad)"/>
+    <text x="55" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Quaternary</text>
+    <text x="55" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Structure</text>
+    
+    <!-- Multiple subunits -->
+    <g transform="translate(15, 55)">
+      <ellipse cx="25" cy="25" rx="22" ry="18" fill="#E1BEE7" stroke="#7B1FA2" stroke-width="2"/>
+      <text x="25" y="29" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A148C" font-weight="bold">α</text>
+      
+      <ellipse cx="55" cy="35" rx="22" ry="18" fill="#CE93D8" stroke="#7B1FA2" stroke-width="2"/>
+      <text x="55" y="39" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4A148C" font-weight="bold">β</text>
+      
+      <ellipse cx="25" cy="65" rx="22" ry="18" fill="#BA68C8" stroke="#7B1FA2" stroke-width="2"/>
+      <text x="25" y="69" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">α</text>
+      
+      <ellipse cx="55" cy="75" rx="22" ry="18" fill="#AB47BC" stroke="#7B1FA2" stroke-width="2"/>
+      <text x="55" y="79" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">β</text>
+    </g>
+    
+    <!-- Description -->
+    <text x="55" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Multiple</text>
+    <text x="55" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">subunits</text>
+    <text x="55" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">working</text>
+    <text x="55" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">together</text>
+    
+    <!-- Example -->
+    <rect x="10" y="245" width="90" height="85" fill="#F3E5F5" rx="5"/>
+    <text x="55" y="263" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#7B1FA2" font-weight="bold">Examples:</text>
+    <text x="55" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Hemoglobin</text>
+    <text x="55" y="293" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">(α2β2 tetramer)</text>
+    <text x="55" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Antibodies</text>
+    <text x="55" y="323" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">RNA Pol II</text>
+    
+    <text x="55" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#888">(Multi-chain)</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="400" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Each level of structure determines protein function, stability, and interactions</text>
+</svg>

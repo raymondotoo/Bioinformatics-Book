@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="netGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5C6BC0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7986CB;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowNet" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#5C6BC0">Biological Network Analysis</text>
+  
+  <!-- Main Network Visualization -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="420" height="380" fill="white" stroke="url(#netGrad)" stroke-width="2" rx="10" filter="url(#shadowNet)"/>
+    <text x="210" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#5C6BC0">Protein-Protein Interaction Network</text>
+    
+    <!-- Edges first (behind nodes) -->
+    <g stroke="#E0E0E0" stroke-width="2">
+      <!-- Hub connections -->
+      <line x1="200" y1="180" x2="100" y2="100"/>
+      <line x1="200" y1="180" x2="300" y2="100"/>
+      <line x1="200" y1="180" x2="120" y2="200"/>
+      <line x1="200" y1="180" x2="280" y2="200"/>
+      <line x1="200" y1="180" x2="100" y2="280"/>
+      <line x1="200" y1="180" x2="300" y2="280"/>
+      <line x1="200" y1="180" x2="200" y2="320"/>
+      
+      <!-- Secondary connections -->
+      <line x1="100" y1="100" x2="60" y2="60" stroke="#F0F0F0"/>
+      <line x1="100" y1="100" x2="150" y2="60" stroke="#F0F0F0"/>
+      <line x1="300" y1="100" x2="350" y2="60" stroke="#F0F0F0"/>
+      <line x1="300" y1="100" x2="260" y2="60" stroke="#F0F0F0"/>
+      
+      <line x1="100" y1="280" x2="60" y2="320" stroke="#F0F0F0"/>
+      <line x1="100" y1="280" x2="140" y2="330" stroke="#F0F0F0"/>
+      <line x1="300" y1="280" x2="340" y2="320" stroke="#F0F0F0"/>
+      <line x1="300" y1="280" x2="260" y2="330" stroke="#F0F0F0"/>
+      
+      <line x1="120" y1="200" x2="60" y2="180" stroke="#F0F0F0"/>
+      <line x1="280" y1="200" x2="340" y2="180" stroke="#F0F0F0"/>
+      <line x1="280" y1="200" x2="340" y2="220" stroke="#F0F0F0"/>
+      
+      <!-- Cross connections -->
+      <line x1="100" y1="100" x2="120" y2="200" stroke="#E8E8E8"/>
+      <line x1="300" y1="100" x2="280" y2="200" stroke="#E8E8E8"/>
+      <line x1="100" y1="280" x2="200" y2="320" stroke="#E8E8E8"/>
+      <line x1="300" y1="280" x2="200" y2="320" stroke="#E8E8E8"/>
+    </g>
+    
+    <!-- Nodes -->
+    <!-- Hub node (largest) -->
+    <circle cx="200" cy="180" r="28" fill="#E53935" filter="url(#glow)"/>
+    <text x="200" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">TP53</text>
+    
+    <!-- Primary nodes -->
+    <circle cx="100" cy="100" r="20" fill="#1565C0"/>
+    <text x="100" y="104" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">MDM2</text>
+    
+    <circle cx="300" cy="100" r="20" fill="#1565C0"/>
+    <text x="300" y="104" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">BRCA1</text>
+    
+    <circle cx="120" cy="200" r="18" fill="#43A047"/>
+    <text x="120" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">ATM</text>
+    
+    <circle cx="280" cy="200" r="18" fill="#43A047"/>
+    <text x="280" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">CHK2</text>
+    
+    <circle cx="100" cy="280" r="18" fill="#FB8C00"/>
+    <text x="100" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">BAX</text>
+    
+    <circle cx="300" cy="280" r="18" fill="#FB8C00"/>
+    <text x="300" y="284" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">BCL2</text>
+    
+    <circle cx="200" cy="320" r="15" fill="#7B1FA2"/>
+    <text x="200" y="324" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white">CASP3</text>
+    
+    <!-- Leaf nodes -->
+    <circle cx="60" cy="60" r="10" fill="#90CAF9"/>
+    <circle cx="150" cy="60" r="10" fill="#90CAF9"/>
+    <circle cx="260" cy="60" r="10" fill="#90CAF9"/>
+    <circle cx="350" cy="60" r="10" fill="#90CAF9"/>
+    <circle cx="60" cy="180" r="10" fill="#A5D6A7"/>
+    <circle cx="340" cy="180" r="10" fill="#A5D6A7"/>
+    <circle cx="340" cy="220" r="10" fill="#A5D6A7"/>
+    <circle cx="60" cy="320" r="10" fill="#FFCC80"/>
+    <circle cx="140" cy="330" r="10" fill="#FFCC80"/>
+    <circle cx="260" cy="330" r="10" fill="#FFCC80"/>
+    <circle cx="340" cy="320" r="10" fill="#FFCC80"/>
+    
+    <!-- Legend -->
+    <g transform="translate(20, 340)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="9" fill="#666">Node size = Connectivity (degree)</text>
+      <circle cx="220" cy="-5" r="10" fill="#E53935"/>
+      <text x="235" y="0" font-family="Arial, sans-serif" font-size="9" fill="#666">Hub protein</text>
+    </g>
+  </g>
+  
+  <!-- Network Types -->
+  <g transform="translate(490, 60)">
+    <rect x="0" y="0" width="280" height="180" fill="white" stroke="#1565C0" stroke-width="2" rx="10" filter="url(#shadowNet)"/>
+    <rect x="0" y="0" width="280" height="25" fill="#1565C0" rx="10"/>
+    <rect x="0" y="17" width="280" height="8" fill="#1565C0"/>
+    <text x="140" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Network Types</text>
+    
+    <g transform="translate(15, 35)">
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1565C0">🔗 PPI Networks</text>
+      <text x="15" y="32" font-family="Arial, sans-serif" font-size="9" fill="#666">Physical interactions between proteins</text>
+      
+      <text x="0" y="55" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#43A047">🧬 Gene Regulatory</text>
+      <text x="15" y="72" font-family="Arial, sans-serif" font-size="9" fill="#666">TF-target gene relationships</text>
+      
+      <text x="0" y="95" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#FB8C00">⚗️ Metabolic</text>
+      <text x="15" y="112" font-family="Arial, sans-serif" font-size="9" fill="#666">Enzyme-metabolite pathways</text>
+      
+      <text x="0" y="135" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#7B1FA2">📊 Co-expression</text>
+      <text x="15" y="152" font-family="Arial, sans-serif" font-size="9" fill="#666">Correlated gene expression</text>
+    </g>
+  </g>
+  
+  <!-- Network Metrics -->
+  <g transform="translate(490, 255)">
+    <rect x="0" y="0" width="280" height="185" fill="white" stroke="#43A047" stroke-width="2" rx="10" filter="url(#shadowNet)"/>
+    <rect x="0" y="0" width="280" height="25" fill="#43A047" rx="10"/>
+    <rect x="0" y="17" width="280" height="8" fill="#43A047"/>
+    <text x="140" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Network Metrics</text>
+    
+    <g transform="translate(15, 35)">
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">Centrality Measures:</text>
+      <text x="10" y="33" font-family="Arial, sans-serif" font-size="9" fill="#666">• Degree centrality</text>
+      <text x="10" y="48" font-family="Arial, sans-serif" font-size="9" fill="#666">• Betweenness centrality</text>
+      <text x="10" y="63" font-family="Arial, sans-serif" font-size="9" fill="#666">• Closeness centrality</text>
+      <text x="10" y="78" font-family="Arial, sans-serif" font-size="9" fill="#666">• PageRank</text>
+      
+      <text x="0" y="100" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">Topology:</text>
+      <text x="10" y="118" font-family="Arial, sans-serif" font-size="9" fill="#666">• Clustering coefficient</text>
+      <text x="10" y="133" font-family="Arial, sans-serif" font-size="9" fill="#666">• Modularity (communities)</text>
+      <text x="10" y="148" font-family="Arial, sans-serif" font-size="9" fill="#666">• Scale-free / Small-world</text>
+    </g>
+  </g>
+  
+  <!-- Tools -->
+  <g transform="translate(50, 455)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">Tools:</text>
+    <text x="45" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">Cytoscape • STRING • NetworkX • igraph • Gephi | Databases: STRING, BioGRID, IntAct</text>
+  </g>
+</svg>

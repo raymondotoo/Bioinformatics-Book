@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="microGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43A047;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66BB6A;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowMicro" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#43A047">Microbiome Analysis &amp; Diversity</text>
+  
+  <!-- Sample Diversity Comparison -->
+  <g transform="translate(50, 60)">
+    <rect x="0" y="0" width="700" height="180" fill="white" stroke="#43A047" stroke-width="2" rx="10" filter="url(#shadowMicro)"/>
+    <text x="350" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#43A047">Comparing Microbial Communities</text>
+    
+    <!-- Healthy gut -->
+    <g transform="translate(50, 50)">
+      <text x="80" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">Healthy Gut</text>
+      
+      <!-- Diverse bacteria icons -->
+      <ellipse cx="40" cy="40" rx="25" ry="12" fill="#66BB6A"/>
+      <ellipse cx="90" cy="35" rx="15" ry="20" fill="#81C784"/>
+      <circle cx="130" cy="45" r="18" fill="#A5D6A7"/>
+      <ellipse cx="60" cy="70" rx="20" ry="10" fill="#43A047"/>
+      <circle cx="110" cy="75" r="12" fill="#2E7D32"/>
+      <ellipse cx="150" cy="65" rx="12" ry="18" fill="#4CAF50"/>
+      <circle cx="30" cy="90" r="10" fill="#81C784"/>
+      <ellipse cx="70" cy="95" rx="18" ry="8" fill="#66BB6A"/>
+      <circle cx="120" cy="100" r="8" fill="#A5D6A7"/>
+      <ellipse cx="160" cy="90" rx="10" ry="15" fill="#43A047"/>
+      
+      <text x="90" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">High diversity</text>
+    </g>
+    
+    <!-- Arrow -->
+    <text x="270" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#666">→</text>
+    <text x="270" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Dysbiosis</text>
+    
+    <!-- Diseased gut -->
+    <g transform="translate(330, 50)">
+      <text x="80" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#C62828">Dysbiotic Gut</text>
+      
+      <!-- Less diverse, dominated by few species -->
+      <ellipse cx="50" cy="50" rx="35" ry="20" fill="#EF5350"/>
+      <ellipse cx="110" cy="45" rx="30" ry="25" fill="#EF5350"/>
+      <ellipse cx="80" cy="80" rx="40" ry="15" fill="#E53935"/>
+      <ellipse cx="140" cy="75" rx="25" ry="20" fill="#EF5350"/>
+      <circle cx="40" cy="100" r="8" fill="#FFCDD2"/>
+      <circle cx="160" cy="95" r="6" fill="#FFCDD2"/>
+      
+      <text x="90" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Low diversity</text>
+    </g>
+    
+    <!-- Legend -->
+    <g transform="translate(520, 50)">
+      <rect x="0" y="0" width="150" height="105" fill="#F5F5F5" rx="5"/>
+      <text x="75" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">Changes in Dysbiosis</text>
+      <text x="10" y="40" font-family="Arial, sans-serif" font-size="9" fill="#C62828">↓ Reduced diversity</text>
+      <text x="10" y="58" font-family="Arial, sans-serif" font-size="9" fill="#C62828">↓ Fewer beneficial bacteria</text>
+      <text x="10" y="76" font-family="Arial, sans-serif" font-size="9" fill="#C62828">↑ Pathogen overgrowth</text>
+      <text x="10" y="94" font-family="Arial, sans-serif" font-size="9" fill="#C62828">↑ Inflammation</text>
+    </g>
+  </g>
+  
+  <!-- Diversity Metrics -->
+  <g transform="translate(50, 255)">
+    <rect x="0" y="0" width="340" height="200" fill="white" stroke="#1565C0" stroke-width="2" rx="10" filter="url(#shadowMicro)"/>
+    <rect x="0" y="0" width="340" height="28" fill="#1565C0" rx="10"/>
+    <rect x="0" y="20" width="340" height="8" fill="#1565C0"/>
+    <text x="170" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Alpha Diversity (Within Sample)</text>
+    
+    <g transform="translate(20, 45)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1565C0">Richness:</text>
+      <text x="10" y="18" font-family="Arial, sans-serif" font-size="10" fill="#666">• Observed OTUs/ASVs</text>
+      <text x="10" y="34" font-family="Arial, sans-serif" font-size="10" fill="#666">• Chao1 estimator</text>
+      
+      <text x="0" y="60" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1565C0">Evenness:</text>
+      <text x="10" y="78" font-family="Arial, sans-serif" font-size="10" fill="#666">• Pielou's evenness</text>
+      
+      <text x="0" y="104" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1565C0">Combined:</text>
+      <text x="10" y="122" font-family="Arial, sans-serif" font-size="10" fill="#666">• Shannon index (H')</text>
+      <text x="10" y="138" font-family="Arial, sans-serif" font-size="10" fill="#666">• Simpson index (1-D)</text>
+    </g>
+    
+    <!-- Formula -->
+    <rect x="180" y="120" width="140" height="55" fill="#E3F2FD" rx="5"/>
+    <text x="250" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1565C0" font-weight="bold">Shannon Index</text>
+    <text x="250" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">H' = -Σ pᵢ ln(pᵢ)</text>
+  </g>
+  
+  <!-- Beta Diversity -->
+  <g transform="translate(410, 255)">
+    <rect x="0" y="0" width="340" height="200" fill="white" stroke="#7B1FA2" stroke-width="2" rx="10" filter="url(#shadowMicro)"/>
+    <rect x="0" y="0" width="340" height="28" fill="#7B1FA2" rx="10"/>
+    <rect x="0" y="20" width="340" height="8" fill="#7B1FA2"/>
+    <text x="170" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Beta Diversity (Between Samples)</text>
+    
+    <!-- PCoA plot -->
+    <g transform="translate(20, 40)">
+      <rect x="0" y="0" width="140" height="100" fill="#F5F5F5" rx="3"/>
+      
+      <!-- Cluster 1 -->
+      <circle cx="35" cy="30" r="6" fill="#43A047"/>
+      <circle cx="45" cy="40" r="6" fill="#66BB6A"/>
+      <circle cx="30" cy="45" r="6" fill="#43A047"/>
+      <circle cx="50" cy="35" r="6" fill="#81C784"/>
+      
+      <!-- Cluster 2 -->
+      <circle cx="100" cy="65" r="6" fill="#E53935"/>
+      <circle cx="110" cy="75" r="6" fill="#EF5350"/>
+      <circle cx="95" cy="80" r="6" fill="#E53935"/>
+      <circle cx="115" cy="70" r="6" fill="#FFCDD2"/>
+      
+      <text x="70" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">PCoA / NMDS</text>
+    </g>
+    
+    <g transform="translate(180, 45)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#7B1FA2">Distance Metrics:</text>
+      <text x="10" y="20" font-family="Arial, sans-serif" font-size="9" fill="#666">• Bray-Curtis</text>
+      <text x="10" y="36" font-family="Arial, sans-serif" font-size="9" fill="#666">• UniFrac (weighted/unweighted)</text>
+      <text x="10" y="52" font-family="Arial, sans-serif" font-size="9" fill="#666">• Jaccard</text>
+      
+      <text x="0" y="78" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#7B1FA2">Statistical Tests:</text>
+      <text x="10" y="96" font-family="Arial, sans-serif" font-size="9" fill="#666">• PERMANOVA (adonis)</text>
+      <text x="10" y="112" font-family="Arial, sans-serif" font-size="9" fill="#666">• ANOSIM</text>
+    </g>
+    
+    <!-- Legend -->
+    <g transform="translate(180, 150)">
+      <circle cx="10" cy="8" r="5" fill="#43A047"/>
+      <text x="25" y="12" font-family="Arial, sans-serif" font-size="9" fill="#666">Healthy</text>
+      <circle cx="80" cy="8" r="5" fill="#E53935"/>
+      <text x="95" y="12" font-family="Arial, sans-serif" font-size="9" fill="#666">Disease</text>
+    </g>
+  </g>
+  
+  <!-- Tools Footer -->
+  <g transform="translate(50, 465)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">Tools:</text>
+    <text x="45" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">QIIME2 • DADA2 • phyloseq • MicrobiomeAnalyst • mothur • MetaPhlAn</text>
+    <text x="650" y="0" font-family="Arial, sans-serif" font-size="10" fill="#666">| 16S / Shotgun</text>
+  </g>
+</svg>

@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="volcanoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E53935;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF5350;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowVolc" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1565C0">Volcano Plot: Visualizing Differential Expression</text>
+  
+  <!-- Main Plot Area -->
+  <g transform="translate(100, 60)">
+    <rect x="0" y="0" width="500" height="380" fill="white" stroke="#E0E0E0" stroke-width="1" filter="url(#shadowVolc)"/>
+    
+    <!-- Grid lines -->
+    <g stroke="#F0F0F0" stroke-width="1">
+      <line x1="0" y1="76" x2="500" y2="76"/>
+      <line x1="0" y1="152" x2="500" y2="152"/>
+      <line x1="0" y1="228" x2="500" y2="228"/>
+      <line x1="0" y1="304" x2="500" y2="304"/>
+      <line x1="100" y1="0" x2="100" y2="380"/>
+      <line x1="200" y1="0" x2="200" y2="380"/>
+      <line x1="300" y1="0" x2="300" y2="380"/>
+      <line x1="400" y1="0" x2="400" y2="380"/>
+    </g>
+    
+    <!-- Significance thresholds -->
+    <line x1="0" y1="100" x2="500" y2="100" stroke="#FB8C00" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="505" y="104" font-family="Arial, sans-serif" font-size="9" fill="#FB8C00">-log10(0.05)</text>
+    
+    <line x1="150" y1="0" x2="150" y2="380" stroke="#7B1FA2" stroke-width="2" stroke-dasharray="8,4"/>
+    <line x1="350" y1="0" x2="350" y2="380" stroke="#7B1FA2" stroke-width="2" stroke-dasharray="8,4"/>
+    <text x="120" y="395" font-family="Arial, sans-serif" font-size="9" fill="#7B1FA2">FC=-2</text>
+    <text x="355" y="395" font-family="Arial, sans-serif" font-size="9" fill="#7B1FA2">FC=2</text>
+    
+    <!-- Non-significant points (gray) -->
+    <circle cx="160" cy="320" r="4" fill="#BDBDBD"/>
+    <circle cx="180" cy="280" r="4" fill="#BDBDBD"/>
+    <circle cx="200" cy="300" r="4" fill="#BDBDBD"/>
+    <circle cx="220" cy="340" r="4" fill="#BDBDBD"/>
+    <circle cx="240" cy="290" r="4" fill="#BDBDBD"/>
+    <circle cx="260" cy="310" r="4" fill="#BDBDBD"/>
+    <circle cx="280" cy="270" r="4" fill="#BDBDBD"/>
+    <circle cx="300" cy="330" r="4" fill="#BDBDBD"/>
+    <circle cx="320" cy="285" r="4" fill="#BDBDBD"/>
+    <circle cx="340" cy="295" r="4" fill="#BDBDBD"/>
+    <circle cx="190" cy="250" r="4" fill="#BDBDBD"/>
+    <circle cx="230" cy="260" r="4" fill="#BDBDBD"/>
+    <circle cx="270" cy="245" r="4" fill="#BDBDBD"/>
+    <circle cx="310" cy="255" r="4" fill="#BDBDBD"/>
+    <circle cx="175" cy="200" r="4" fill="#BDBDBD"/>
+    <circle cx="210" cy="180" r="4" fill="#BDBDBD"/>
+    <circle cx="250" cy="170" r="4" fill="#BDBDBD"/>
+    <circle cx="290" cy="190" r="4" fill="#BDBDBD"/>
+    <circle cx="330" cy="175" r="4" fill="#BDBDBD"/>
+    <circle cx="195" cy="145" r="4" fill="#BDBDBD"/>
+    <circle cx="235" cy="155" r="4" fill="#BDBDBD"/>
+    <circle cx="275" cy="140" r="4" fill="#BDBDBD"/>
+    <circle cx="315" cy="150" r="4" fill="#BDBDBD"/>
+    <circle cx="205" cy="120" r="4" fill="#BDBDBD"/>
+    <circle cx="245" cy="115" r="4" fill="#BDBDBD"/>
+    <circle cx="285" cy="125" r="4" fill="#BDBDBD"/>
+    <circle cx="255" cy="108" r="4" fill="#BDBDBD"/>
+    
+    <!-- Downregulated significant (blue) -->
+    <circle cx="80" cy="60" r="6" fill="#1565C0"/>
+    <circle cx="95" cy="75" r="5" fill="#1565C0"/>
+    <circle cx="70" cy="50" r="7" fill="#1565C0"/>
+    <circle cx="110" cy="85" r="5" fill="#42A5F5"/>
+    <circle cx="85" cy="95" r="4" fill="#42A5F5"/>
+    <circle cx="125" cy="55" r="6" fill="#1565C0"/>
+    <circle cx="60" cy="80" r="5" fill="#42A5F5"/>
+    <circle cx="100" cy="45" r="6" fill="#1565C0"/>
+    <circle cx="140" cy="70" r="5" fill="#42A5F5"/>
+    <circle cx="75" cy="35" r="7" fill="#0D47A1"/>
+    <circle cx="115" cy="25" r="6" fill="#1565C0"/>
+    <circle cx="55" cy="65" r="5" fill="#42A5F5"/>
+    <circle cx="130" cy="40" r="6" fill="#1565C0"/>
+    <circle cx="90" cy="30" r="5" fill="#1565C0"/>
+    
+    <!-- Upregulated significant (red) -->
+    <circle cx="420" cy="55" r="6" fill="#E53935"/>
+    <circle cx="400" cy="70" r="5" fill="#E53935"/>
+    <circle cx="440" cy="45" r="7" fill="#C62828"/>
+    <circle cx="385" cy="80" r="5" fill="#EF5350"/>
+    <circle cx="410" cy="90" r="4" fill="#EF5350"/>
+    <circle cx="375" cy="60" r="6" fill="#E53935"/>
+    <circle cx="455" cy="75" r="5" fill="#EF5350"/>
+    <circle cx="395" cy="40" r="6" fill="#E53935"/>
+    <circle cx="360" cy="65" r="5" fill="#EF5350"/>
+    <circle cx="430" cy="30" r="7" fill="#B71C1C"/>
+    <circle cx="380" cy="25" r="6" fill="#E53935"/>
+    <circle cx="465" cy="50" r="5" fill="#EF5350"/>
+    <circle cx="370" cy="35" r="6" fill="#E53935"/>
+    <circle cx="445" cy="20" r="6" fill="#C62828"/>
+    <circle cx="415" cy="15" r="5" fill="#E53935"/>
+    
+    <!-- Labeled genes -->
+    <circle cx="75" cy="35" r="8" fill="none" stroke="#0D47A1" stroke-width="2"/>
+    <text x="85" y="25" font-family="Arial, sans-serif" font-size="10" fill="#0D47A1" font-weight="bold">CDKN1A</text>
+    
+    <circle cx="430" cy="30" r="8" fill="none" stroke="#B71C1C" stroke-width="2"/>
+    <text x="440" y="20" font-family="Arial, sans-serif" font-size="10" fill="#B71C1C" font-weight="bold">MYC</text>
+    
+    <circle cx="70" cy="50" r="8" fill="none" stroke="#1565C0" stroke-width="2"/>
+    <text x="35" y="55" font-family="Arial, sans-serif" font-size="10" fill="#1565C0" font-weight="bold">TP53</text>
+    
+    <circle cx="445" cy="20" r="8" fill="none" stroke="#C62828" stroke-width="2"/>
+    <text x="455" y="35" font-family="Arial, sans-serif" font-size="10" fill="#C62828" font-weight="bold">BRCA1</text>
+    
+    <!-- Axis labels -->
+    <text x="250" y="415" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333" font-weight="bold">log2(Fold Change)</text>
+    <text x="-190" y="-15" transform="rotate(-90)" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333" font-weight="bold">-log10(P-value)</text>
+    
+    <!-- Tick labels X -->
+    <text x="50" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">-4</text>
+    <text x="150" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">-2</text>
+    <text x="250" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">0</text>
+    <text x="350" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">2</text>
+    <text x="450" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">4</text>
+    
+    <!-- Tick labels Y -->
+    <text x="-10" y="384" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#666">0</text>
+    <text x="-10" y="308" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#666">1</text>
+    <text x="-10" y="232" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#666">2</text>
+    <text x="-10" y="156" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#666">3</text>
+    <text x="-10" y="80" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#666">4</text>
+    <text x="-10" y="4" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#666">5</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(630, 100)">
+    <rect x="0" y="0" width="150" height="180" fill="white" stroke="#E0E0E0" stroke-width="1" rx="8" filter="url(#shadowVolc)"/>
+    <text x="75" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Legend</text>
+    
+    <circle cx="20" cy="50" r="6" fill="#E53935"/>
+    <text x="35" y="54" font-family="Arial, sans-serif" font-size="10" fill="#333">Upregulated</text>
+    
+    <circle cx="20" cy="75" r="6" fill="#1565C0"/>
+    <text x="35" y="79" font-family="Arial, sans-serif" font-size="10" fill="#333">Downregulated</text>
+    
+    <circle cx="20" cy="100" r="5" fill="#BDBDBD"/>
+    <text x="35" y="104" font-family="Arial, sans-serif" font-size="10" fill="#333">Not significant</text>
+    
+    <line x1="15" y1="125" x2="35" y2="125" stroke="#FB8C00" stroke-width="2" stroke-dasharray="4"/>
+    <text x="45" y="129" font-family="Arial, sans-serif" font-size="9" fill="#333">P threshold</text>
+    
+    <line x1="15" y1="150" x2="35" y2="150" stroke="#7B1FA2" stroke-width="2" stroke-dasharray="4"/>
+    <text x="45" y="154" font-family="Arial, sans-serif" font-size="9" fill="#333">FC threshold</text>
+  </g>
+  
+  <!-- Summary Stats -->
+  <g transform="translate(630, 300)">
+    <rect x="0" y="0" width="150" height="140" fill="white" stroke="#E0E0E0" stroke-width="1" rx="8" filter="url(#shadowVolc)"/>
+    <text x="75" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Summary</text>
+    
+    <text x="15" y="50" font-family="Arial, sans-serif" font-size="10" fill="#333">Total genes: 15,000</text>
+    <text x="15" y="70" font-family="Arial, sans-serif" font-size="10" fill="#E53935">↑ Upregulated: 523</text>
+    <text x="15" y="90" font-family="Arial, sans-serif" font-size="10" fill="#1565C0">↓ Downregulated: 412</text>
+    <text x="15" y="110" font-family="Arial, sans-serif" font-size="10" fill="#666">Not significant: 14,065</text>
+    
+    <text x="15" y="132" font-family="Arial, sans-serif" font-size="8" fill="#888">Cutoffs: |FC|≥2, padj&lt;0.05</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="400" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Volcano plots combine fold change (biological significance) with p-value (statistical significance)</text>
+</svg>
