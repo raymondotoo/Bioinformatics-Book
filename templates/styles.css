@@ -1,0 +1,430 @@
+/* 
+ * PDF Stylesheet for The Serial Bioinformatician
+ * Optimized for professional print output
+ */
+
+/* ===== Page Setup ===== */
+@page {
+    size: A4;
+    margin: 25mm 20mm 25mm 25mm;
+    
+    @top-left {
+        content: "The Serial Bioinformatician";
+        font-size: 9pt;
+        color: #666;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    
+    @top-right {
+        content: string(chapter-title);
+        font-size: 9pt;
+        color: #666;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    
+    @bottom-center {
+        content: counter(page);
+        font-size: 10pt;
+        color: #333;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+}
+
+@page :first {
+    margin: 0;
+    @top-left { content: none; }
+    @top-right { content: none; }
+    @bottom-center { content: none; }
+}
+
+@page chapter {
+    @top-right {
+        content: string(chapter-title);
+    }
+}
+
+/* ===== Typography ===== */
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #1a1a1a;
+    text-align: justify;
+    hyphens: auto;
+}
+
+/* ===== Headings ===== */
+h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 28pt;
+    font-weight: 700;
+    color: #1a237e;
+    margin-top: 0;
+    margin-bottom: 20pt;
+    padding-bottom: 10pt;
+    border-bottom: 3pt solid #3949ab;
+    string-set: chapter-title content();
+    page-break-before: always;
+    page-break-after: avoid;
+}
+
+h1:first-of-type {
+    page-break-before: avoid;
+}
+
+h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18pt;
+    font-weight: 600;
+    color: #303f9f;
+    margin-top: 24pt;
+    margin-bottom: 12pt;
+    padding-left: 10pt;
+    border-left: 4pt solid #5c6bc0;
+    page-break-after: avoid;
+}
+
+h3 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14pt;
+    font-weight: 600;
+    color: #3949ab;
+    margin-top: 18pt;
+    margin-bottom: 10pt;
+    page-break-after: avoid;
+}
+
+h4 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: 600;
+    color: #5c6bc0;
+    margin-top: 14pt;
+    margin-bottom: 8pt;
+}
+
+/* ===== Paragraphs & Text ===== */
+p {
+    margin-bottom: 10pt;
+    orphans: 3;
+    widows: 3;
+}
+
+strong {
+    font-weight: 700;
+    color: #1a237e;
+}
+
+em {
+    font-style: italic;
+}
+
+/* ===== Lists ===== */
+ul, ol {
+    margin-left: 20pt;
+    margin-bottom: 12pt;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 6pt;
+    page-break-inside: avoid;
+}
+
+ul li::marker {
+    color: #3949ab;
+}
+
+ol li::marker {
+    color: #3949ab;
+    font-weight: 600;
+}
+
+/* ===== Code Blocks ===== */
+pre {
+    background-color: #f5f5f5;
+    border: 1pt solid #e0e0e0;
+    border-left: 4pt solid #3949ab;
+    border-radius: 0 4pt 4pt 0;
+    padding: 12pt 15pt;
+    margin: 15pt 0;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 9pt;
+    line-height: 1.5;
+    overflow-x: auto;
+    page-break-inside: avoid;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 9.5pt;
+    background-color: #f0f0f0;
+    padding: 1pt 4pt;
+    border-radius: 2pt;
+    color: #c62828;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+/* ===== Tables ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15pt 0;
+    font-size: 10pt;
+    page-break-inside: avoid;
+}
+
+thead {
+    background-color: #3949ab;
+    color: white;
+}
+
+th {
+    padding: 10pt 12pt;
+    text-align: left;
+    font-weight: 600;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+td {
+    padding: 8pt 12pt;
+    border-bottom: 1pt solid #e0e0e0;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tbody tr:hover {
+    background-color: #e8eaf6;
+}
+
+/* ===== Images & Figures ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15pt auto;
+}
+
+figure {
+    margin: 20pt 0;
+    page-break-inside: avoid;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 9pt;
+    color: #666;
+    font-style: italic;
+    margin-top: 8pt;
+    text-align: center;
+}
+
+/* Center-aligned images */
+p[align="center"] {
+    text-align: center;
+}
+
+p[align="center"] img {
+    margin: 15pt auto;
+}
+
+/* ===== Blockquotes ===== */
+blockquote {
+    background-color: #e8eaf6;
+    border-left: 4pt solid #3949ab;
+    padding: 12pt 15pt;
+    margin: 15pt 0;
+    font-style: italic;
+    color: #37474f;
+    page-break-inside: avoid;
+}
+
+blockquote p {
+    margin-bottom: 0;
+}
+
+/* ===== Admonitions ===== */
+.admonition {
+    padding: 15pt;
+    margin: 15pt 0;
+    border-radius: 4pt;
+    page-break-inside: avoid;
+    border-left: 4pt solid;
+}
+
+.admonition-title {
+    font-weight: 700;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 8pt;
+    font-size: 11pt;
+}
+
+.admonition.note {
+    background-color: #e3f2fd;
+    border-left-color: #2196f3;
+}
+
+.admonition.tip {
+    background-color: #e8f5e9;
+    border-left-color: #4caf50;
+}
+
+.admonition.warning {
+    background-color: #fff3e0;
+    border-left-color: #ff9800;
+}
+
+.admonition.danger, .admonition.error {
+    background-color: #ffebee;
+    border-left-color: #f44336;
+}
+
+.admonition.info {
+    background-color: #e0f7fa;
+    border-left-color: #00bcd4;
+}
+
+/* ===== Links ===== */
+a {
+    color: #1565c0;
+    text-decoration: none;
+}
+
+a:after {
+    content: " [" attr(href) "]";
+    font-size: 8pt;
+    color: #666;
+}
+
+a[href^="#"]:after,
+a[href^="javascript"]:after {
+    content: "";
+}
+
+/* ===== Math ===== */
+.arithmatex {
+    font-size: 11pt;
+    margin: 10pt 0;
+}
+
+/* ===== Table of Contents ===== */
+.md-nav__list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.md-nav__item {
+    margin-bottom: 6pt;
+}
+
+.md-nav__link {
+    color: #333;
+    text-decoration: none;
+}
+
+/* ===== Part Headers ===== */
+.part-header {
+    page-break-before: always;
+    text-align: center;
+    padding-top: 40%;
+}
+
+.part-header h1 {
+    border-bottom: none;
+    color: #1a237e;
+    font-size: 32pt;
+}
+
+/* ===== Chapter Opening ===== */
+article > h1:first-child {
+    margin-top: 30mm;
+}
+
+/* ===== Definition Lists ===== */
+dl {
+    margin: 15pt 0;
+}
+
+dt {
+    font-weight: 700;
+    color: #1a237e;
+    margin-top: 10pt;
+}
+
+dd {
+    margin-left: 20pt;
+    margin-bottom: 8pt;
+}
+
+/* ===== Horizontal Rules ===== */
+hr {
+    border: none;
+    border-top: 1pt solid #e0e0e0;
+    margin: 20pt 0;
+}
+
+/* ===== Footnotes ===== */
+.footnote {
+    font-size: 9pt;
+    color: #666;
+}
+
+/* ===== Print-specific Optimizations ===== */
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+    
+    a {
+        page-break-inside: avoid;
+    }
+    
+    pre, blockquote, table, figure {
+        page-break-inside: avoid;
+    }
+    
+    h1, h2, h3, h4 {
+        page-break-after: avoid;
+    }
+}
+
+/* ===== SVG Illustrations ===== */
+img[src$=".svg"] {
+    max-width: 90%;
+    margin: 20pt auto;
+    page-break-inside: avoid;
+}
+
+/* ===== Glossary Styling ===== */
+.glossary-term {
+    font-weight: 700;
+    color: #1a237e;
+}
+
+.glossary-definition {
+    margin-left: 15pt;
+    margin-bottom: 10pt;
+}
+
+/* ===== Chapter Numbers ===== */
+h1::before {
+    display: block;
+    font-size: 12pt;
+    color: #5c6bc0;
+    font-weight: 400;
+    margin-bottom: 5pt;
+}

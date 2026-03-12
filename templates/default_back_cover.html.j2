@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            height: 297mm;
+            width: 210mm;
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #5c6bc0 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        /* DNA pattern background */
+        .dna-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40%;
+            height: 100%;
+            opacity: 0.08;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 400'%3E%3Cpath d='M20,0 Q80,50 20,100 Q-40,150 20,200 Q80,250 20,300 Q-40,350 20,400' fill='none' stroke='white' stroke-width='3'/%3E%3Cpath d='M80,0 Q20,50 80,100 Q140,150 80,200 Q20,250 80,300 Q140,350 80,400' fill='none' stroke='white' stroke-width='3'/%3E%3C/svg%3E");
+            background-repeat: repeat-y;
+            background-size: 80px auto;
+        }
+        
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 30mm 25mm;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-section {
+            flex: 1;
+        }
+        
+        .section-title {
+            font-size: 5mm;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1mm;
+            color: #ffab00;
+            margin-bottom: 5mm;
+        }
+        
+        .description {
+            font-size: 4mm;
+            line-height: 1.7;
+            max-width: 150mm;
+            opacity: 0.95;
+            margin-bottom: 15mm;
+        }
+        
+        .topics-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4mm;
+            margin-bottom: 20mm;
+        }
+        
+        .topic {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 2mm 4mm;
+            border-radius: 2mm;
+            font-size: 3mm;
+        }
+        
+        .highlights {
+            margin-bottom: 20mm;
+        }
+        
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 4mm;
+            font-size: 3.5mm;
+            line-height: 1.5;
+        }
+        
+        .highlight-icon {
+            margin-right: 3mm;
+            font-size: 4mm;
+        }
+        
+        .author-bio {
+            background: rgba(255,255,255,0.1);
+            border-radius: 4mm;
+            padding: 8mm;
+            margin-bottom: 15mm;
+        }
+        
+        .author-title {
+            font-size: 4mm;
+            font-weight: 600;
+            margin-bottom: 3mm;
+        }
+        
+        .author-text {
+            font-size: 3.2mm;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .bottom-section {
+            margin-top: auto;
+            text-align: center;
+            padding-top: 10mm;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .license {
+            font-size: 3mm;
+            opacity: 0.7;
+            margin-bottom: 3mm;
+        }
+        
+        .website {
+            font-size: 4mm;
+            color: #ffab00;
+            font-weight: 500;
+        }
+        
+        /* Bottom accent bar */
+        .bottom-accent {
+            height: 8mm;
+            background: linear-gradient(90deg, #ffab00, #ff6f00, #e65100);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="dna-pattern"></div>
+    
+    <div class="content">
+        <div class="about-section">
+            <div class="section-title">About This Book</div>
+            <p class="description">
+                The Serial Bioinformatician is your comprehensive guide to understanding 
+                and applying computational methods in biological research. From fundamental 
+                concepts of molecular biology to advanced multi-omics integration, this book 
+                provides the knowledge and practical skills needed to excel in bioinformatics.
+            </p>
+            
+            <div class="section-title">Topics Covered</div>
+            <div class="topics-grid">
+                <span class="topic">Central Dogma</span>
+                <span class="topic">Genomics</span>
+                <span class="topic">Transcriptomics</span>
+                <span class="topic">Proteomics</span>
+                <span class="topic">Metabolomics</span>
+                <span class="topic">Microbiomics</span>
+                <span class="topic">Python & R</span>
+                <span class="topic">NGS Analysis</span>
+                <span class="topic">Systems Biology</span>
+                <span class="topic">Machine Learning</span>
+                <span class="topic">Data Visualization</span>
+                <span class="topic">Clinical Applications</span>
+            </div>
+            
+            <div class="section-title">What You'll Learn</div>
+            <div class="highlights">
+                <div class="highlight-item">
+                    <span class="highlight-icon">✓</span>
+                    <span>Master essential command-line tools and programming for biological data analysis</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">✓</span>
+                    <span>Navigate major biological databases and retrieve relevant data efficiently</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">✓</span>
+                    <span>Perform sequence alignment, phylogenetic analysis, and genome assembly</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">✓</span>
+                    <span>Analyze high-throughput omics data including RNA-seq and mass spectrometry</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">✓</span>
+                    <span>Build interactive visualizations and reproducible analysis pipelines</span>
+                </div>
+            </div>
+            
+            <div class="author-bio">
+                <div class="author-title">About the Author</div>
+                <p class="author-text">
+                    Raymond Otoo, Ph.D., is a computational biologist with expertise in 
+                    multi-omics data integration and biomarker discovery. With a passion 
+                    for education, he has developed this comprehensive resource to bridge 
+                    the gap between biological concepts and computational analysis.
+                </p>
+            </div>
+        </div>
+        
+        <div class="bottom-section">
+            <p class="license">
+                This work is licensed under Creative Commons Attribution-ShareAlike 4.0 International
+            </p>
+            <p class="website">Open Access • Free Download</p>
+        </div>
+    </div>
+    
+    <div class="bottom-accent"></div>
+</body>
+</html>

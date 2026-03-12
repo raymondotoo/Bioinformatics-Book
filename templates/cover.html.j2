@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            height: 297mm;
+            width: 210mm;
+            background: linear-gradient(135deg, #1a237e 0%, #3949ab 50%, #5c6bc0 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* DNA Helix decorative pattern */
+        .dna-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 400'%3E%3Cpath d='M20,0 Q80,50 20,100 Q-40,150 20,200 Q80,250 20,300 Q-40,350 20,400' fill='none' stroke='white' stroke-width='3'/%3E%3Cpath d='M80,0 Q20,50 80,100 Q140,150 80,200 Q20,250 80,300 Q140,350 80,400' fill='none' stroke='white' stroke-width='3'/%3E%3Ccircle cx='50' cy='25' r='8' fill='white'/%3E%3Ccircle cx='50' cy='75' r='8' fill='white'/%3E%3Ccircle cx='50' cy='125' r='8' fill='white'/%3E%3Ccircle cx='50' cy='175' r='8' fill='white'/%3E%3Ccircle cx='50' cy='225' r='8' fill='white'/%3E%3Ccircle cx='50' cy='275' r='8' fill='white'/%3E%3Ccircle cx='50' cy='325' r='8' fill='white'/%3E%3Ccircle cx='50' cy='375' r='8' fill='white'/%3E%3C/svg%3E");
+            background-repeat: repeat-y;
+            background-size: 100px auto;
+        }
+        
+        /* Top accent bar */
+        .top-accent {
+            height: 8mm;
+            background: linear-gradient(90deg, #ffab00, #ff6f00, #e65100);
+            width: 100%;
+        }
+        
+        /* Main content area */
+        .cover-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 25mm 20mm;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Book icon/logo area */
+        .logo-area {
+            margin-bottom: 15mm;
+        }
+        
+        .logo-icon {
+            width: 25mm;
+            height: 25mm;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14mm;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        /* Title styling */
+        .title {
+            font-size: 16mm;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 8mm;
+            letter-spacing: -0.5mm;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .title .highlight {
+            color: #ffab00;
+        }
+        
+        /* Subtitle */
+        .subtitle {
+            font-size: 5mm;
+            font-weight: 300;
+            line-height: 1.5;
+            max-width: 140mm;
+            margin-bottom: 15mm;
+            opacity: 0.9;
+        }
+        
+        /* Edition badge */
+        .edition-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 2mm 5mm;
+            border-radius: 3mm;
+            font-size: 3.5mm;
+            font-weight: 500;
+            letter-spacing: 0.3mm;
+            margin-bottom: 10mm;
+        }
+        
+        /* Features list */
+        .features {
+            display: flex;
+            gap: 8mm;
+            margin-bottom: 15mm;
+        }
+        
+        .feature {
+            background: rgba(255,255,255,0.1);
+            padding: 3mm 5mm;
+            border-radius: 2mm;
+            font-size: 3mm;
+            border-left: 2px solid #ffab00;
+        }
+        
+        /* Author section */
+        .author-section {
+            margin-top: auto;
+            padding-top: 10mm;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .author-name {
+            font-size: 5mm;
+            font-weight: 600;
+            margin-bottom: 2mm;
+        }
+        
+        .author-title {
+            font-size: 3.5mm;
+            opacity: 0.8;
+        }
+        
+        /* Bottom section */
+        .bottom-section {
+            background: rgba(0,0,0,0.2);
+            padding: 8mm 20mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .version {
+            font-size: 3mm;
+            opacity: 0.7;
+        }
+        
+        .year {
+            font-size: 4mm;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="dna-pattern"></div>
+    <div class="top-accent"></div>
+    
+    <div class="cover-content">
+        <div class="logo-area">
+            <div class="logo-icon">🧬</div>
+        </div>
+        
+        <div class="edition-badge">COMPREHENSIVE EDITION</div>
+        
+        <h1 class="title">
+            The <span class="highlight">Serial</span><br>
+            Bioinformatician
+        </h1>
+        
+        <p class="subtitle">
+            A comprehensive guide from the central dogma to cutting-edge 
+            computational techniques in bioinformatics. Master genomics, 
+            transcriptomics, proteomics, and multi-omics integration.
+        </p>
+        
+        <div class="features">
+            <div class="feature">20 Chapters</div>
+            <div class="feature">Hands-on Code</div>
+            <div class="feature">Real Datasets</div>
+            <div class="feature">Best Practices</div>
+        </div>
+        
+        <div class="author-section">
+            <div class="author-name">Raymond Otoo, Ph.D.</div>
+            <div class="author-title">Computational Biologist & Educator</div>
+        </div>
+    </div>
+    
+    <div class="bottom-section">
+        <span class="version">First Edition • Open Access</span>
+        <span class="year">2026</span>
+    </div>
+</body>
+</html>
