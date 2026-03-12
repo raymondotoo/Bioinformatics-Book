@@ -23,8 +23,10 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Build MkDocs
+      - name: Build MkDocs with PDF
         run: mkdocs build
+        env:
+          ENABLE_PDF_EXPORT: 1
 
       - name: Check for broken internal links
         run: |
