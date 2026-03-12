@@ -1,5 +1,10 @@
 # Chapter 7: Statistics for Bioinformatics
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-19.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 7.1 The Language of Evidence
 
 Bioinformatics is data-driven. When we observe a difference—say, gene A is expressed more in tumor cells than normal cells—we need to know if this difference is real or just random noise. Statistics provides the framework to quantify this uncertainty.

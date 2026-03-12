@@ -1,5 +1,10 @@
 # Chapter 19: Interactive Visualization of WGCNA Results
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-18.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 19.1 Visualizing WGCNA Results
 
 While static plots are useful, WGCNA generates a wealth of data that is best explored interactively. In this chapter, we build a Shiny dashboard to explore the network analysis results from Chapter 18.

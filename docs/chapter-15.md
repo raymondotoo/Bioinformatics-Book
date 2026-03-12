@@ -1,5 +1,10 @@
 # Chapter 16: Systems Biology: Integrating the 'Omics'
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-15.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 16.1 Reductionism vs. Holism
 
 Traditional biology is **reductionist**: it breaks things down to study them (e.g., studying one gene at a time).

@@ -1,16 +1,166 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="260" viewBox="0 0 600 260">
-  <style>
-    .mRNA{fill:none;stroke:#f06292;stroke-width:6}
-    .rib{fill:#fff;stroke:#6d4c41;stroke-width:3}
-    .text{font:600 14px 'Helvetica Neue', Arial, sans-serif; fill:#2a2a2a}
-  </style>
-  <rect width="100%" height="100%" fill="#fff"/>
-  <path class="mRNA" d="M20 60 C120 40 240 40 360 60 C480 80 560 100 580 120" />
-  <g transform="translate(200,120)">
-    <ellipse class="rib" cx="120" cy="20" rx="120" ry="40" />
-    <text class="text" x="120" y="25" text-anchor="middle">Ribosome</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 500" width="950" height="500">
+  <defs>
+    <linearGradient id="ribosomeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B1FA2"/>
+      <stop offset="100%" style="stop-color:#9C27B0"/>
+    </linearGradient>
+    <linearGradient id="mrnaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2E7D32"/>
+      <stop offset="100%" style="stop-color:#4CAF50"/>
+    </linearGradient>
+    <linearGradient id="trnaGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#1565C0"/>
+      <stop offset="100%" style="stop-color:#42A5F5"/>
+    </linearGradient>
+    <linearGradient id="proteinGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E65100"/>
+      <stop offset="100%" style="stop-color:#FF9800"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#5C6BC0"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#FAFAFA" rx="12"/>
+  
+  <!-- Title -->
+  <text x="475" y="40" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="26" font-weight="700" fill="#4A148C">Translation: mRNA → Protein</text>
+  
+  <!-- mRNA Strand -->
+  <g transform="translate(80, 200)" filter="url(#shadow)">
+    <rect x="0" y="0" width="700" height="40" rx="6" fill="url(#mrnaGrad)"/>
+    <text x="350" y="27" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">mRNA (5' → 3')</text>
+    
+    <!-- Codons -->
+    <g transform="translate(50, 50)">
+      <rect x="0" y="0" width="70" height="35" rx="4" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+      <text x="35" y="23" text-anchor="middle" font-family="'Courier New'" font-size="16" font-weight="700" fill="#1B5E20">AUG</text>
+      <text x="35" y="52" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#558B2F">Start</text>
+      
+      <rect x="90" y="0" width="70" height="35" rx="4" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+      <text x="125" y="23" text-anchor="middle" font-family="'Courier New'" font-size="16" font-weight="700" fill="#1B5E20">GCU</text>
+      <text x="125" y="52" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#558B2F">Ala</text>
+      
+      <rect x="180" y="0" width="70" height="35" rx="4" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+      <text x="215" y="23" text-anchor="middle" font-family="'Courier New'" font-size="16" font-weight="700" fill="#1B5E20">UUC</text>
+      <text x="215" y="52" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#558B2F">Phe</text>
+      
+      <rect x="270" y="0" width="70" height="35" rx="4" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+      <text x="305" y="23" text-anchor="middle" font-family="'Courier New'" font-size="16" font-weight="700" fill="#1B5E20">CAG</text>
+      <text x="305" y="52" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#558B2F">Gln</text>
+      
+      <rect x="360" y="0" width="70" height="35" rx="4" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+      <text x="395" y="23" text-anchor="middle" font-family="'Courier New'" font-size="16" font-weight="700" fill="#1B5E20">GAA</text>
+      <text x="395" y="52" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#558B2F">Glu</text>
+      
+      <rect x="450" y="0" width="70" height="35" rx="4" fill="#FFEBEE" stroke="#C62828" stroke-width="2"/>
+      <text x="485" y="23" text-anchor="middle" font-family="'Courier New'" font-size="16" font-weight="700" fill="#B71C1C">UAA</text>
+      <text x="485" y="52" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#C62828">Stop</text>
+    </g>
   </g>
-  <text class="text" x="20" y="50">mRNA</text>
-  <text class="text" x="20" y="200">Translation: codons → amino acids → protein</text>
+  
+  <!-- Ribosome -->
+  <g transform="translate(280, 90)" filter="url(#shadow)">
+    <!-- Large subunit -->
+    <ellipse cx="120" cy="70" rx="100" ry="55" fill="url(#ribosomeGrad)" opacity="0.9"/>
+    <text x="120" y="65" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">60S</text>
+    <text x="120" y="82" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#E1BEE7">Large Subunit</text>
+    
+    <!-- Small subunit -->
+    <ellipse cx="120" cy="145" rx="80" ry="35" fill="#9C27B0"/>
+    <text x="120" y="142" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" font-weight="600" fill="white">40S</text>
+    <text x="120" y="157" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="9" fill="#E1BEE7">Small Subunit</text>
+    
+    <!-- A P E sites -->
+    <rect x="50" y="100" width="35" height="25" rx="4" fill="#CE93D8" stroke="#7B1FA2" stroke-width="2"/>
+    <text x="67" y="117" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="700" fill="#4A148C">E</text>
+    
+    <rect x="95" y="100" width="35" height="25" rx="4" fill="#BA68C8" stroke="#7B1FA2" stroke-width="2"/>
+    <text x="112" y="117" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="700" fill="#4A148C">P</text>
+    
+    <rect x="140" y="100" width="35" height="25" rx="4" fill="#AB47BC" stroke="#4A148C" stroke-width="2"/>
+    <text x="157" y="117" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="700" fill="white">A</text>
+  </g>
+  
+  <!-- tRNA in P site -->
+  <g transform="translate(380, 50)" filter="url(#shadow)">
+    <path d="M0,100 L0,50 Q0,20 20,10 L30,5 Q40,0 50,5 L60,10 Q80,20 80,50 L80,100" fill="url(#trnaGrad)" stroke="#0D47A1" stroke-width="2"/>
+    <text x="40" y="70" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" font-weight="600" fill="white">tRNA</text>
+    <!-- Anticodon -->
+    <rect x="15" y="105" width="50" height="22" rx="3" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
+    <text x="40" y="120" text-anchor="middle" font-family="'Courier New'" font-size="11" font-weight="700" fill="#0D47A1">UAC</text>
+    <!-- Amino acid -->
+    <circle cx="40" cy="-5" r="15" fill="#FF9800" stroke="#E65100" stroke-width="2"/>
+    <text x="40" y="0" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="9" font-weight="600" fill="white">Met</text>
+  </g>
+  
+  <!-- Growing Polypeptide Chain -->
+  <g transform="translate(30, 70)" filter="url(#shadow)">
+    <rect x="0" y="0" width="250" height="35" rx="8" fill="url(#proteinGrad)"/>
+    <text x="125" y="23" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" font-weight="600" fill="white">Growing Polypeptide Chain</text>
+    <!-- Amino acid beads -->
+    <circle cx="30" cy="50" r="12" fill="#FFCC80" stroke="#E65100" stroke-width="2"/>
+    <text x="30" y="54" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="8" fill="#E65100">M</text>
+    <circle cx="60" cy="50" r="12" fill="#FFE0B2" stroke="#F57C00" stroke-width="2"/>
+    <text x="60" y="54" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="8" fill="#E65100">A</text>
+    <circle cx="90" cy="50" r="12" fill="#FFCC80" stroke="#E65100" stroke-width="2"/>
+    <text x="90" y="54" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="8" fill="#E65100">F</text>
+    <circle cx="120" cy="50" r="12" fill="#FFE0B2" stroke="#F57C00" stroke-width="2"/>
+    <text x="120" y="54" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="8" fill="#E65100">Q</text>
+    <line x1="42" y1="50" x2="48" y2="50" stroke="#BF360C" stroke-width="3"/>
+    <line x1="72" y1="50" x2="78" y2="50" stroke="#BF360C" stroke-width="3"/>
+    <line x1="102" y1="50" x2="108" y2="50" stroke="#BF360C" stroke-width="3"/>
+  </g>
+  
+  <!-- Process Labels -->
+  <g transform="translate(650, 80)">
+    <rect width="260" height="300" rx="10" fill="white" stroke="#E0E0E0" filter="url(#shadow)"/>
+    <text x="130" y="30" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="#4A148C">Translation Steps</text>
+    <line x1="20" y1="45" x2="240" y2="45" stroke="#E0E0E0"/>
+    
+    <g transform="translate(25, 65)">
+      <circle cx="12" cy="0" r="12" fill="#7B1FA2"/>
+      <text x="12" y="5" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="white">1</text>
+      <text x="35" y="5" font-family="'Segoe UI', Arial" font-size="12" font-weight="600" fill="#37474F">Initiation</text>
+      <text x="35" y="22" font-family="'Segoe UI', Arial" font-size="10" fill="#607D8B">AUG + Met-tRNA</text>
+      
+      <circle cx="12" cy="55" r="12" fill="#9C27B0"/>
+      <text x="12" y="60" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="white">2</text>
+      <text x="35" y="60" font-family="'Segoe UI', Arial" font-size="12" font-weight="600" fill="#37474F">Elongation</text>
+      <text x="35" y="77" font-family="'Segoe UI', Arial" font-size="10" fill="#607D8B">tRNA binding, peptide bond</text>
+      
+      <circle cx="12" cy="110" r="12" fill="#AB47BC"/>
+      <text x="12" y="115" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="white">3</text>
+      <text x="35" y="115" font-family="'Segoe UI', Arial" font-size="12" font-weight="600" fill="#37474F">Translocation</text>
+      <text x="35" y="132" font-family="'Segoe UI', Arial" font-size="10" fill="#607D8B">Ribosome moves 3 nt</text>
+      
+      <circle cx="12" cy="165" r="12" fill="#CE93D8"/>
+      <text x="12" y="170" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="#4A148C">4</text>
+      <text x="35" y="170" font-family="'Segoe UI', Arial" font-size="12" font-weight="600" fill="#37474F">Termination</text>
+      <text x="35" y="187" font-family="'Segoe UI', Arial" font-size="10" fill="#607D8B">Stop codon (UAA/UAG/UGA)</text>
+    </g>
+    
+    <rect x="20" y="220" width="220" height="60" rx="6" fill="#F3E5F5"/>
+    <text x="130" y="245" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" fill="#4A148C">A site: Aminoacyl-tRNA entry</text>
+    <text x="130" y="262" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" fill="#4A148C">P site: Peptidyl-tRNA</text>
+    <text x="130" y="279" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" fill="#4A148C">E site: Exit site</text>
+  </g>
+  
+  <!-- Footer Legend -->
+  <g transform="translate(50, 460)">
+    <rect width="850" height="30" rx="6" fill="#ECEFF1"/>
+    <rect x="20" y="8" width="14" height="14" rx="2" fill="#2E7D32"/>
+    <text x="40" y="19" font-family="'Segoe UI', Arial" font-size="10" fill="#37474F">mRNA</text>
+    <rect x="100" y="8" width="14" height="14" rx="2" fill="#7B1FA2"/>
+    <text x="120" y="19" font-family="'Segoe UI', Arial" font-size="10" fill="#37474F">Ribosome</text>
+    <rect x="200" y="8" width="14" height="14" rx="2" fill="#1565C0"/>
+    <text x="220" y="19" font-family="'Segoe UI', Arial" font-size="10" fill="#37474F">tRNA</text>
+    <rect x="280" y="8" width="14" height="14" rx="2" fill="#FF9800"/>
+    <text x="300" y="19" font-family="'Segoe UI', Arial" font-size="10" fill="#37474F">Amino Acid</text>
+    <text x="600" y="19" font-family="'Segoe UI', Arial" font-size="10" font-style="italic" fill="#607D8B">Location: Cytoplasm (eukaryotes) | Rate: ~6 amino acids/second</text>
+  </g>
 </svg>

@@ -1,5 +1,10 @@
 # Chapter 1: Introduction to the Central Dogma
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-01.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 Welcome to the very beginning of our journey into bioinformatics! Before we can run complex analyses or write scripts, we must first understand the fundamental story of life that is written inside every living cell. This story is called the **Central Dogma of Molecular Biology**.
 
 Think of it as the core process, the assembly line, that turns the information stored in a cell's library into the functional machines that do all the work.

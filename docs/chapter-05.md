@@ -1,5 +1,10 @@
 # Chapter 5: Programming for Bioinformatics with Python
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-05.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 5.1 Why Python?
 
 If you ask a room full of bioinformaticians what programming language they use, the vast majority will say **Python**.

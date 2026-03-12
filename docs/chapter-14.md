@@ -1,5 +1,10 @@
 # Chapter 15: Structural Bioinformatics
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-14.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 15.1 Structure Determines Function
 
 In Chapter 3, we learned that proteins fold into complex 3D shapes. **Structural Bioinformatics** is the subfield dedicated to analyzing, predicting, and simulating these 3D structures.

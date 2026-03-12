@@ -1,5 +1,10 @@
 # Chapter 12: Transcriptomics: Analyzing Gene Expression (RNA-Seq)
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-11.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 12.1 What is the Transcriptome?
 
 The genome is the cell's complete set of DNA—a static blueprint. However, not all genes in the blueprint are active at the same time. A brain cell and a liver cell have the same DNA, but they use different sets of genes to perform their specialized functions.

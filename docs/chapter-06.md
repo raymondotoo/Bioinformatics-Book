@@ -1,5 +1,10 @@
 # Chapter 6: Navigating Biological Databases
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-06.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 6.1 The Data Deluge
 
 Biology has transformed into a data-rich science. Experiments now generate terabytes of data daily. This data is stored in massive, centralized repositories. As a bioinformatician, knowing how to navigate these databases is as important as knowing how to code.

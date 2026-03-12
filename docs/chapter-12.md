@@ -1,5 +1,10 @@
 # Chapter 13: Proteomics and Metabolomics
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-12.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 13.1 Beyond the Genome
 
 Genomics tells us what *could* happen (the blueprint). Transcriptomics tells us what *appears* to be happening (the instructions). But **Proteomics** and **Metabolomics** tell us what is *actually* happening.

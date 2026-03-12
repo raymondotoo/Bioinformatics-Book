@@ -1,5 +1,10 @@
 # Chapter 4: Introduction to the Command Line for Biologists
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-04.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 4.1 Breaking the GUI Habit
 
 <p align="center">

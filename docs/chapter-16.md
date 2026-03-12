@@ -1,5 +1,10 @@
 # Chapter 17: Bioinformatics in Medicine
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-16.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 17.1 From Bench to Bedside
 
 We have reached the final chapter. How does all this code and biology actually help people?

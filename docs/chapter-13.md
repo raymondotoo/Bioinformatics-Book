@@ -1,5 +1,10 @@
 # Chapter 14: Microbiomics: Analyzing Microbial Communities
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-13.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 14.1 We Are Not Alone
 
 You are more bacteria than human. The **Microbiome** refers to the trillions of microorganisms living in and on us (and in the environment). These communities affect digestion, immunity, and even mental health.

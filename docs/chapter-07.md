@@ -1,5 +1,10 @@
 # Chapter 8: Sequence Alignment
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-07.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 8.1 The Most Fundamental Algorithm
 
 If you have two DNA sequences, the first question you usually ask is: "Are they similar?"

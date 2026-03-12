@@ -1,5 +1,10 @@
 # Chapter 3: Proteins - The Functional Units
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-03.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 We have explored the blueprint (DNA) and the messenger (RNA). Now, we arrive at the machines that actually do the work: **Proteins**.
 
 If DNA is the architectural drawing of a building, proteins are the bricks, the cement, the windows, and the construction workers themselves. In this chapter, we will understand how a simple string of letters becomes a complex, functional 3D machine.

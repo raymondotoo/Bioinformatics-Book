@@ -1,5 +1,10 @@
 # Chapter 11: Introduction to Next-Generation Sequencing (NGS)
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-10.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 11.1 The Sequencing Revolution
 
 For decades, **Sanger sequencing** was the gold standard. It was reliable but slow and expensive, sequencing one small piece of DNA at a time. The Human Genome Project took over 10 years and cost billions of dollars using this method.

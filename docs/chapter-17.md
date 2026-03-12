@@ -1,5 +1,10 @@
 # Chapter 18: Integrated Clinical Proteomics: The Full Analytical Pipeline
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-17.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 18.1 Overview
 
 This chapter details the comprehensive computational workflow used to identify proteomic signatures of Alzheimer's Disease (AD) by integrating data from the **ADNI** and **ADRC** cohorts. The analysis proceeds sequentially from raw data cleaning to systems-level network analysis (WGCNA), functional enrichment, and machine learning.

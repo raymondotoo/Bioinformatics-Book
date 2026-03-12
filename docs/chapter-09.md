@@ -1,5 +1,10 @@
 # Chapter 10: Genome Assembly and Annotation
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-09.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 10.1 The Jigsaw Puzzle
 
 <p align="center">

@@ -1,5 +1,10 @@
 # Chapter 20: Multiomics Data Integration
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-20.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 ## 20.1 The Power of Integration
 
 Biological systems are complex and multilayered. A single "omic" layer—whether it's the genome, transcriptome, proteome, or metabolome—provides only a partial snapshot of the organism's state. **Multiomics data integration** combines these distinct layers to construct a holistic view of biological processes, revealing interactions and regulatory mechanisms that would be invisible in isolation.

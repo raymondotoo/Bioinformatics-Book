@@ -1,5 +1,10 @@
 # Chapter 2: The Genome and its Variations
 
+
+<div class="download-slides">
+📥 <a href="../slides/chapter-02.pptx" download>Download Lecture Slides (PPTX)</a>
+</div>
+
 In Chapter 1, we learned about the central dogma: the flow of information from DNA to Protein. We treated DNA as a perfect, static blueprint. But in reality, the "cookbook" of life is dynamic, vast, and has variations between copies.
 
 In this chapter, we will zoom out from a single gene to the entire **genome** and explore how it's organized and how it varies between individuals.

@@ -5,3 +5,30 @@
   /* Increase code block font size */
   --md-code-font-size: 1.05rem;
 }
+
+/* Download slides button styling */
+.download-slides {
+  background: linear-gradient(135deg, #1565C0 0%, #5C6BC0 100%);
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 1rem 0 2rem 0;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(21, 101, 192, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-slides:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 101, 192, 0.4);
+}
+
+.download-slides a {
+  color: white !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.download-slides a:hover {
+  text-decoration: none;
+}
