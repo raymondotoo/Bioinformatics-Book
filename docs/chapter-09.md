@@ -10,7 +10,7 @@
 <p align="center">
 </p>
 <p align="center">
-  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Genome Assembly">
+  <img src="../assets/illustrations/genome-assembly.svg" alt="Illustration of Genome Assembly">
 </p>
 </p>
 

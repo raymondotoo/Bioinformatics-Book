@@ -10,7 +10,7 @@
 "Nothing in biology makes sense except in the light of evolution." - Theodosius Dobzhansky.
 
 <p align="center">
-  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of a Phylogenetic Tree">
+  <img src="../assets/illustrations/phylogenetic-tree.svg" alt="Illustration of a Phylogenetic Tree">
 </p>
 
 For an interactive view of tree manipulation and collapsing, open the interactive demo: [Interactive Phylogenetic Tree](../interactive/phylo.html)

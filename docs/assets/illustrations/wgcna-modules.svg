@@ -1,0 +1,298 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="wgcnaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8E24AA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#AB47BC;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowWgcna" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#8E24AA">WGCNA: Weighted Gene Co-expression Network Analysis</text>
+  
+  <!-- Workflow Overview -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="740" height="80" fill="white" stroke="url(#wgcnaGrad)" stroke-width="2" rx="10" filter="url(#shadowWgcna)"/>
+    
+    <!-- Step 1: Expression Matrix -->
+    <g transform="translate(20, 12)">
+      <rect x="0" y="0" width="100" height="55" fill="#E3F2FD" stroke="#1565C0" rx="5"/>
+      <text x="50" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#1565C0">Expression</text>
+      <text x="50" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#1565C0">Matrix</text>
+      <!-- Mini matrix -->
+      <g transform="translate(25, 33)">
+        <rect x="0" y="0" width="8" height="6" fill="#90CAF9"/>
+        <rect x="10" y="0" width="8" height="6" fill="#64B5F6"/>
+        <rect x="20" y="0" width="8" height="6" fill="#1E88E5"/>
+        <rect x="30" y="0" width="8" height="6" fill="#42A5F5"/>
+        <rect x="0" y="8" width="8" height="6" fill="#64B5F6"/>
+        <rect x="10" y="8" width="8" height="6" fill="#1E88E5"/>
+        <rect x="20" y="8" width="8" height="6" fill="#90CAF9"/>
+        <rect x="30" y="8" width="8" height="6" fill="#64B5F6"/>
+      </g>
+    </g>
+    <text x="132" y="42" font-family="Arial, sans-serif" font-size="16" fill="#8E24AA">→</text>
+    
+    <!-- Step 2: Similarity -->
+    <g transform="translate(150, 12)">
+      <rect x="0" y="0" width="100" height="55" fill="#F3E5F5" stroke="#8E24AA" rx="5"/>
+      <text x="50" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#8E24AA">Similarity</text>
+      <text x="50" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#8E24AA">|cor(i,j)|^β</text>
+      <text x="50" y="47" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Soft threshold</text>
+    </g>
+    <text x="262" y="42" font-family="Arial, sans-serif" font-size="16" fill="#8E24AA">→</text>
+    
+    <!-- Step 3: TOM -->
+    <g transform="translate(280, 12)">
+      <rect x="0" y="0" width="100" height="55" fill="#E8F5E9" stroke="#43A047" rx="5"/>
+      <text x="50" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#43A047">TOM</text>
+      <text x="50" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Topological</text>
+      <text x="50" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Overlap</text>
+      <text x="50" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Matrix</text>
+    </g>
+    <text x="392" y="42" font-family="Arial, sans-serif" font-size="16" fill="#8E24AA">→</text>
+    
+    <!-- Step 4: Clustering -->
+    <g transform="translate(410, 12)">
+      <rect x="0" y="0" width="100" height="55" fill="#FFF3E0" stroke="#FB8C00" rx="5"/>
+      <text x="50" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FB8C00">Hierarchical</text>
+      <text x="50" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FB8C00">Clustering</text>
+      <text x="50" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Dynamic tree cut</text>
+    </g>
+    <text x="522" y="42" font-family="Arial, sans-serif" font-size="16" fill="#8E24AA">→</text>
+    
+    <!-- Step 5: Modules -->
+    <g transform="translate(540, 12)">
+      <rect x="0" y="0" width="100" height="55" fill="#FFEBEE" stroke="#E53935" rx="5"/>
+      <text x="50" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#E53935">Gene</text>
+      <text x="50" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#E53935">Modules</text>
+      <!-- Module colors -->
+      <g transform="translate(15, 36)">
+        <circle cx="8" cy="8" r="7" fill="#2196F3"/>
+        <circle cx="28" cy="8" r="7" fill="#4CAF50"/>
+        <circle cx="48" cy="8" r="7" fill="#FF9800"/>
+        <circle cx="68" cy="8" r="7" fill="#9C27B0"/>
+      </g>
+    </g>
+    <text x="652" y="42" font-family="Arial, sans-serif" font-size="16" fill="#8E24AA">→</text>
+    
+    <!-- Step 6: Module-Trait -->
+    <g transform="translate(670, 12)">
+      <rect x="0" y="0" width="55" height="55" fill="#E1F5FE" stroke="#0288D1" rx="5"/>
+      <text x="28" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#0288D1">Trait</text>
+      <text x="28" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#0288D1">Corr</text>
+      <text x="28" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#0288D1">★</text>
+    </g>
+  </g>
+  
+  <!-- Module-Trait Heatmap -->
+  <g transform="translate(30, 150)">
+    <rect x="0" y="0" width="300" height="200" fill="white" stroke="#0288D1" stroke-width="2" rx="10" filter="url(#shadowWgcna)"/>
+    <text x="150" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0288D1">Module-Trait Relationships</text>
+    
+    <!-- Heatmap -->
+    <g transform="translate(70, 35)">
+      <!-- Trait labels -->
+      <text x="35" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">Disease</text>
+      <text x="75" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">Age</text>
+      <text x="115" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">Treatment</text>
+      <text x="155" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">Gender</text>
+      <text x="195" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">Stage</text>
+      
+      <!-- Module labels -->
+      <text x="-5" y="22" text-anchor="end" font-family="Arial, sans-serif" font-size="8" fill="#2196F3" font-weight="bold">Blue</text>
+      <text x="-5" y="47" text-anchor="end" font-family="Arial, sans-serif" font-size="8" fill="#4CAF50" font-weight="bold">Green</text>
+      <text x="-5" y="72" text-anchor="end" font-family="Arial, sans-serif" font-size="8" fill="#FF9800" font-weight="bold">Orange</text>
+      <text x="-5" y="97" text-anchor="end" font-family="Arial, sans-serif" font-size="8" fill="#9C27B0" font-weight="bold">Purple</text>
+      <text x="-5" y="122" text-anchor="end" font-family="Arial, sans-serif" font-size="8" fill="#F44336" font-weight="bold">Red</text>
+      <text x="-5" y="147" text-anchor="end" font-family="Arial, sans-serif" font-size="8" fill="#607D8B" font-weight="bold">Grey</text>
+      
+      <!-- Heatmap cells -->
+      <!-- Row 1: Blue module -->
+      <rect x="15" y="10" width="35" height="22" fill="#E53935"/>
+      <text x="32" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">0.85***</text>
+      <rect x="55" y="10" width="35" height="22" fill="#FFCDD2"/>
+      <text x="72" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.12</text>
+      <rect x="95" y="10" width="35" height="22" fill="#C8E6C9"/>
+      <text x="112" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">-0.25*</text>
+      <rect x="135" y="10" width="35" height="22" fill="#FFF9C4"/>
+      <text x="152" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.03</text>
+      <rect x="175" y="10" width="35" height="22" fill="#EF9A9A"/>
+      <text x="192" y="23" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.65**</text>
+      
+      <!-- Row 2: Green module -->
+      <rect x="15" y="35" width="35" height="22" fill="#C8E6C9"/>
+      <text x="32" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">-0.32*</text>
+      <rect x="55" y="35" width="35" height="22" fill="#E53935"/>
+      <text x="72" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">0.78***</text>
+      <rect x="95" y="35" width="35" height="22" fill="#FFEBEE"/>
+      <text x="112" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.08</text>
+      <rect x="135" y="35" width="35" height="22" fill="#FFF9C4"/>
+      <text x="152" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">-0.05</text>
+      <rect x="175" y="35" width="35" height="22" fill="#FFCDD2"/>
+      <text x="192" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.15</text>
+      
+      <!-- Row 3: Orange -->
+      <rect x="15" y="60" width="35" height="22" fill="#FFCDD2"/>
+      <text x="32" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.21</text>
+      <rect x="55" y="60" width="35" height="22" fill="#C8E6C9"/>
+      <text x="72" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">-0.18</text>
+      <rect x="95" y="60" width="35" height="22" fill="#4CAF50"/>
+      <text x="112" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">-0.72***</text>
+      <rect x="135" y="60" width="35" height="22" fill="#FFF9C4"/>
+      <text x="152" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.02</text>
+      <rect x="175" y="60" width="35" height="22" fill="#FFF9C4"/>
+      <text x="192" y="73" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">-0.08</text>
+      
+      <!-- Row 4: Purple -->
+      <rect x="15" y="85" width="35" height="22" fill="#FFEBEE"/>
+      <text x="32" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.05</text>
+      <rect x="55" y="85" width="35" height="22" fill="#FFF9C4"/>
+      <text x="72" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.01</text>
+      <rect x="95" y="85" width="35" height="22" fill="#FFCDD2"/>
+      <text x="112" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.28</text>
+      <rect x="135" y="85" width="35" height="22" fill="#E53935"/>
+      <text x="152" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">0.91***</text>
+      <rect x="175" y="85" width="35" height="22" fill="#FFF9C4"/>
+      <text x="192" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.06</text>
+      
+      <!-- Row 5: Red -->
+      <rect x="15" y="110" width="35" height="22" fill="#EF9A9A"/>
+      <text x="32" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.55**</text>
+      <rect x="55" y="110" width="35" height="22" fill="#FFF9C4"/>
+      <text x="72" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">-0.02</text>
+      <rect x="95" y="110" width="35" height="22" fill="#FFCDD2"/>
+      <text x="112" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.18</text>
+      <rect x="135" y="110" width="35" height="22" fill="#FFF9C4"/>
+      <text x="152" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">-0.04</text>
+      <rect x="175" y="110" width="35" height="22" fill="#EF5350"/>
+      <text x="192" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">0.72**</text>
+      
+      <!-- Row 6: Grey -->
+      <rect x="15" y="135" width="35" height="22" fill="#FFF9C4"/>
+      <text x="32" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.02</text>
+      <rect x="55" y="135" width="35" height="22" fill="#FFF9C4"/>
+      <text x="72" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.04</text>
+      <rect x="95" y="135" width="35" height="22" fill="#FFEBEE"/>
+      <text x="112" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.01</text>
+      <rect x="135" y="135" width="35" height="22" fill="#FFF9C4"/>
+      <text x="152" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">-0.03</text>
+      <rect x="175" y="135" width="35" height="22" fill="#FFEBEE"/>
+      <text x="192" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#333">0.05</text>
+    </g>
+  </g>
+  
+  <!-- Module Network -->
+  <g transform="translate(350, 150)">
+    <rect x="0" y="0" width="200" height="200" fill="white" stroke="#9C27B0" stroke-width="2" rx="10" filter="url(#shadowWgcna)"/>
+    <text x="100" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9C27B0">Module Network</text>
+    
+    <!-- Network visualization -->
+    <g transform="translate(100, 115)">
+      <!-- Edges -->
+      <line x1="0" y1="-50" x2="-40" y2="-10" stroke="#E0E0E0" stroke-width="2"/>
+      <line x1="0" y1="-50" x2="40" y2="-10" stroke="#E0E0E0" stroke-width="2"/>
+      <line x1="0" y1="-50" x2="0" y2="40" stroke="#E0E0E0" stroke-width="1"/>
+      <line x1="-40" y1="-10" x2="-60" y2="35" stroke="#E0E0E0" stroke-width="1"/>
+      <line x1="-40" y1="-10" x2="0" y2="40" stroke="#E0E0E0" stroke-width="1"/>
+      <line x1="40" y1="-10" x2="60" y2="35" stroke="#E0E0E0" stroke-width="1"/>
+      <line x1="40" y1="-10" x2="0" y2="40" stroke="#E0E0E0" stroke-width="1"/>
+      
+      <!-- Hub gene (center-top) -->
+      <circle cx="0" cy="-50" r="18" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
+      <text x="0" y="-47" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white" font-weight="bold">Hub</text>
+      <text x="0" y="-38" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="white">Gene</text>
+      
+      <!-- Connected genes -->
+      <circle cx="-40" cy="-10" r="14" fill="#64B5F6"/>
+      <circle cx="40" cy="-10" r="14" fill="#64B5F6"/>
+      <circle cx="-60" cy="35" r="10" fill="#90CAF9"/>
+      <circle cx="0" cy="40" r="12" fill="#90CAF9"/>
+      <circle cx="60" cy="35" r="10" fill="#90CAF9"/>
+    </g>
+    
+    <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Node size ∝ connectivity</text>
+  </g>
+  
+  <!-- Eigengene -->
+  <g transform="translate(570, 150)">
+    <rect x="0" y="0" width="200" height="200" fill="white" stroke="#43A047" stroke-width="2" rx="10" filter="url(#shadowWgcna)"/>
+    <text x="100" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#43A047">Module Eigengene</text>
+    
+    <!-- Eigengene plot -->
+    <g transform="translate(25, 45)">
+      <rect x="0" y="0" width="150" height="100" fill="#F8F9FA" stroke="#E0E0E0"/>
+      
+      <!-- Axes -->
+      <line x1="0" y1="50" x2="150" y2="50" stroke="#CCC" stroke-width="0.5" stroke-dasharray="2"/>
+      
+      <!-- Eigengene expression line -->
+      <polyline points="10,70 25,45 40,65 55,35 70,30 85,40 100,25 115,20 130,35 145,55" 
+                fill="none" stroke="#2196F3" stroke-width="2.5"/>
+      
+      <!-- Sample points -->
+      <circle cx="10" cy="70" r="3" fill="#2196F3"/>
+      <circle cx="25" cy="45" r="3" fill="#2196F3"/>
+      <circle cx="40" cy="65" r="3" fill="#2196F3"/>
+      <circle cx="55" cy="35" r="3" fill="#2196F3"/>
+      <circle cx="70" cy="30" r="3" fill="#2196F3"/>
+      <circle cx="85" cy="40" r="3" fill="#2196F3"/>
+      <circle cx="100" cy="25" r="3" fill="#2196F3"/>
+      <circle cx="115" cy="20" r="3" fill="#2196F3"/>
+      <circle cx="130" cy="35" r="3" fill="#2196F3"/>
+      <circle cx="145" cy="55" r="3" fill="#2196F3"/>
+      
+      <text x="75" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Samples</text>
+      <text x="-10" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666" transform="rotate(-90, -10, 55)">ME value</text>
+    </g>
+    
+    <text x="100" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">1st PC of module</text>
+    <text x="100" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">expression profile</text>
+  </g>
+  
+  <!-- Key Concepts -->
+  <g transform="translate(30, 370)">
+    <rect x="0" y="0" width="350" height="115" fill="white" stroke="#FF7043" stroke-width="2" rx="10" filter="url(#shadowWgcna)"/>
+    <rect x="0" y="0" width="350" height="25" fill="#FF7043" rx="10"/>
+    <rect x="0" y="17" width="350" height="8" fill="#FF7043"/>
+    <text x="175" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Key Concepts</text>
+    
+    <g transform="translate(15, 35)">
+      <text x="0" y="12" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#333">Soft Threshold (β):</text>
+      <text x="110" y="12" font-family="Arial, sans-serif" font-size="9" fill="#666">Power for scale-free topology</text>
+      
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#333">TOM:</text>
+      <text x="35" y="30" font-family="Arial, sans-serif" font-size="9" fill="#666">Captures shared neighbors</text>
+      
+      <text x="0" y="48" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#333">Module Membership (kME):</text>
+      <text x="140" y="48" font-family="Arial, sans-serif" font-size="9" fill="#666">Gene-module correlation</text>
+      
+      <text x="0" y="66" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#333">Hub Genes:</text>
+      <text x="67" y="66" font-family="Arial, sans-serif" font-size="9" fill="#666">Highly connected, high kME</text>
+      
+      <text x="0" y="84" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#333">Gene Significance:</text>
+      <text x="100" y="84" font-family="Arial, sans-serif" font-size="9" fill="#666">Gene-trait correlation</text>
+    </g>
+  </g>
+  
+  <!-- Applications -->
+  <g transform="translate(400, 370)">
+    <rect x="0" y="0" width="370" height="115" fill="white" stroke="#5C6BC0" stroke-width="2" rx="10" filter="url(#shadowWgcna)"/>
+    <rect x="0" y="0" width="370" height="25" fill="#5C6BC0" rx="10"/>
+    <rect x="0" y="17" width="370" height="8" fill="#5C6BC0"/>
+    <text x="185" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Applications & Outputs</text>
+    
+    <g transform="translate(15, 35)">
+      <text x="0" y="12" font-family="Arial, sans-serif" font-size="9" fill="#333">🔬 Identify disease-associated gene modules</text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="9" fill="#333">🎯 Discover hub genes as biomarker candidates</text>
+      <text x="0" y="48" font-family="Arial, sans-serif" font-size="9" fill="#333">🔗 Reveal pathway/functional relationships</text>
+      <text x="0" y="66" font-family="Arial, sans-serif" font-size="9" fill="#333">📊 Module preservation across datasets</text>
+      <text x="0" y="84" font-family="Arial, sans-serif" font-size="9" fill="#333">🧬 Integrate with pathway enrichment (GO, KEGG)</text>
+    </g>
+  </g>
+</svg>

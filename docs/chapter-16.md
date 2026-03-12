@@ -33,7 +33,7 @@ By sequencing a tumor (Tumor) and the patient's healthy blood (Normal), bioinfor
 ## 17.4 GWAS: Genome-Wide Association Studies
 
 <p align="center">
-    <img src="../assets/illustrations/figure-template.svg" alt="Illustration of GWAS Manhattan Plot">
+    <img src="../assets/illustrations/gwas-manhattan.svg" alt="Illustration of GWAS Manhattan Plot">
 </p>
 
 ## 16.4 Clinical Bioinformatics: Standards and Interpretation

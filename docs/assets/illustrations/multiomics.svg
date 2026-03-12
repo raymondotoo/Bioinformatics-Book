@@ -1,0 +1,245 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="multiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D81B60;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F06292;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowMulti" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1565C0"/>
+      <stop offset="100%" style="stop-color:#42A5F5"/>
+    </linearGradient>
+    <linearGradient id="rnaGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#43A047"/>
+      <stop offset="100%" style="stop-color:#81C784"/>
+    </linearGradient>
+    <linearGradient id="protGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FB8C00"/>
+      <stop offset="100%" style="stop-color:#FFB74D"/>
+    </linearGradient>
+    <linearGradient id="metabGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8E24AA"/>
+      <stop offset="100%" style="stop-color:#BA68C8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="520" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#D81B60">Multi-Omics Integration</text>
+  
+  <!-- Central Dogma Flow with Omics Layers -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="400" height="220" fill="white" stroke="url(#multiGrad)" stroke-width="2" rx="10" filter="url(#shadowMulti)"/>
+    <text x="200" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#D81B60">Omics Layers</text>
+    
+    <!-- Genomics -->
+    <g transform="translate(25, 38)">
+      <rect x="0" y="0" width="350" height="38" fill="url(#dnaGrad)" rx="5" opacity="0.9"/>
+      <text x="45" y="15" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">GENOMICS</text>
+      <text x="45" y="30" font-family="Arial, sans-serif" font-size="8" fill="white">DNA: WGS, WES, SNP arrays, CNV</text>
+      <!-- DNA helix icon -->
+      <g transform="translate(10, 8)">
+        <ellipse cx="10" cy="10" rx="10" ry="4" fill="none" stroke="white" stroke-width="1.5"/>
+        <ellipse cx="10" cy="10" rx="10" ry="4" fill="none" stroke="white" stroke-width="1.5" transform="rotate(60, 10, 10)"/>
+      </g>
+      <text x="310" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Variants, Mutations</text>
+    </g>
+    
+    <!-- Arrow -->
+    <polygon points="200,82 195,88 205,88" fill="#1565C0"/>
+    <text x="215" y="88" font-family="Arial, sans-serif" font-size="7" fill="#666">Transcription</text>
+    
+    <!-- Transcriptomics -->
+    <g transform="translate(25, 95)">
+      <rect x="0" y="0" width="350" height="38" fill="url(#rnaGrad)" rx="5" opacity="0.9"/>
+      <text x="45" y="15" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">TRANSCRIPTOMICS</text>
+      <text x="45" y="30" font-family="Arial, sans-serif" font-size="8" fill="white">RNA: RNA-seq, microarray, scRNA-seq</text>
+      <!-- RNA icon -->
+      <g transform="translate(8, 6)">
+        <path d="M5,20 Q10,5 15,20 Q20,35 25,20" fill="none" stroke="white" stroke-width="2"/>
+      </g>
+      <text x="310" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Gene Expression</text>
+    </g>
+    
+    <!-- Arrow -->
+    <polygon points="200,139 195,145 205,145" fill="#43A047"/>
+    <text x="215" y="145" font-family="Arial, sans-serif" font-size="7" fill="#666">Translation</text>
+    
+    <!-- Proteomics -->
+    <g transform="translate(25, 152)">
+      <rect x="0" y="0" width="350" height="38" fill="url(#protGrad)" rx="5" opacity="0.9"/>
+      <text x="45" y="15" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">PROTEOMICS</text>
+      <text x="45" y="30" font-family="Arial, sans-serif" font-size="8" fill="white">Proteins: MS, protein arrays, RPPA</text>
+      <!-- Protein icon -->
+      <g transform="translate(5, 4)">
+        <circle cx="10" cy="15" r="6" fill="white" opacity="0.8"/>
+        <circle cx="22" cy="15" r="6" fill="white" opacity="0.6"/>
+        <circle cx="16" cy="8" r="5" fill="white" opacity="0.7"/>
+      </g>
+      <text x="310" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white">Protein Abundance</text>
+    </g>
+  </g>
+  
+  <!-- Additional Omics -->
+  <g transform="translate(30, 290)">
+    <rect x="0" y="0" width="400" height="105" fill="white" stroke="#8E24AA" stroke-width="2" rx="10" filter="url(#shadowMulti)"/>
+    <text x="200" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#8E24AA">Additional Omics Layers</text>
+    
+    <!-- Metabolomics -->
+    <g transform="translate(15, 35)">
+      <rect x="0" y="0" width="115" height="55" fill="url(#metabGrad)" rx="5" opacity="0.9"/>
+      <text x="58" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">METABOLOMICS</text>
+      <text x="58" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Small molecules</text>
+      <text x="58" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">LC-MS, NMR</text>
+    </g>
+    
+    <!-- Epigenomics -->
+    <g transform="translate(140, 35)">
+      <rect x="0" y="0" width="115" height="55" fill="#5C6BC0" rx="5" opacity="0.9"/>
+      <text x="58" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">EPIGENOMICS</text>
+      <text x="58" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">DNA methylation</text>
+      <text x="58" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">ChIP-seq, ATAC-seq</text>
+    </g>
+    
+    <!-- Microbiome -->
+    <g transform="translate(265, 35)">
+      <rect x="0" y="0" width="115" height="55" fill="#00897B" rx="5" opacity="0.9"/>
+      <text x="58" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">MICROBIOME</text>
+      <text x="58" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">16S rRNA, Shotgun</text>
+      <text x="58" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="white">Metagenomics</text>
+    </g>
+  </g>
+  
+  <!-- Integration Arrow -->
+  <g transform="translate(430, 140)">
+    <polygon points="0,50 30,30 30,40 80,40 80,60 30,60 30,70" fill="#D81B60"/>
+    <text x="40" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">Integrate</text>
+  </g>
+  
+  <!-- Integration Methods -->
+  <g transform="translate(450, 55)">
+    <rect x="0" y="0" width="320" height="170" fill="white" stroke="#E53935" stroke-width="2" rx="10" filter="url(#shadowMulti)"/>
+    <rect x="0" y="0" width="320" height="25" fill="#E53935" rx="10"/>
+    <rect x="0" y="17" width="320" height="8" fill="#E53935"/>
+    <text x="160" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Integration Strategies</text>
+    
+    <g transform="translate(15, 35)">
+      <!-- Early Integration -->
+      <rect x="0" y="0" width="135" height="55" fill="#E3F2FD" stroke="#1565C0" rx="5"/>
+      <text x="68" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#1565C0">Early Integration</text>
+      <text x="68" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">Concatenate matrices</text>
+      <text x="68" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">Joint preprocessing</text>
+      <text x="68" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#999">e.g., PCA on merged data</text>
+      
+      <!-- Late Integration -->
+      <rect x="150" y="0" width="135" height="55" fill="#E8F5E9" stroke="#43A047" rx="5"/>
+      <text x="218" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#43A047">Late Integration</text>
+      <text x="218" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">Analyze separately</text>
+      <text x="218" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">Combine results</text>
+      <text x="218" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#999">e.g., Meta-analysis</text>
+      
+      <!-- Intermediate -->
+      <rect x="0" y="65" width="135" height="55" fill="#FFF3E0" stroke="#FB8C00" rx="5"/>
+      <text x="68" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FB8C00">Intermediate</text>
+      <text x="68" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">Shared latent factors</text>
+      <text x="68" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">Network-based</text>
+      <text x="68" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#999">e.g., MOFA, SNF</text>
+      
+      <!-- Methods -->
+      <rect x="150" y="65" width="135" height="55" fill="#F3E5F5" stroke="#8E24AA" rx="5"/>
+      <text x="218" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#8E24AA">ML Methods</text>
+      <text x="218" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">Deep learning, VAE</text>
+      <text x="218" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">Random forest</text>
+      <text x="218" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#999">Feature selection</text>
+    </g>
+  </g>
+  
+  <!-- Tools and Platforms -->
+  <g transform="translate(450, 240)">
+    <rect x="0" y="0" width="320" height="100" fill="white" stroke="#00897B" stroke-width="2" rx="10" filter="url(#shadowMulti)"/>
+    <rect x="0" y="0" width="320" height="25" fill="#00897B" rx="10"/>
+    <rect x="0" y="17" width="320" height="8" fill="#00897B"/>
+    <text x="160" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Tools &amp; Methods</text>
+    
+    <g transform="translate(15, 35)">
+      <text x="0" y="12" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#00897B">R/Bioconductor:</text>
+      <text x="90" y="12" font-family="Arial, sans-serif" font-size="8" fill="#666">mixOmics, MOFA2, MultiAssayExperiment</text>
+      
+      <text x="0" y="32" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#1565C0">Python:</text>
+      <text x="50" y="32" font-family="Arial, sans-serif" font-size="8" fill="#666">Scanpy, MEFISTO, Muon, scvi-tools</text>
+      
+      <text x="0" y="52" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#FB8C00">Methods:</text>
+      <text x="55" y="52" font-family="Arial, sans-serif" font-size="8" fill="#666">CCA, PLS-DA, WGCNA, SNF, NMF, DIABLO</text>
+    </g>
+  </g>
+  
+  <!-- Applications/Outputs -->
+  <g transform="translate(450, 355)">
+    <rect x="0" y="0" width="320" height="155" fill="white" stroke="#5C6BC0" stroke-width="2" rx="10" filter="url(#shadowMulti)"/>
+    <rect x="0" y="0" width="320" height="25" fill="#5C6BC0" rx="10"/>
+    <rect x="0" y="17" width="320" height="8" fill="#5C6BC0"/>
+    <text x="160" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white">Integration Outcomes</text>
+    
+    <g transform="translate(15, 35)">
+      <text x="0" y="12" font-family="Arial, sans-serif" font-size="9" fill="#333">🎯 Identify multi-omic biomarkers</text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="9" fill="#333">🔗 Discover cross-layer correlations</text>
+      <text x="0" y="48" font-family="Arial, sans-serif" font-size="9" fill="#333">📊 Molecular subtyping / clustering</text>
+      <text x="0" y="66" font-family="Arial, sans-serif" font-size="9" fill="#333">🧬 Pathway activity inference</text>
+      <text x="0" y="84" font-family="Arial, sans-serif" font-size="9" fill="#333">💊 Drug response prediction</text>
+      <text x="0" y="102" font-family="Arial, sans-serif" font-size="9" fill="#333">🏥 Patient stratification</text>
+      <text x="0" y="120" font-family="Arial, sans-serif" font-size="9" fill="#333">🔬 Systems biology insights</text>
+    </g>
+  </g>
+  
+  <!-- Sample Integration Visualization -->
+  <g transform="translate(30, 405)">
+    <rect x="0" y="0" width="400" height="105" fill="white" stroke="#FB8C00" stroke-width="2" rx="10" filter="url(#shadowMulti)"/>
+    <text x="200" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#FB8C00">Sample Integration Visualization (Multi-Omics Factor Analysis)</text>
+    
+    <!-- Factor loading bars visualization -->
+    <g transform="translate(20, 35)">
+      <text x="0" y="10" font-family="Arial, sans-serif" font-size="8" fill="#1565C0" font-weight="bold">Genomics</text>
+      <rect x="60" y="2" width="80" height="12" fill="#1565C0" opacity="0.7"/>
+      
+      <text x="0" y="28" font-family="Arial, sans-serif" font-size="8" fill="#43A047" font-weight="bold">Transcriptomics</text>
+      <rect x="60" y="20" width="110" height="12" fill="#43A047" opacity="0.7"/>
+      
+      <text x="0" y="46" font-family="Arial, sans-serif" font-size="8" fill="#FB8C00" font-weight="bold">Proteomics</text>
+      <rect x="60" y="38" width="65" height="12" fill="#FB8C00" opacity="0.7"/>
+      
+      <text x="0" y="64" font-family="Arial, sans-serif" font-size="8" fill="#8E24AA" font-weight="bold">Metabolomics</text>
+      <rect x="60" y="56" width="45" height="12" fill="#8E24AA" opacity="0.7"/>
+      
+      <text x="100" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">Variance explained per factor</text>
+    </g>
+    
+    <!-- Latent factors scatterplot -->
+    <g transform="translate(210, 30)">
+      <rect x="0" y="0" width="170" height="65" fill="#F8F9FA" stroke="#E0E0E0"/>
+      <text x="85" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#333">Factor 1 vs Factor 2</text>
+      
+      <!-- Cluster 1 -->
+      <circle cx="45" cy="20" r="5" fill="#E53935" opacity="0.7"/>
+      <circle cx="55" cy="25" r="5" fill="#E53935" opacity="0.7"/>
+      <circle cx="40" cy="30" r="5" fill="#E53935" opacity="0.7"/>
+      <circle cx="50" cy="35" r="5" fill="#E53935" opacity="0.7"/>
+      
+      <!-- Cluster 2 -->
+      <circle cx="120" cy="15" r="5" fill="#1565C0" opacity="0.7"/>
+      <circle cx="130" cy="22" r="5" fill="#1565C0" opacity="0.7"/>
+      <circle cx="115" cy="28" r="5" fill="#1565C0" opacity="0.7"/>
+      <circle cx="125" cy="35" r="5" fill="#1565C0" opacity="0.7"/>
+      
+      <!-- Cluster 3 -->
+      <circle cx="80" cy="45" r="5" fill="#43A047" opacity="0.7"/>
+      <circle cx="90" cy="50" r="5" fill="#43A047" opacity="0.7"/>
+      <circle cx="75" cy="55" r="5" fill="#43A047" opacity="0.7"/>
+      
+      <text x="85" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#666">Samples cluster by shared factors</text>
+    </g>
+  </g>
+</svg>

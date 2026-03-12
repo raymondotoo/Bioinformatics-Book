@@ -20,7 +20,7 @@ In this chapter, we will focus on **Biopython**, the standard library for comput
 ## 5.2 Getting Started with Biopython
 
 <p align="center">
-  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Biopython">
+  <img src="../assets/illustrations/biopython.svg" alt="Illustration of Biopython">
 </p>
 
 Before we write code, you usually need to install the library. In your terminal (Chapter 4 skills!), you would run:

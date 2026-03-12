@@ -12,7 +12,7 @@ While static plots are useful, WGCNA generates a wealth of data that is best exp
 ## 19.2 Dashboard Structure
 
 <p align="center">
-  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Shiny Dashboard">
+  <img src="../assets/illustrations/shiny-dashboard.svg" alt="Illustration of Shiny Dashboard">
 </p>
 
 Try the interactive module-trait heatmap demo here: [Interactive WGCNA Heatmap](../interactive/wgcna.html)

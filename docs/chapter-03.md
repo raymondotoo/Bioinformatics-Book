@@ -25,7 +25,7 @@ The specific sequence of these amino acids determines everything about the prote
 ## 3.2 The Hierarchy of Protein Structure
 
 <p align="center">
-    <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Protein Structure Levels">
+    <img src="../assets/illustrations/protein-structure.svg" alt="Illustration of Protein Structure Levels">
 </p>
 
 ## 3.4 Structure Prediction and Modern Tools

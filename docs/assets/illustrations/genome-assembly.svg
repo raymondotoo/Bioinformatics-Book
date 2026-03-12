@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="readGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#42A5F5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="contigGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#43A047;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66BB6A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="scaffoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B1FA2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#AB47BC;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowAsm" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+    <marker id="arrowAsm" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1565C0">Genome Assembly Pipeline</text>
+  
+  <!-- Step 1: Raw Reads -->
+  <g transform="translate(30, 70)">
+    <rect x="0" y="0" width="160" height="130" fill="white" stroke="url(#readGrad)" stroke-width="2" rx="10" filter="url(#shadowAsm)"/>
+    <rect x="0" y="0" width="160" height="28" fill="url(#readGrad)" rx="10"/>
+    <rect x="0" y="20" width="160" height="8" fill="url(#readGrad)"/>
+    <text x="80" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">1. Raw Reads</text>
+    
+    <!-- Simulated reads -->
+    <g transform="translate(15, 40)">
+      <rect x="0" y="0" width="50" height="8" fill="#42A5F5" rx="2"/>
+      <rect x="30" y="12" width="55" height="8" fill="#64B5F6" rx="2"/>
+      <rect x="10" y="24" width="45" height="8" fill="#42A5F5" rx="2"/>
+      <rect x="60" y="0" width="60" height="8" fill="#64B5F6" rx="2"/>
+      <rect x="55" y="36" width="50" height="8" fill="#42A5F5" rx="2"/>
+      <rect x="0" y="48" width="55" height="8" fill="#64B5F6" rx="2"/>
+      <rect x="70" y="24" width="45" height="8" fill="#42A5F5" rx="2"/>
+      <rect x="15" y="60" width="60" height="8" fill="#64B5F6" rx="2"/>
+      <rect x="80" y="48" width="40" height="8" fill="#42A5F5" rx="2"/>
+    </g>
+    
+    <text x="80" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Millions of short fragments</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <line x1="200" y1="135" x2="230" y2="135" stroke="#666" stroke-width="2" marker-end="url(#arrowAsm)"/>
+  
+  <!-- Step 2: Overlap Detection -->
+  <g transform="translate(240, 70)">
+    <rect x="0" y="0" width="160" height="130" fill="white" stroke="#FB8C00" stroke-width="2" rx="10" filter="url(#shadowAsm)"/>
+    <rect x="0" y="0" width="160" height="28" fill="#FB8C00" rx="10"/>
+    <rect x="0" y="20" width="160" height="8" fill="#FB8C00"/>
+    <text x="80" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">2. Find Overlaps</text>
+    
+    <!-- Overlapping reads -->
+    <g transform="translate(15, 45)">
+      <rect x="0" y="0" width="70" height="10" fill="#42A5F5" rx="2"/>
+      <rect x="40" y="15" width="80" height="10" fill="#64B5F6" rx="2"/>
+      <rect x="90" y="0" width="40" height="10" fill="#42A5F5" rx="2"/>
+      
+      <!-- Overlap highlight -->
+      <rect x="40" y="-2" width="30" height="29" fill="none" stroke="#E53935" stroke-width="2" stroke-dasharray="4" rx="3"/>
+      <rect x="90" y="13" width="30" height="14" fill="none" stroke="#E53935" stroke-width="2" stroke-dasharray="4" rx="3"/>
+    </g>
+    
+    <!-- De Bruijn graph hint -->
+    <g transform="translate(30, 80)">
+      <circle cx="20" cy="20" r="12" fill="#FFF3E0" stroke="#FB8C00" stroke-width="2"/>
+      <text x="20" y="24" text-anchor="middle" font-family="monospace" font-size="8" fill="#E65100">ATG</text>
+      <circle cx="70" cy="20" r="12" fill="#FFF3E0" stroke="#FB8C00" stroke-width="2"/>
+      <text x="70" y="24" text-anchor="middle" font-family="monospace" font-size="8" fill="#E65100">TGC</text>
+      <circle cx="120" cy="20" r="12" fill="#FFF3E0" stroke="#FB8C00" stroke-width="2"/>
+      <text x="120" y="24" text-anchor="middle" font-family="monospace" font-size="8" fill="#E65100">GCA</text>
+      <line x1="32" y1="20" x2="58" y2="20" stroke="#FB8C00" stroke-width="1.5" marker-end="url(#arrowAsm)"/>
+      <line x1="82" y1="20" x2="108" y2="20" stroke="#FB8C00" stroke-width="1.5" marker-end="url(#arrowAsm)"/>
+    </g>
+    
+    <text x="80" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Build overlap/de Bruijn graph</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <line x1="410" y1="135" x2="440" y2="135" stroke="#666" stroke-width="2" marker-end="url(#arrowAsm)"/>
+  
+  <!-- Step 3: Contigs -->
+  <g transform="translate(450, 70)">
+    <rect x="0" y="0" width="160" height="130" fill="white" stroke="url(#contigGrad)" stroke-width="2" rx="10" filter="url(#shadowAsm)"/>
+    <rect x="0" y="0" width="160" height="28" fill="url(#contigGrad)" rx="10"/>
+    <rect x="0" y="20" width="160" height="8" fill="url(#contigGrad)"/>
+    <text x="80" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">3. Contigs</text>
+    
+    <!-- Contigs -->
+    <g transform="translate(15, 45)">
+      <rect x="0" y="0" width="130" height="12" fill="url(#contigGrad)" rx="3"/>
+      <rect x="0" y="20" width="90" height="12" fill="url(#contigGrad)" rx="3"/>
+      <rect x="0" y="40" width="110" height="12" fill="url(#contigGrad)" rx="3"/>
+      <rect x="0" y="60" width="70" height="12" fill="url(#contigGrad)" rx="3"/>
+    </g>
+    
+    <text x="80" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Contiguous sequences</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <line x1="620" y1="135" x2="650" y2="135" stroke="#666" stroke-width="2" marker-end="url(#arrowAsm)"/>
+  
+  <!-- Step 4: Scaffolds -->
+  <g transform="translate(660, 70)">
+    <rect x="0" y="0" width="120" height="130" fill="white" stroke="url(#scaffoldGrad)" stroke-width="2" rx="10" filter="url(#shadowAsm)"/>
+    <rect x="0" y="0" width="120" height="28" fill="url(#scaffoldGrad)" rx="10"/>
+    <rect x="0" y="20" width="120" height="8" fill="url(#scaffoldGrad)"/>
+    <text x="60" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">4. Scaffold</text>
+    
+    <!-- Scaffold with gaps -->
+    <g transform="translate(10, 50)">
+      <rect x="0" y="0" width="45" height="15" fill="url(#scaffoldGrad)" rx="3"/>
+      <rect x="50" y="0" width="8" height="15" fill="#E0E0E0" stroke="#9E9E9E" stroke-dasharray="2"/>
+      <rect x="62" y="0" width="35" height="15" fill="url(#scaffoldGrad)" rx="3"/>
+      
+      <text x="54" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#666">N's (gaps)</text>
+    </g>
+    
+    <text x="60" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Ordered contigs</text>
+  </g>
+  
+  <!-- Assembly Strategies -->
+  <g transform="translate(50, 220)">
+    <rect x="0" y="0" width="320" height="140" fill="white" stroke="#1565C0" stroke-width="2" rx="10" filter="url(#shadowAsm)"/>
+    <text x="160" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1565C0">Assembly Strategies</text>
+    
+    <text x="20" y="50" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">OLC (Overlap-Layout-Consensus)</text>
+    <text x="30" y="68" font-family="Arial, sans-serif" font-size="10" fill="#666">• Best for long reads (PacBio, Nanopore)</text>
+    <text x="30" y="83" font-family="Arial, sans-serif" font-size="10" fill="#666">• Tools: Canu, Flye, miniasm</text>
+    
+    <text x="20" y="105" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">De Bruijn Graph</text>
+    <text x="30" y="123" font-family="Arial, sans-serif" font-size="10" fill="#666">• Best for short reads (Illumina)</text>
+    <text x="30" y="138" font-family="Arial, sans-serif" font-size="10" fill="#666">• Tools: SPAdes, MEGAHIT, Velvet</text>
+  </g>
+  
+  <!-- Quality Metrics -->
+  <g transform="translate(400, 220)">
+    <rect x="0" y="0" width="360" height="140" fill="white" stroke="#43A047" stroke-width="2" rx="10" filter="url(#shadowAsm)"/>
+    <text x="180" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#43A047">Quality Metrics</text>
+    
+    <g transform="translate(20, 40)">
+      <text x="0" y="15" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">N50:</text>
+      <text x="40" y="15" font-family="Arial, sans-serif" font-size="10" fill="#666">50% of assembly in contigs ≥ N50 length</text>
+      
+      <text x="0" y="40" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">L50:</text>
+      <text x="40" y="40" font-family="Arial, sans-serif" font-size="10" fill="#666">Number of contigs comprising 50% of assembly</text>
+      
+      <text x="0" y="65" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">BUSCO:</text>
+      <text x="55" y="65" font-family="Arial, sans-serif" font-size="10" fill="#666">Completeness based on conserved genes</text>
+      
+      <text x="0" y="90" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">Coverage:</text>
+      <text x="65" y="90" font-family="Arial, sans-serif" font-size="10" fill="#666">Average read depth across assembly</text>
+    </g>
+  </g>
+  
+  <!-- Hybrid Assembly -->
+  <g transform="translate(50, 380)">
+    <rect x="0" y="0" width="700" height="75" fill="#E8F5E9" stroke="#43A047" stroke-width="2" rx="10"/>
+    <text x="30" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">💡 Hybrid Assembly</text>
+    <text x="30" y="45" font-family="Arial, sans-serif" font-size="11" fill="#333">Combine short reads (high accuracy) + long reads (spanning power) for best results</text>
+    <text x="30" y="65" font-family="Arial, sans-serif" font-size="10" fill="#666">Tools: Unicycler, MaSuRCA, hybridSPAdes | Common workflow: Long read assembly → Short read polishing</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="400" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Genome assembly reconstructs complete sequences from fragmented sequencing reads</text>
+</svg>

@@ -32,7 +32,7 @@ By sequencing this "barcode," we can identify the bacteria without growing them 
 ## 14.4 Diversity: Alpha vs. Beta
 
 <p align="center">
-    <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Microbiome Diversity">
+    <img src="../assets/illustrations/microbiome-diversity.svg" alt="Illustration of Microbiome Diversity">
 </p>
 
 ## 13.4 Modern Microbiome Methods and Best Practices

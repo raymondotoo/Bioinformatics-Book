@@ -14,7 +14,7 @@ Proteins are the functional units, and metabolites are the fuel and building blo
 ## 13.2 Proteomics: The Mass Spec Revolution
 
 <p align="center">
-  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Mass Spectrometry">
+  <img src="../assets/illustrations/mass-spectrometry.svg" alt="Illustration of Mass Spectrometry">
 </p>
 
 ## 12.6 Modern Proteomics: DDA vs DIA and Quantification

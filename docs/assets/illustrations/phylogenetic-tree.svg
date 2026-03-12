@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="treeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E7D32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#66BB6A;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadowTree" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FAFAFA"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2E7D32">Phylogenetic Tree Analysis</text>
+  
+  <!-- Main Tree -->
+  <g transform="translate(50, 70)">
+    <rect x="0" y="0" width="450" height="380" fill="white" stroke="#2E7D32" stroke-width="2" rx="10" filter="url(#shadowTree)"/>
+    
+    <!-- Tree branches -->
+    <g transform="translate(30, 30)">
+      <!-- Root -->
+      <line x1="0" y1="170" x2="60" y2="170" stroke="#4E342E" stroke-width="4"/>
+      
+      <!-- First split -->
+      <line x1="60" y1="170" x2="60" y2="80" stroke="#4E342E" stroke-width="3"/>
+      <line x1="60" y1="170" x2="60" y2="260" stroke="#4E342E" stroke-width="3"/>
+      
+      <!-- Upper clade -->
+      <line x1="60" y1="80" x2="140" y2="80" stroke="#4E342E" stroke-width="3"/>
+      <line x1="140" y1="80" x2="140" y2="40" stroke="#4E342E" stroke-width="2.5"/>
+      <line x1="140" y1="80" x2="140" y2="120" stroke="#4E342E" stroke-width="2.5"/>
+      
+      <!-- Upper-upper split -->
+      <line x1="140" y1="40" x2="220" y2="40" stroke="#4E342E" stroke-width="2.5"/>
+      <line x1="220" y1="40" x2="220" y2="20" stroke="#4E342E" stroke-width="2"/>
+      <line x1="220" y1="40" x2="220" y2="60" stroke="#4E342E" stroke-width="2"/>
+      
+      <!-- Terminal branches -->
+      <line x1="220" y1="20" x2="300" y2="20" stroke="#4E342E" stroke-width="2"/>
+      <line x1="220" y1="60" x2="280" y2="60" stroke="#4E342E" stroke-width="2"/>
+      <line x1="140" y1="120" x2="260" y2="120" stroke="#4E342E" stroke-width="2"/>
+      
+      <!-- Lower clade -->
+      <line x1="60" y1="260" x2="100" y2="260" stroke="#4E342E" stroke-width="3"/>
+      <line x1="100" y1="260" x2="100" y2="200" stroke="#4E342E" stroke-width="2.5"/>
+      <line x1="100" y1="260" x2="100" y2="320" stroke="#4E342E" stroke-width="2.5"/>
+      
+      <line x1="100" y1="200" x2="180" y2="200" stroke="#4E342E" stroke-width="2"/>
+      <line x1="180" y1="200" x2="180" y2="180" stroke="#4E342E" stroke-width="2"/>
+      <line x1="180" y1="200" x2="180" y2="220" stroke="#4E342E" stroke-width="2"/>
+      
+      <line x1="180" y1="180" x2="300" y2="180" stroke="#4E342E" stroke-width="2"/>
+      <line x1="180" y1="220" x2="280" y2="220" stroke="#4E342E" stroke-width="2"/>
+      <line x1="100" y1="320" x2="300" y2="320" stroke="#4E342E" stroke-width="2"/>
+      
+      <!-- Species labels with icons -->
+      <circle cx="310" cy="20" r="8" fill="#E53935"/>
+      <text x="325" y="24" font-family="Arial, sans-serif" font-size="11" fill="#333" font-style="italic">Homo sapiens</text>
+      
+      <circle cx="290" cy="60" r="8" fill="#E53935"/>
+      <text x="305" y="64" font-family="Arial, sans-serif" font-size="11" fill="#333" font-style="italic">Pan troglodytes</text>
+      
+      <circle cx="270" cy="120" r="8" fill="#FB8C00"/>
+      <text x="285" y="124" font-family="Arial, sans-serif" font-size="11" fill="#333" font-style="italic">Mus musculus</text>
+      
+      <circle cx="310" cy="180" r="8" fill="#43A047"/>
+      <text x="325" y="184" font-family="Arial, sans-serif" font-size="11" fill="#333" font-style="italic">Gallus gallus</text>
+      
+      <circle cx="290" cy="220" r="8" fill="#43A047"/>
+      <text x="305" y="224" font-family="Arial, sans-serif" font-size="11" fill="#333" font-style="italic">Xenopus tropicalis</text>
+      
+      <circle cx="310" cy="320" r="8" fill="#1565C0"/>
+      <text x="325" y="324" font-family="Arial, sans-serif" font-size="11" fill="#333" font-style="italic">Danio rerio</text>
+      
+      <!-- Bootstrap values -->
+      <rect x="55" y="72" width="30" height="16" fill="#E8F5E9" rx="3"/>
+      <text x="70" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2E7D32" font-weight="bold">100</text>
+      
+      <rect x="135" y="32" width="25" height="16" fill="#E8F5E9" rx="3"/>
+      <text x="148" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2E7D32" font-weight="bold">98</text>
+      
+      <rect x="95" y="252" width="25" height="16" fill="#FFF3E0" rx="3"/>
+      <text x="108" y="264" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#E65100" font-weight="bold">85</text>
+      
+      <rect x="175" y="192" width="25" height="16" fill="#E8F5E9" rx="3"/>
+      <text x="188" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2E7D32" font-weight="bold">92</text>
+    </g>
+    
+    <!-- Scale bar -->
+    <g transform="translate(50, 355)">
+      <line x1="0" y1="0" x2="80" y2="0" stroke="#333" stroke-width="2"/>
+      <line x1="0" y1="-5" x2="0" y2="5" stroke="#333" stroke-width="2"/>
+      <line x1="80" y1="-5" x2="80" y2="5" stroke="#333" stroke-width="2"/>
+      <text x="40" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">0.1 substitutions/site</text>
+    </g>
+    
+    <!-- Clade labels -->
+    <text x="420" y="55" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#E53935" font-weight="bold">Primates</text>
+    <text x="420" y="130" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#FB8C00" font-weight="bold">Rodents</text>
+    <text x="420" y="210" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#43A047" font-weight="bold">Birds/Amphibians</text>
+    <text x="420" y="330" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#1565C0" font-weight="bold">Fish</text>
+  </g>
+  
+  <!-- Methods Panel -->
+  <g transform="translate(520, 70)">
+    <rect x="0" y="0" width="250" height="175" fill="white" stroke="#1565C0" stroke-width="2" rx="10" filter="url(#shadowTree)"/>
+    <rect x="0" y="0" width="250" height="30" fill="#1565C0" rx="10"/>
+    <rect x="0" y="22" width="250" height="8" fill="#1565C0"/>
+    <text x="125" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Tree Building Methods</text>
+    
+    <text x="15" y="50" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">Distance-based:</text>
+    <text x="25" y="68" font-family="Arial, sans-serif" font-size="10" fill="#666">• UPGMA</text>
+    <text x="25" y="83" font-family="Arial, sans-serif" font-size="10" fill="#666">• Neighbor-Joining</text>
+    
+    <text x="15" y="105" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">Character-based:</text>
+    <text x="25" y="123" font-family="Arial, sans-serif" font-size="10" fill="#666">• Maximum Parsimony</text>
+    <text x="25" y="138" font-family="Arial, sans-serif" font-size="10" fill="#666">• Maximum Likelihood (RAxML)</text>
+    <text x="25" y="153" font-family="Arial, sans-serif" font-size="10" fill="#666">• Bayesian (MrBayes, BEAST)</text>
+  </g>
+  
+  <!-- Concepts Panel -->
+  <g transform="translate(520, 260)">
+    <rect x="0" y="0" width="250" height="190" fill="white" stroke="#7B1FA2" stroke-width="2" rx="10" filter="url(#shadowTree)"/>
+    <rect x="0" y="0" width="250" height="30" fill="#7B1FA2" rx="10"/>
+    <rect x="0" y="22" width="250" height="8" fill="#7B1FA2"/>
+    <text x="125" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Key Concepts</text>
+    
+    <text x="15" y="50" font-family="Arial, sans-serif" font-size="10" fill="#333">📊 <tspan font-weight="bold">Bootstrap Values:</tspan></text>
+    <text x="25" y="65" font-family="Arial, sans-serif" font-size="9" fill="#666">Statistical support (0-100%)</text>
+    
+    <text x="15" y="85" font-family="Arial, sans-serif" font-size="10" fill="#333">🌳 <tspan font-weight="bold">Branch Length:</tspan></text>
+    <text x="25" y="100" font-family="Arial, sans-serif" font-size="9" fill="#666">Evolutionary distance</text>
+    
+    <text x="15" y="120" font-family="Arial, sans-serif" font-size="10" fill="#333">🔄 <tspan font-weight="bold">Rooting:</tspan></text>
+    <text x="25" y="135" font-family="Arial, sans-serif" font-size="9" fill="#666">Outgroup or midpoint</text>
+    
+    <text x="15" y="155" font-family="Arial, sans-serif" font-size="10" fill="#333">🧬 <tspan font-weight="bold">Monophyly:</tspan></text>
+    <text x="25" y="170" font-family="Arial, sans-serif" font-size="9" fill="#666">All descendants of common ancestor</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Phylogenetic trees reveal evolutionary relationships and guide comparative analyses</text>
+</svg>

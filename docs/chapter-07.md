@@ -17,7 +17,7 @@ If you have two DNA sequences, the first question you usually ask is: "Are they 
 ## 8.2 Global vs. Local Alignment
 
 <p align="center">
-  <img src="../assets/illustrations/figure-template.svg" alt="Illustration of Sequence Alignment">
+  <img src="../assets/illustrations/sequence-alignment.svg" alt="Illustration of Sequence Alignment">
 </p>
 
 ### Global Alignment (Needleman-Wunsch)
