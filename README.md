@@ -1,5 +1,43 @@
 # The Serial Bioinformatician
 
+<!-- Badges -->
+<p align="center">
+  <a href="https://github.com/raymondotoo/Bioinformatics-Book/actions/workflows/ci.yml">
+    <img src="https://github.com/raymondotoo/Bioinformatics-Book/actions/workflows/ci.yml/badge.svg" alt="CI Build Status">
+  </a>
+  <a href="https://github.com/raymondotoo/Bioinformatics-Book/actions/workflows/deploy.yml">
+    <img src="https://github.com/raymondotoo/Bioinformatics-Book/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status">
+  </a>
+  <a href="https://raymondotoo.github.io/Bioinformatics-Book/">
+    <img src="https://img.shields.io/badge/docs-online-brightgreen?logo=readthedocs" alt="Documentation">
+  </a>
+  <a href="https://raymondotoo.github.io/Bioinformatics-Book/pdf/document.pdf">
+    <img src="https://img.shields.io/badge/PDF-Download-blue?logo=adobe-acrobat-reader" alt="Download PDF">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/raymondotoo/Bioinformatics-Book/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" alt="License: CC BY-SA 4.0">
+  </a>
+  <a href="https://github.com/raymondotoo/Bioinformatics-Book/stargazers">
+    <img src="https://img.shields.io/github/stars/raymondotoo/Bioinformatics-Book?style=social" alt="GitHub Stars">
+  </a>
+  <a href="https://github.com/raymondotoo/Bioinformatics-Book/network/members">
+    <img src="https://img.shields.io/github/forks/raymondotoo/Bioinformatics-Book?style=social" alt="GitHub Forks">
+  </a>
+  <a href="https://github.com/raymondotoo/Bioinformatics-Book/issues">
+    <img src="https://img.shields.io/github/issues/raymondotoo/Bioinformatics-Book" alt="GitHub Issues">
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/github/last-commit/raymondotoo/Bioinformatics-Book" alt="Last Commit">
+  <img src="https://img.shields.io/github/repo-size/raymondotoo/Bioinformatics-Book" alt="Repo Size">
+  <img src="https://img.shields.io/github/languages/top/raymondotoo/Bioinformatics-Book" alt="Top Language">
+  <img src="https://img.shields.io/badge/MkDocs-Material-blue?logo=material-for-mkdocs" alt="Built with MkDocs Material">
+</p>
+
 <p align="center">
   <img src="docs/assets/cover.png" alt="Book Cover" width="500">
 </p>

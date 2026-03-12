@@ -41,7 +41,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
-repo_url: https://github.com/your-username/Bioinformatics-Book
+repo_url: https://github.com/raymondotoo/Bioinformatics-Book
 repo_name: Bioinformatics-Book
 
 plugins:

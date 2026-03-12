@@ -1,5 +1,21 @@
 # The Serial Bioinformatician
 
+<!-- Status Badges -->
+<p align="center">
+  <a href="https://github.com/raymondotoo/Bioinformatics-Book/actions/workflows/ci.yml">
+    <img src="https://github.com/raymondotoo/Bioinformatics-Book/actions/workflows/ci.yml/badge.svg" alt="CI Status">
+  </a>
+  <a href="https://github.com/raymondotoo/Bioinformatics-Book/actions/workflows/deploy.yml">
+    <img src="https://github.com/raymondotoo/Bioinformatics-Book/actions/workflows/deploy.yml/badge.svg" alt="Deploy Status">
+  </a>
+  <a href="https://github.com/raymondotoo/Bioinformatics-Book/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg" alt="License">
+  </a>
+  <a href="https://github.com/raymondotoo/Bioinformatics-Book">
+    <img src="https://img.shields.io/github/stars/raymondotoo/Bioinformatics-Book?style=social" alt="Stars">
+  </a>
+</p>
+
 <p align="center">
   <img src="assets/cover.png" alt="Book Cover" width="500">
 </p>
