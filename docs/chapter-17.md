@@ -29,7 +29,7 @@ Principal Component Analysis (PCA) was performed on the harmonized data.
 **Script:** `03_WGCNA_running.Rmd`
 
 <p align="center">
-  <img src="https://placehold.co/600x400/E8F5E9/333333?text=WGCNA+Network+Modules" alt="Illustration of WGCNA Modules">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of WGCNA Modules">
 </p>
 
 We employed Weighted Gene Co-expression Network Analysis (WGCNA) to identify clusters (modules) of co-expressed proteins. This systems biology approach moves beyond single-protein analysis to identify functional units.
@@ -130,3 +130,14 @@ pres <- modulePreservation(
 ## Summary
 
 This pipeline transforms raw proteomic data into biologically meaningful modules. By following these four steps—Preprocessing, Network Construction, Module Detection, and Trait Correlation—we identify systems-level protein signatures associated with Alzheimer's Disease.
+
+## 17.8 Reproducibility and Data Sharing
+
+For clinical and translational research, reproducibility is paramount. Best practices:
+
+- **R environment management:** Use `renv` to pin package versions for complete reproducibility.
+- **Session documentation:** Export `sessionInfo()` and parameter files at the end of each analysis.
+- **Data deposition:** When possible, deposit processed expression matrices (e.g., GEO) and network results with methods metadata.
+- **Validation strategy:** Where feasible, repeat key modules in an independent cohort and report module preservation Z-scores.
+
+Publishing reproducible R Markdown notebooks (or targets pipelines) ensures other researchers can verify and extend your findings.

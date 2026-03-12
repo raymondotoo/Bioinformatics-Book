@@ -15,7 +15,7 @@ In this chapter, we will focus on **Biopython**, the standard library for comput
 ## 5.2 Getting Started with Biopython
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Biopython:+Computational+Biology+Tools" alt="Illustration of Biopython">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Biopython">
 </p>
 
 Before we write code, you usually need to install the library. In your terminal (Chapter 4 skills!), you would run:
@@ -108,3 +108,30 @@ This simple loop can process files containing millions of sequences without cras
 ## Summary
 
 Python, combined with Biopython, allows us to automate the biological concepts we learned in Part 1. We can now manipulate sequences, perform the central dogma operations, and read standard file formats with just a few lines of code.
+
+## 5.5 Practical Libraries, Workflows, and Best Practices
+
+Python's ecosystem supports every step of modern bioinformatics. Key recommendations:
+
+- **Core packages:** `biopython`, `pandas`, `numpy`, `scipy` for data handling and basic statistics.
+- **Machine learning / deep learning:** `scikit-learn`, `xgboost`, `tensorflow`, `pytorch`.
+- **Single-cell analysis:** `scanpy`, `anndata` for preprocessing and downstream analyses.
+- **Interactive and reproducible:** Use Jupyter or VS Code notebooks for exploration; export production code as scripts and add tests.
+- **Packaging & environments:** Use `poetry`, `pip`, or `conda`/`mamba` for environment management; pin dependencies in `environment.yml` or `requirements.txt`.
+
+Example: a small, testable function with a type hint and a unit test-friendly design.
+
+```python
+from typing import List, Dict
+
+def gc_content(seq: str) -> float:
+  """Return GC percentage of a DNA sequence."""
+  s = seq.upper()
+  if not s:
+    return 0.0
+  return (s.count('G') + s.count('C')) / len(s) * 100
+
+# This function is simple to unit test and reuse in pipelines.
+```
+
+Add CI and tests for critical utilities to avoid silent regressions in pipelines.

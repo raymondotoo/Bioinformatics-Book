@@ -11,8 +11,22 @@ Traditional biology is **reductionist**: it breaks things down to study them (e.
 ## 16.2 Biological Networks
 
 <p align="center">
-  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Biological+Networks:+Nodes+and+Edges" alt="Illustration of Biological Networks">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Biological Networks">
 </p>
+
+## 15.4 Network Analysis and Pathway Enrichment
+
+Systems biology connects molecular entities into networks and pathways. Practical components:
+
+- **Network construction:** Build co-expression or protein–protein interaction networks (WGCNA, STRING interactions).
+- **Module detection:** Identify modules/clusters and test for enrichment of pathways or gene ontology terms.
+- **Pathway enrichment:** Tools include `g:Profiler`, `ReactomePA`, `clusterProfiler` for pathway over-representation and GSEA approaches.
+
+Best practices:
+
+- Use multiple evidence sources (expression, interaction databases) to build robust networks.
+- Correct for multiple testing and report effect sizes, not only p-values.
+- Visualize modules with clear legends, colors, and interactive viewers where possible.
 
 We represent these systems using **Graphs** (Networks).
 *   **Nodes:** The biological entities (Genes, Proteins, Metabolites).

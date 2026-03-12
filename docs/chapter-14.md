@@ -9,8 +9,22 @@ Why does this matter? Because if you know the shape of a lock (a protein involve
 ## 15.2 The Protein Data Bank (PDB)
 
 <p align="center">
-  <img src="https://placehold.co/600x400/E8F5E9/333333?text=3D+Protein+Structure" alt="Illustration of 3D Protein Structure">
+  <img src="assets/illustrations/alphafold.svg" alt="Illustration of 3D Protein Structure">
 </p>
+
+## 14.4 Interpreting Predicted Structures and Downstream Analyses
+
+Structure prediction (AlphaFold) is best used as a hypothesis generator. Guidance:
+
+- **Confidence metrics:** Inspect per-residue confidence (pLDDT) and predicted aligned error (PAE) when available.
+- **Compare to experiment:** Overlay predicted models with PDB or cryo-EM maps when possible to validate conformations.
+- **Molecular dynamics (MD):** Use MD (e.g., `GROMACS`) to sample conformational flexibility and assess stability, when necessary.
+- **Binding site inference:** Combine structure with docking and evolutionary conservation to predict ligand-binding residues.
+
+Visualization & tools:
+
+- `PyMOL`, `ChimeraX` for high-quality figures and interactive exploration.
+- Use AlphaFold DB to query precomputed models before running local predictions.
 
 The **PDB** is the worldwide repository for 3D structural data of large biological molecules. Unlike GenBank (which stores sequences), PDB stores **coordinates** (X, Y, Z positions) for every atom in the molecule.
 

@@ -9,8 +9,32 @@ Proteins are the functional units, and metabolites are the fuel and building blo
 ## 13.2 Proteomics: The Mass Spec Revolution
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Mass+Spectrometry+Workflow" alt="Illustration of Mass Spectrometry">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Mass Spectrometry">
 </p>
+
+## 12.6 Modern Proteomics: DDA vs DIA and Quantification
+
+Proteomics has matured with better instruments and computational workflows. Two dominant acquisition strategies exist:
+
+- **DDA (Data-Dependent Acquisition):** The instrument selects the most intense precursor ions for fragmentation. Historically common and supported by tools like `MaxQuant`.
+- **DIA (Data-Independent Acquisition):** Fragments all ions in predefined windows, improving reproducibility and depth of quantification. Tools: `OpenSWATH`, `DIA-NN`.
+
+Key points for quantitative proteomics:
+
+- **Spectral libraries vs library-free:** DIA benefits from spectral libraries but modern tools (DIA-NN) can operate in library-free or predicted-library modes.
+- **Label-free vs labeling approaches:** TMT/iTRAQ allow multiplexing; label-free workflows scale more simply but require careful normalization.
+- **Quality control:** Monitor peptide identification rates, retention time stability, and coefficient of variation across replicates.
+
+Recommended tools and pipelines:
+
+- `MaxQuant` for DDA identification and quantification.
+- `DIA-NN`, `OpenSWATH` for DIA analyses.
+- Use `Perseus` or `MSstats` for downstream statistical analysis and differential protein expression.
+
+Practical advice:
+
+- Store raw files and spectral libraries in a structured archive and deposit them in PRIDE or MassIVE when publishing.
+- Include a clear description of search parameters, enzyme specificity, and false discovery rate (FDR) thresholds.
 
 Unlike DNA, we cannot "sequence" proteins easily. Instead, we weigh them.
 

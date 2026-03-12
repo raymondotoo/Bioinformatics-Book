@@ -12,7 +12,7 @@ If you have two DNA sequences, the first question you usually ask is: "Are they 
 ## 8.2 Global vs. Local Alignment
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Sequence+Alignment:+Global+vs+Local" alt="Illustration of Sequence Alignment">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Sequence Alignment">
 </p>
 
 ### Global Alignment (Needleman-Wunsch)
@@ -79,3 +79,35 @@ query             0 GCATG-U 6
 ## Summary
 
 Sequence alignment allows us to compare biological strings. **Global alignment** compares whole sequences, while **Local alignment** finds shared parts. **BLAST** is the tool we use to search massive databases.
+
+## 8.6 Modern Alignment Tools and Practical Workflow
+
+Modern bioinformatics relies on fast, accurate aligners and standard file formats. Key tools and recommendations:
+
+- **Short-read aligners:** `BWA-MEM2` (fast, accurate for Illumina); `Bowtie2` for small/short-read applications.
+- **Long-read aligners:** `minimap2` (recommended for Oxford Nanopore and PacBio reads).
+- **Splice-aware aligners:** `STAR`, `HISAT2` for RNA-Seq mapping.
+- **Format basics:** Aligners produce `SAM`/`BAM` files. Use `samtools` to sort, index, and query these files.
+
+Practical command-line pipeline (short-read DNA alignment):
+
+```bash
+# 1. Index the reference
+bwa-mem2 index ref.fa
+
+# 2. Align paired-end reads, output SAM
+bwa-mem2 mem ref.fa sample_R1.fastq.gz sample_R2.fastq.gz > sample.sam
+
+# 3. Convert to BAM, sort, and index
+samtools view -bS sample.sam | samtools sort -o sample.sorted.bam
+samtools index sample.sorted.bam
+
+# 4. Quick QC: flagstat and depth
+samtools flagstat sample.sorted.bam
+samtools depth -a sample.sorted.bam | awk '{sum+=$3} END {print "mean depth="sum/NR}'
+```
+
+Notes:
+
+- Always record software versions (`bwa-mem2 --version`, `samtools --version`) and parameters for reproducibility.
+- For large projects, encode these steps into a workflow manager (`Snakemake`, `Nextflow`) and run inside containers to ensure portability.

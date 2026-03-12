@@ -5,7 +5,7 @@
 Biological systems are complex and multilayered. A single "omic" layer—whether it's the genome, transcriptome, proteome, or metabolome—provides only a partial snapshot of the organism's state. **Multiomics data integration** combines these distinct layers to construct a holistic view of biological processes, revealing interactions and regulatory mechanisms that would be invisible in isolation.
 
 <p align="center">
-  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Multiomics+Integration+Layers" alt="Illustration of Multiomics Layers">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Multiomics Layers">
 </p>
 
 ## 20.2 Challenges in Integration
@@ -75,6 +75,23 @@ The frontier of integration is at the single-cell level (e.g., CITE-seq, which m
 ## Summary
 
 Multiomics integration is the key to unlocking the genotype-phenotype map. By moving from single-layer analysis to integrated models like **MOFA** or **sPLS**, we can discover robust biomarkers and mechanistic pathways that drive complex diseases.
+
+## 20.6 Batch Correction and Quality Control
+
+Integrating data from multiple labs or runs requires careful batch correction:
+
+- **ComBat / SVA:** Standard methods for expression data; ComBat-seq for counts.
+- **Harmony / scVI:** For single-cell data integration and label transfer.
+- **Caution:** Always visualize before and after correction (PCA, UMAP) and avoid removing real biological signal.
+
+## 20.7 Recommended Multiomics Workflow
+
+1. Harmonize sample IDs and metadata across layers.
+2. Perform QC and normalization per layer.
+3. Apply batch correction if needed.
+4. Run joint dimension reduction (MOFA+, mixOmics).
+5. Interpret factors biologically (enrichment, network mapping).
+6. Validate top features in independent cohorts or with orthogonal assays.
 
 ---
 

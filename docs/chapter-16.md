@@ -28,8 +28,20 @@ By sequencing a tumor (Tumor) and the patient's healthy blood (Normal), bioinfor
 ## 17.4 GWAS: Genome-Wide Association Studies
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=GWAS+Manhattan+Plot" alt="Illustration of GWAS Manhattan Plot">
+    <img src="assets/illustrations/figure-template.svg" alt="Illustration of GWAS Manhattan Plot">
 </p>
+
+## 16.4 Clinical Bioinformatics: Standards and Interpretation
+
+Translating bioinformatics into clinic-grade results requires standards, validation, and clear reporting.
+
+- **Variant interpretation:** Follow ACMG/AMP guidelines for clinical classification (Pathogenic, Likely Pathogenic, VUS, Likely Benign, Benign).
+- **VCF best practices:** Include detailed metadata, sample identifiers, and ensure reproducible filtration steps; use `bcftools` and `GATK` best practices.
+- **Reporting and provenance:** Maintain audit trails, software versions, and parameter files. Use controlled-access repositories for human data to comply with consent.
+
+Privacy and federated analysis:
+
+- For sensitive human genomic data, consider federated approaches (DataSHIELD, GA4GH APIs) and de-identification strategies. Engage ethics and legal teams early.
 
 How do we find the genes responsible for complex diseases like Diabetes or Alzheimer's?
 

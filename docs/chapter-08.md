@@ -5,8 +5,10 @@
 "Nothing in biology makes sense except in the light of evolution." - Theodosius Dobzhansky.
 
 <p align="center">
-  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Phylogenetic+Tree" alt="Illustration of a Phylogenetic Tree">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of a Phylogenetic Tree">
 </p>
+
+For an interactive view of tree manipulation and collapsing, open the interactive demo: [Interactive Phylogenetic Tree](interactive/phylo.html)
 
 **Phylogenetics** is the study of evolutionary relationships among groups of organisms. We represent these relationships using a **Phylogenetic Tree**.
 
@@ -79,3 +81,25 @@ Phylo.draw_ascii(tree)
 ## Summary
 
 Phylogenetics allows us to reconstruct the history of life. We start with an **MSA**, choose a method (like **Maximum Likelihood**), and produce a tree that visualizes the evolutionary distance between species.
+
+## 9.5 Model Selection, Tools, and Robustness
+
+Modern phylogenetic practice emphasizes model selection, statistical support, and reproducibility.
+
+- **Model selection:** Use tools like `ModelFinder` (built into `IQ-TREE`) to select substitution models that best fit your MSA.
+- **Tree inference:** Popular, fast, and reliable tools include `IQ-TREE` and `RAxML-NG` for Maximum Likelihood trees; `MrBayes` for Bayesian inference.
+- **Support values:** Perform bootstrapping (standard or ultrafast bootstrap in `IQ-TREE`) to quantify node support.
+- **Visualization:** Use `ETE3`, `FigTree`, or interactive services like `iTOL` to visualize annotated trees.
+
+Example: running `IQ-TREE` with model selection and ultrafast bootstraps:
+
+```bash
+# Model selection + ML tree + ultrafast bootstrap (1000 replicates)
+iqtree2 -s alignment.fasta -m MFP -B 1000 -T AUTO
+```
+
+Practical tips:
+
+- Inspect the MSA for poorly aligned regions and trim them (e.g., `trimAl`) before building trees.
+- For large datasets, consider partitioning or using gene/species tree reconciliation methods.
+- Share alignment, trees, and commands (e.g., `README` or workflow file) so results are reproducible.

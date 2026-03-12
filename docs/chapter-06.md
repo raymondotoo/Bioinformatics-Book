@@ -7,7 +7,7 @@ Biology has transformed into a data-rich science. Experiments now generate terab
 ## 6.2 The Big Three
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Biological+Databases:+NCBI,+EMBL-EBI,+DDBJ" alt="Illustration of Major Databases">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Major Databases">
 </p>
 
 While there are thousands of specialized databases, three major organizations host the primary data for the world:
@@ -75,3 +75,20 @@ SOURCE      Homo sapiens (human)
 ## Summary
 
 Databases are the libraries of bioinformatics. We use **Accession Numbers** to locate specific books (records) and tools like **Entrez** to check them out automatically.
+
+## 6.6 Programmatic Access, APIs, and Standards
+
+Beyond `Entrez`, programmatic access to data is critical for automation and reproducible research.
+
+- **ENA / EBI APIs:** The European Nucleotide Archive provides REST endpoints for searching and fetching datasets (use `curl` or `requests`).
+
+  Example (fetch a metadata JSON):
+
+  ```bash
+  curl -H "Accept: application/json" "https://www.ebi.ac.uk/ena/portal/api/filereport?accession=SRR1234567&result=read_run&fields=run_accession,fastq_ftp"
+  ```
+
+- **GA4GH standards:** Emerging standards such as `htsget` and `refget` enable secure, standardized access to sequencing reads and reference sequences across cloud providers.
+- **Rate limiting & attribution:** Always include contact information when scripting large downloads and respect provider rate limits. Use `MultiQC` and logging to collect provenance information.
+
+Programmatic access enables reproducible pipelines: combine APIs, `snakemake`, and containers to fetch data, process it, and archive outputs with clear provenance.

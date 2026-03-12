@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="220" viewBox="0 0 700 220">
+  <style>
+    .box{fill:#fff;stroke:#90a4ae;stroke-width:2;rx:8}
+    .label{font:700 14px 'Helvetica Neue', Arial, sans-serif; fill:#263238}
+    .arrow{stroke:#3949ab;stroke-width:8;stroke-linecap:round}
+  </style>
+  <rect width="100%" height="100%" fill="#E8F5E9"/>
+  <g transform="translate(20,40)">
+    <rect class="box" x="0" y="0" width="140" height="80"/>
+    <text class="label" x="70" y="48" text-anchor="middle">Sample Prep</text>
+
+    <rect class="box" x="180" y="0" width="140" height="80"/>
+    <text class="label" x="250" y="48" text-anchor="middle">Sequencing</text>
+
+    <rect class="box" x="360" y="0" width="140" height="80"/>
+    <text class="label" x="430" y="48" text-anchor="middle">Basecalling</text>
+
+    <rect class="box" x="540" y="0" width="140" height="80"/>
+    <text class="label" x="610" y="48" text-anchor="middle">Alignment / QC</text>
+
+    <path class="arrow" d="M140 40 L180 40" />
+    <path class="arrow" d="M320 40 L360 40" />
+    <path class="arrow" d="M500 40 L540 40" />
+  </g>
+  <text x="20" y="20" font-size="12" fill="#37474f">NGS Workflow: from sample to aligned reads</text>
+</svg>

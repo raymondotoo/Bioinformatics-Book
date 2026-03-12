@@ -1,5 +1,7 @@
 site_name: The Serial Bioinformatician
 site_description: A comprehensive guide from the central dogma to cutting-edge computational techniques in bioinformatics.
+site_author: Raymond Otoo, Ph.D.
+copyright: "© 2026 Raymond Otoo. Licensed under CC BY-SA 4.0."
 
 # Use the 'docs' subdirectory for all documentation files.
 docs_dir: docs
@@ -9,14 +11,38 @@ theme:
   name: material
   palette:
     # Palette toggle for light/dark mode
-    scheme: default
-    primary: indigo
-    accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.top
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
   logo: 'assets/cover.png'
   favicon: 'assets/cover.png'
+  icon:
+    repo: fontawesome/brands/github
+
+repo_url: https://github.com/your-username/Bioinformatics-Book
+repo_name: Bioinformatics-Book
 
 plugins:
   - search
@@ -31,9 +57,25 @@ plugins:
 
 markdown_extensions:
   - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+      toc_depth: 3
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 # Navigation: This creates the sidebar for your book
 nav:

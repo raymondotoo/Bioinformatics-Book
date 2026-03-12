@@ -3,7 +3,10 @@
 ## 10.1 The Jigsaw Puzzle
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Genome+Assembly:+Reads+to+Contigs" alt="Illustration of Genome Assembly">
+</p>
+<p align="center">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Genome Assembly">
+</p>
 </p>
 
 When we sequence a genome, we do not read the chromosome from start to finish. Current technology cannot do that. Instead, we break the DNA into millions of tiny pieces, sequence them, and then try to put them back together.
@@ -85,3 +88,40 @@ N50: 500
 ## Summary
 
 Genome assembly stitches short reads into long **contigs**. We use metrics like **N50** to judge the quality. Finally, **annotation** turns the raw sequence into a map of genes and functions.
+
+## 10.6 Modern Assembly: Long reads, hybrid approaches, and best practices
+
+Recent advances in sequencing have shifted the assembly landscape. Long-read technologies (PacBio HiFi, Oxford Nanopore) produce reads that span many repeats and structural variants, making assemblies much more contiguous. Key recommendations:
+
+- **Choose technology by goal:** Use short reads (Illumina) for high base accuracy and variant calling; use long reads for assembly and structural variant discovery. HiFi reads combine length with high accuracy.
+- **Hybrid assembly:** Combine long reads for contiguity with short reads for polishing. Tools: `SPAdes` (hybrid modes), `Unicycler` (bacterial hybrid), `MaSuRCA`.
+- **Long-read assemblers:** `hifiasm` (HiFi), `Flye`, `Canu`.
+- **Polishing:** After assembly, improve base accuracy with short-read polishing tools (`Pilon`) or long-read polishers (`Racon`, `Medaka`). For HiFi assemblies, fewer polishing rounds are typically needed.
+- **Scaffolding & phasing:** Use Hi-C, linked reads, or trio-binning to scaffold and phase haplotypes when producing reference-quality genomes.
+
+## 10.7 Quality control and evaluation
+
+Tools and metrics to include in any assembly workflow:
+
+- **QUAST**: Comprehensive assembly evaluation (N50, misassemblies, genome fraction).
+- **BUSCO**: Measures gene-space completeness using single-copy orthologs.
+- **BlobTools**: Detect contamination by taxonomic assignment of contigs.
+
+Practical tips:
+
+- Target appropriate coverage: ~30–60× for long-read assembly depending on genome complexity; higher for polyploid or repeat-rich genomes.
+- Keep raw data and intermediate files organized and versioned; record software versions and parameters for reproducibility.
+
+## 10.8 Recommended minimal pipeline (example)
+
+1.  Basecalling and adapter trimming (if required).
+2.  Read QC and filtering (remove low-quality reads and contaminants).
+3.  Assemble with a long-read assembler (or hybrid assembler when combining data).
+4.  Polish the assembly with reads of complementary accuracy.
+5.  Run QUAST and BUSCO to evaluate.
+6.  Annotate using evidence-based pipelines (e.g., `MAKER`, `BRAKER`) and deposit raw reads and assembly in public archives (SRA, ENA) for transparency.
+
+## 10.9 Further reading and resources
+
+- The Genome Reference Consortium and recent high-quality assemblies (e.g., T2T consortium) provide important case studies in assembly best practices.
+- Tool documentation: `hifiasm`, `Flye`, `SPAdes`, `QUAST`, `BUSCO`.

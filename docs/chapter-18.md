@@ -7,8 +7,10 @@ While static plots are useful, WGCNA generates a wealth of data that is best exp
 ## 19.2 Dashboard Structure
 
 <p align="center">
-  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Shiny+Dashboard+Layout" alt="Illustration of Shiny Dashboard">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Shiny Dashboard">
 </p>
+
+Try the interactive module-trait heatmap demo here: [Interactive WGCNA Heatmap](interactive/wgcna.html)
 
 We will use `shinydashboard` to organize the results into three main tabs:
 1.  **Network Topology:** Visualizing the soft thresholding and scale-free fit.
@@ -87,3 +89,13 @@ server <- function(input, output) {
 ## Summary
 
 By building an R Shiny app, we transformed static analysis results into a dynamic tool for discovery. This allows domain experts to interact with the data directly, fostering better collaboration between bioinformaticians and clinicians.
+
+## 19.4 Deployment and Packaging Options
+
+Options for making interactive results accessible:
+
+- **Shiny Server / shinyapps.io:** Host Shiny apps for live, server-rendered interactivity (requires active R session).
+- **Static HTML widgets:** Use `htmlwidgets` (e.g., `plotly`, `DT`) embedded in R Markdown HTML reports for zero-dependency sharing.
+- **Pre-computed RData:** Package pre-computed `.RData` or `.rds` files so the app loads instantly without re-running analyses.
+
+Choose the approach that fits your audience; for broad dissemination, static HTML reports with embedded widgets are often easiest to share.

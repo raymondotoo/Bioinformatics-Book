@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
+  <style>
+    .box{fill:#fff;stroke:#90a4ae;stroke-width:2;rx:8}
+    .label{font:700 14px 'Helvetica Neue', Arial, sans-serif; fill:#263238}
+    .arrow{stroke:#43a047;stroke-width:6;stroke-linecap:round}
+  </style>
+  <rect width="100%" height="100%" fill="#E8F5E9"/>
+  <g transform="translate(30,40)">
+    <rect class="box" x="0" y="0" width="160" height="70"/>
+    <text class="label" x="80" y="42" text-anchor="middle">Data</text>
+    <rect class="box" x="220" y="0" width="160" height="70"/>
+    <text class="label" x="300" y="42" text-anchor="middle">Processing</text>
+    <rect class="box" x="440" y="0" width="120" height="70"/>
+    <text class="label" x="500" y="42" text-anchor="middle">Results</text>
+    <path class="arrow" d="M160 35 L220 35" />
+    <path class="arrow" d="M380 35 L440 35" />
+  </g>
+  <text x="18" y="18" font-size="12" fill="#37474f">Reproducible Workflow: scripts, containers, workflow managers</text>
+</svg>

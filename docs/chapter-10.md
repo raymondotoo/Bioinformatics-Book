@@ -9,7 +9,7 @@ For decades, **Sanger sequencing** was the gold standard. It was reliable but sl
 ## 11.2 The Core Principle: Massive Parallelism
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=NGS+Workflow:+Massive+Parallelism" alt="Illustration of NGS Workflow">
+  <img src="assets/illustrations/ngs-workflow.svg" alt="Illustration of NGS Workflow">
 </p>
 
 While different NGS platforms (like Illumina, PacBio, or Oxford Nanopore) have unique chemistries, the general workflow is similar:
@@ -73,3 +73,54 @@ This ability to programmatically check the quality of your data is the first ste
 ## Summary
 
 NGS allows for massive parallel sequencing, generating huge amounts of data quickly and cheaply. This data is stored in **FASTQ** files, which contain both the sequence and a **Phred quality score** for each base. We use tools like Biopython to parse these files and assess data quality before analysis.
+
+## 11.6 Common NGS Data Types and File Formats
+
+- **FASTQ:** Raw reads + quality.
+- **FASTA:** Assembled sequences or reference genomes (no quality scores).
+- **SAM/BAM/CRAM:** Aligned reads (SAM is human-readable; BAM is compressed binary; CRAM is compressed with reference-based compression).
+- **VCF:** Variant calls (SNPs, indels) and annotations.
+
+## 11.7 Best Practices & Typical Pipeline (recommended)
+
+A standard short-read (Illumina) pipeline for variant discovery or RNA-Seq analysis typically follows:
+
+1.  **Raw data QC:** `FastQC`, then aggregate with `MultiQC`.
+2.  **Trimming/filtering:** `TrimGalore`/`fastp` to remove adapters and low-quality bases.
+3.  **Alignment:** `BWA-MEM2` for short reads, `minimap2` for long reads or transcriptome alignment.
+4.  **Post-processing:** `samtools` for sorting/indexing; mark duplicates with `Picard`.
+5.  **Variant calling:** `GATK` Best Practices pipeline, `FreeBayes`, or `DeepVariant` (machine-learning based).
+6.  **Annotation:** `SnpEff`, `VEP` to add gene and functional context.
+
+## 11.8 Reproducibility: Workflows, Containers, and Data Provenance
+
+Reproducible analysis is essential. Recommendations:
+
+- Use workflow managers: `Snakemake`, `Nextflow`, or `Cromwell` to encode pipelines as reproducible workflows.
+- Containerize tools: use `Docker` or `Singularity/Apptainer` to lock tool versions and dependencies.
+- Keep manifests: record `conda`/`pip` environments or provide `Dockerfile`/`Singularity` images.
+- Use `MultiQC` and automated reports to capture QC metadata.
+
+## 11.9 Emerging Methods and Notes
+
+- **Long-read sequencing** (Oxford Nanopore, PacBio) enables isoform-level RNA analysis, direct RNA sequencing, and improved structural variant detection.
+- **Single-cell sequencing** requires specialized preprocessing (UMI handling, cell barcodes) and downstream tools (`CellRanger`, `Scanpy`, `Seurat`).
+- **Privacy and ethics:** human sequence data often requires controlled-access storage and adherence to consent agreements.
+
+## 11.10 Quick example Snakemake rule (alignment)
+
+```python
+rule align:
+  input:
+    reads="{sample}.fastq.gz",
+    ref="ref/genome.fa"
+  output:
+    bam="{sample}.bam"
+  shell:
+    """
+    bwa-mem2 mem {input.ref} {input.reads} | samtools sort -o {output.bam}
+    samtools index {output.bam}
+    """
+```
+
+This small rule demonstrates how to pin commands into a reproducible workflow. Workflow files should be version-controlled alongside configuration and environment manifests.

@@ -27,8 +27,26 @@ By sequencing this "barcode," we can identify the bacteria without growing them 
 ## 14.4 Diversity: Alpha vs. Beta
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Microbiome+Diversity:+Alpha+vs+Beta" alt="Illustration of Microbiome Diversity">
+    <img src="assets/illustrations/figure-template.svg" alt="Illustration of Microbiome Diversity">
 </p>
+
+## 13.4 Modern Microbiome Methods and Best Practices
+
+Microbiome research can use targeted marker gene sequencing (16S) or whole-metagenome shotgun sequencing. Key practices:
+
+- **DADA2 / Deblur:** Use amplicon denoising (DADA2) rather than OTU clustering for higher resolution.
+- **QIIME2:** A full ecosystem for 16S processing, visualization, and reproducible pipelines.
+- **Shotgun metagenomics:** Provides species- and strain-level resolution and functional profiling (e.g., HUMAnN).
+
+Analysis considerations:
+
+- **Contamination control:** Include blanks and negative controls; use `decontam` to identify contaminants.
+- **Compositional data:** Use compositional-aware methods (ALDEx2, DESeq2 with caution) and transform data (CLR) before multivariate analyses.
+- **Diversity metrics:** Alpha (within-sample) and Beta (between-sample) are standard; use rarefaction carefully and prefer robust normalization methods.
+
+Data sharing:
+
+- Deposit raw reads in SRA/ENA and provide sample metadata in standard formats (MIxS). Provide analysis notebooks and environment files for reproducibility.
 
 This is the most important concept in microbiome analysis.
 

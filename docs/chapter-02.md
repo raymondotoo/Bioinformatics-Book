@@ -7,7 +7,7 @@ In this chapter, we will zoom out from a single gene to the entire **genome** an
 ## 2.1 DNA Structure and Replication
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=DNA+Replication+Process" alt="Illustration of DNA Replication">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of DNA Replication">
 </p>
 
 As we learned, DNA is a double helix. But this helix isn't just floating around in a straight line. The human genome, if stretched out, would be about 2 meters long! To fit inside a microscopic nucleus, it must be incredibly well-organized and compacted.
@@ -81,7 +81,7 @@ Not all DNA is made of genes! In humans, genes make up only about 1-2% of the en
 ## 2.3 Genetic Variation: The Spice of Life
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Genetic+Variants:+SNPs+and+Indels" alt="Illustration of Genetic Variants">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Genetic Variants">
 </p>
 
 If you compare the genome of any two humans, they are more than 99% identical. It's that tiny fraction of a percent that makes us all unique. These differences are called **genetic variants**.
@@ -114,3 +114,13 @@ If a SNP is a typo, an Indel is like adding or removing a whole word. Because th
 *   **Translocations:** A piece of one chromosome breaks off and attaches to another.
 
 These are like cutting and pasting entire chapters or paragraphs between different books in our library analogy. They often have significant biological consequences.
+
+## 2.4 Pangenomes and Population-Level Resources
+
+The idea of a single "reference genome" is evolving. Key concepts:
+
+- **Pangenome:** The full set of sequences found across many individuals of a species. A pangenome reference captures common and variable regions, improving variant detection and reducing reference bias.
+- **Long-read sequencing for SVs:** PacBio HiFi and Oxford Nanopore reads span repetitive and structurally variable regions, providing much better resolution for detecting large insertions, deletions, and inversions.
+- **Population databases:** Resources like `gnomAD` aggregate variants from tens of thousands of individuals, providing allele frequencies essential for filtering and interpreting clinical variants. Similarly, `dbSNP` and `ClinVar` annotate known variants with phenotypic associations.
+
+Practical recommendation: when analyzing human variation, always cross-reference your VCF with gnomAD allele frequencies and ClinVar annotations to prioritize variants of clinical or functional interest.

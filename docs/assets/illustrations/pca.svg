@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360">
+  <style>
+    .point{fill:#1e88e5;opacity:0.9}
+    .axis{stroke:#37474f;stroke-width:1}
+    .label{font:600 12px 'Helvetica Neue', Arial, sans-serif; fill:#263238}
+  </style>
+  <rect width="100%" height="100%" fill="#fff"/>
+  <g transform="translate(60,40)">
+    <rect width="460" height="260" fill="#E8F5E9" rx="8"/>
+    <line class="axis" x1="30" y1="230" x2="420" y2="230" />
+    <line class="axis" x1="30" y1="230" x2="30" y2="20" />
+    <circle class="point" cx="100" cy="180" r="6" />
+    <circle class="point" cx="180" cy="120" r="6" />
+    <circle class="point" cx="260" cy="160" r="6" />
+    <circle class="point" cx="340" cy="90" r="6" />
+  </g>
+  <text class="label" x="60" y="30">PCA: PC1 vs PC2 (samples colored by group)</text>
+</svg>

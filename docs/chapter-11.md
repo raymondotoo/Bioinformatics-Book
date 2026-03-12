@@ -11,7 +11,7 @@ The **transcriptome** is the complete set of all RNA molecules (transcripts) in 
 ## 12.2 The RNA-Seq Workflow
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=RNA-Seq+Workflow" alt="Illustration of RNA-Seq Workflow">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of RNA-Seq Workflow">
 </p>
 
 The dominant technology for studying the transcriptome is **RNA-Seq (RNA Sequencing)**. It leverages the NGS technology we learned about in Chapter 11.
@@ -41,7 +41,7 @@ Common units include:
 ## 12.5 Differential Expression Analysis
 
 <p align="center">
-  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Volcano+Plot:+Differential+Expression" alt="Illustration of Volcano Plot">
+  <img src="assets/illustrations/figure-template.svg" alt="Illustration of Volcano Plot">
 </p>
 
 The most common goal of an RNA-Seq experiment is to find **Differentially Expressed Genes (DEGs)**.
@@ -84,3 +84,32 @@ This workflow is repeated for every sample, and the final count files are combin
 ## Summary
 
 **Transcriptomics** provides a dynamic view of the genome in action. The **RNA-Seq** workflow allows us to quantify gene expression by sequencing cDNA and mapping the reads back to a genome. The ultimate goal is often to find **differentially expressed genes** between different conditions, giving us powerful insights into the molecular basis of disease, development, and cellular responses.
+
+## 12.7 Modern Quantification Methods: Pseudoalignment and Transcript-Level Analysis
+
+Newer tools perform very fast, accurate transcript quantification without full alignment. These are now standard for many RNA-Seq workflows:
+
+- **Pseudoaligners / lightweight quantifiers:** `Salmon` and `Kallisto` map reads to a transcriptome index and produce transcript-level abundances quickly and with low memory.
+- **Transcript-to-gene aggregation:** Use `tximport` (R) to import transcript-level estimates into gene-level counts for DE testing in `DESeq2` or `edgeR`.
+
+Example: quantify with `salmon` (quasi-mapping mode):
+
+```bash
+# Build transcriptome index
+salmon index -t transcripts.fa -i transcripts_index
+
+# Quantify reads
+salmon quant -i transcripts_index -l A \
+  -1 sample_R1.fastq.gz -2 sample_R2.fastq.gz \
+  -p 8 -o sample_salmon
+```
+
+## 12.8 Differential Expression and Downstream Analysis
+
+- **DE tools:** `DESeq2` and `edgeR` remain standard for differential expression with appropriate normalization and experimental design specification.
+- **Visualization:** PCA on normalized counts, heatmaps, and volcano plots help inspect results and batch effects.
+- **Single-cell:** For single-cell RNA-Seq, specialized preprocessing is required: UMI handling, cell barcode parsing, doublet detection, and normalization. Tools: `CellRanger` (10x Genomics), `Scanpy`, `Seurat`.
+
+## 12.9 Reproducible RNA-Seq Pipelines
+
+Encode your pipelines using `Snakemake` or `Nextflow`, containerize tools, and include `MultiQC` to aggregate QC across samples. For large consortia projects, maintain metadata (sample sheets) and workflow parameter files to ensure provenance.

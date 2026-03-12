@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360">
+  <style>
+    .bg{fill:#fff}
+    .frame{fill:#E8F5E9;stroke:#cfd8dc;stroke-width:2}
+    .title{font:700 16px 'Helvetica Neue', Arial, sans-serif; fill:#263238}
+    .caption{font:600 12px 'Helvetica Neue', Arial, sans-serif; fill:#37474f}
+  </style>
+  <rect class="bg" width="100%" height="100%"/>
+  <rect class="frame" x="20" y="40" width="560" height="260" rx="8"/>
+  <text class="title" x="300" y="70" text-anchor="middle">Figure</text>
+  <text class="caption" x="300" y="330" text-anchor="middle">Replace with specific illustration for this chapter</text>
+</svg>

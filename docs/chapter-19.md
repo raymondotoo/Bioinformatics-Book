@@ -9,8 +9,10 @@ Bioinformatics is data-driven. When we observe a difference—say, gene A is exp
 The core of statistical inference is **Hypothesis Testing**.
 
 <p align="center">
-  <img src="https://placehold.co/600x300/E8F5E9/333333?text=Hypothesis+Testing+and+P-values" alt="Illustration of Hypothesis Testing">
+  <img src="assets/illustrations/pca.svg" alt="Illustration of PCA">
 </p>
+
+Explore an interactive PCA demo: [PCA Interactive Demo](interactive/pca.html)
 
 1.  **Null Hypothesis ($H_0$):** There is no difference between the groups (e.g., Drug has no effect).
 2.  **Alternative Hypothesis ($H_1$):** There is a difference.
@@ -57,7 +59,7 @@ To fix this, we apply **Multiple Testing Correction**. The standard method in om
 Omics data is high-dimensional (thousands of genes per sample). **Principal Component Analysis (PCA)** reduces this complexity by finding new axes (Principal Components) that capture the most variance in the data.
 
 <p align="center">
-  <img src="https://placehold.co/600x400/E8F5E9/333333?text=PCA:+Principal+Component+Analysis" alt="Illustration of PCA">
+  <img src="assets/illustrations/pca.svg" alt="Illustration of PCA">
 </p>
 
 *   **PC1:** Captures the most variation.
@@ -112,6 +114,16 @@ Significant genes (FDR < 0.05): 48
 ```
 *Notice how the naive method found 93 significant genes (many false positives), while FDR correction narrowed it down to 48 (closer to the true 50).*
 
+## 7.7 Effect Size and Power Analysis
+
+**p-values** tell you if an effect is unlikely to be zero, but not how large or practically significant the effect is. Best practices:
+
+- **Effect size metrics:** Report log2 fold change for expression data, Cohen's d or Hedge's g for group comparisons, odds ratios for associations.
+- **Power analysis:** Before starting an experiment, estimate the sample size required to detect a given effect at a desired power (typically 80%). Use tools like `pwr` (R) or `statsmodels` (Python) to plan experiments.
+- **Confidence intervals:** Present CIs alongside point estimates to communicate uncertainty.
+
+Modern bioinformatics journals and consortia increasingly require effect sizes and pre-registration of sample size justifications for clinical and discovery studies.
+
 ## Summary
 
-Statistics allows us to separate signal from noise. In bioinformatics, understanding **p-values**, **multiple testing correction (FDR)**, and exploratory techniques like **PCA** is essential for interpreting high-throughput data correctly.
+Statistics allows us to separate signal from noise. In bioinformatics, understanding **p-values**, **multiple testing correction (FDR)**, **effect sizes**, and exploratory techniques like **PCA** is essential for interpreting high-throughput data correctly.

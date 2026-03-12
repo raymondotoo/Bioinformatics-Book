@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="240" viewBox="0 0 800 240">
+  <style>
+    .bg{fill:#E8F5E9}
+    .text{font:700 20px/1.2 'Helvetica Neue', Arial, sans-serif; fill:#2a2a2a}
+    .label{font:600 14px/1.2 'Helvetica Neue', Arial, sans-serif; fill:#2a2a2a}
+    .box{fill:#ffffff;stroke:#cfd8dc;stroke-width:2;rx:8}
+    .arrow{fill:#3949ab}
+  </style>
+  <rect class="bg" width="100%" height="100%" rx="8"/>
+  <g transform="translate(40,40)">
+    <rect class="box" x="0" y="20" width="200" height="80" />
+    <text class="text" x="100" y="70" text-anchor="middle">DNA</text>
+
+    <path d="M220 60 L320 60" stroke="#3949ab" stroke-width="12" stroke-linecap="round" />
+    <polygon points="324,56 338,60 324,64" fill="#3949ab" />
+
+    <rect class="box" x="360" y="20" width="200" height="80" />
+    <text class="text" x="460" y="70" text-anchor="middle">RNA</text>
+
+    <path d="M580 60 L680 60" stroke="#3949ab" stroke-width="12" stroke-linecap="round" />
+    <polygon points="684,56 698,60 684,64" fill="#3949ab" />
+
+    <rect class="box" x="720" y="20" width="200" height="80" />
+    <text class="text" x="820" y="70" text-anchor="middle">Protein</text>
+  </g>
+  <text class="label" x="50" y="30">Central Dogma</text>
+</svg>

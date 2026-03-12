@@ -20,7 +20,28 @@ The specific sequence of these amino acids determines everything about the prote
 ## 3.2 The Hierarchy of Protein Structure
 
 <p align="center">
-  <img src="https://placehold.co/600x400/E8F5E9/333333?text=Protein+Structure:+Primary+to+Quaternary" alt="Illustration of Protein Structure Levels">
+    <img src="assets/illustrations/figure-template.svg" alt="Illustration of Protein Structure Levels">
+</p>
+
+## 3.4 Structure Prediction and Modern Tools
+
+Recent advances in deep learning have transformed structural bioinformatics. Methods such as **AlphaFold** produce highly accurate 3D predictions from sequence alone, helping researchers generate testable hypotheses and guide experiments.
+
+- **AlphaFold / RoseTTAFold:** Accurate structure predictions; useful for annotation, variant interpretation, and modeling complexes.
+- **Cryo-EM and experimental methods:** The explosion of cryo-EM structures complements computational predictions and provides high-resolution validation.
+- **Visualization & downstream tools:** Use `PyMOL`, `ChimeraX`, or web-based viewers to inspect models; consider molecular dynamics for refinement when necessary.
+
+Here is a compact workflow:
+
+1.  Obtain sequence(s) of interest.
+2.  Run or query AlphaFold models (or use local prediction tools where available).
+3.  Visualize predicted structures and compare to experimental PDB entries.
+4.  Use structure-aware annotations to infer active sites, binding pockets, or variant effects.
+
+An illustrative diagram is available: 
+
+<p align="center">
+    <img src="assets/illustrations/alphafold.svg" alt="AlphaFold workflow">
 </p>
 
 A protein isn't just a floppy string; it folds into a precise shape. We describe this shape in four levels:
