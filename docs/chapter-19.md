@@ -17,7 +17,7 @@ The core of statistical inference is **Hypothesis Testing**.
   <img src="../assets/illustrations/pca.svg" alt="Illustration of PCA">
 </p>
 
-Explore an interactive PCA demo: [PCA Interactive Demo](../interactive/pca.html)
+Explore an interactive PCA demo: [PCA Interactive Demo](interactive/pca.html)
 
 1.  **Null Hypothesis ($H_0$):** There is no difference between the groups (e.g., Drug has no effect).
 2.  **Alternative Hypothesis ($H_1$):** There is a difference.

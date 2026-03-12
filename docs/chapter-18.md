@@ -15,7 +15,7 @@ While static plots are useful, WGCNA generates a wealth of data that is best exp
   <img src="../assets/illustrations/shiny-dashboard.svg" alt="Illustration of Shiny Dashboard">
 </p>
 
-Try the interactive module-trait heatmap demo here: [Interactive WGCNA Heatmap](../interactive/wgcna.html)
+Try the interactive module-trait heatmap demo here: [Interactive WGCNA Heatmap](interactive/wgcna.html)
 
 We will use `shinydashboard` to organize the results into three main tabs:
 1.  **Network Topology:** Visualizing the soft thresholding and scale-free fit.

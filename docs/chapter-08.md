@@ -13,7 +13,7 @@
   <img src="../assets/illustrations/phylogenetic-tree.svg" alt="Illustration of a Phylogenetic Tree">
 </p>
 
-For an interactive view of tree manipulation and collapsing, open the interactive demo: [Interactive Phylogenetic Tree](../interactive/phylo.html)
+For an interactive view of tree manipulation and collapsing, open the interactive demo: [Interactive Phylogenetic Tree](interactive/phylo.html)
 
 **Phylogenetics** is the study of evolutionary relationships among groups of organisms. We represent these relationships using a **Phylogenetic Tree**.
 

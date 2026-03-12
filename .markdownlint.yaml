@@ -1,0 +1,32 @@
+# Markdownlint configuration for Bioinformatics Book
+# See: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+default: true
+
+# Allow longer lines for code blocks and tables
+MD013:
+  line_length: 300
+  code_blocks: false
+  tables: false
+
+# Allow inline HTML (needed for SVG illustrations)
+MD033: false
+
+# Allow duplicate headings in different sections
+MD024:
+  siblings_only: true
+
+# Allow trailing punctuation in headings (for questions)
+MD026: false
+
+# Allow multiple top-level headings (MkDocs chapters)
+MD025: false
+
+# Allow bare URLs
+MD034: false
+
+# Don't require blank lines around code fences
+MD031: false
+
+# Allow emphasis used instead of heading
+MD036: false
