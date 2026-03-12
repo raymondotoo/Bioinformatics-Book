@@ -1,21 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">
-  <style>
-    .strand{fill:none;stroke:#1e88e5;stroke-width:6}
-    .rung{stroke:#ef6c00;stroke-width:4}
-    .label{font:600 14px 'Helvetica Neue', Arial, sans-serif; fill:#2a2a2a}
-  </style>
-  <rect width="100%" height="100%" fill="#fff"/>
-  <g transform="translate(50,20)">
-    <path class="strand" d="M0 0 C80 40 80 80 0 120 C-80 160 -80 200 0 240" />
-    <path class="strand" d="M120 0 C40 40 40 80 120 120 C200 160 200 200 120 240" />
-
-    <line class="rung" x1="10" y1="20" x2="110" y2="20" />
-    <line class="rung" x1="-10" y1="60" x2="130" y2="60" />
-    <line class="rung" x1="10" y1="100" x2="110" y2="100" />
-    <line class="rung" x1="-10" y1="140" x2="130" y2="140" />
-    <line class="rung" x1="10" y1="180" x2="110" y2="180" />
-    <line class="rung" x1="-10" y1="220" x2="130" y2="220" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="helixGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1565C0"/>
+      <stop offset="100%" style="stop-color:#1E88E5"/>
+    </linearGradient>
+    <linearGradient id="helixGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7B1FA2"/>
+      <stop offset="100%" style="stop-color:#AB47BC"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#F8F9FA" rx="12"/>
+  
+  <!-- Title -->
+  <text x="450" y="45" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="28" font-weight="700" fill="#1A237E">DNA Double Helix Structure</text>
+  <text x="450" y="75" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" fill="#5C6BC0">Watson-Crick Model (1953)</text>
+  
+  <!-- Main Helix Structure -->
+  <g transform="translate(200, 100)">
+    <!-- Sugar-phosphate backbone strand 1 -->
+    <path d="M50,0 Q100,40 50,80 Q0,120 50,160 Q100,200 50,240 Q0,280 50,320" 
+          stroke="url(#helixGrad1)" stroke-width="18" fill="none" stroke-linecap="round" filter="url(#glow)"/>
+    <!-- Sugar-phosphate backbone strand 2 -->
+    <path d="M250,0 Q200,40 250,80 Q300,120 250,160 Q200,200 250,240 Q300,280 250,320" 
+          stroke="url(#helixGrad2)" stroke-width="18" fill="none" stroke-linecap="round" filter="url(#glow)"/>
+    
+    <!-- Base pairs with labels -->
+    <!-- A-T pair -->
+    <g transform="translate(0, 20)">
+      <rect x="70" y="0" width="40" height="24" rx="4" fill="#E53935"/>
+      <text x="90" y="17" text-anchor="middle" font-family="'Courier New'" font-size="14" font-weight="700" fill="white">A</text>
+      <line x1="110" y1="12" x2="190" y2="12" stroke="#78909C" stroke-width="3" stroke-dasharray="4,3"/>
+      <rect x="190" y="0" width="40" height="24" rx="4" fill="#43A047"/>
+      <text x="210" y="17" text-anchor="middle" font-family="'Courier New'" font-size="14" font-weight="700" fill="white">T</text>
+    </g>
+    
+    <!-- G-C pair -->
+    <g transform="translate(0, 80)">
+      <rect x="55" y="0" width="40" height="24" rx="4" fill="#1E88E5"/>
+      <text x="75" y="17" text-anchor="middle" font-family="'Courier New'" font-size="14" font-weight="700" fill="white">G</text>
+      <line x1="95" y1="12" x2="205" y2="12" stroke="#78909C" stroke-width="3" stroke-dasharray="4,3"/>
+      <rect x="205" y="0" width="40" height="24" rx="4" fill="#FDD835"/>
+      <text x="225" y="17" text-anchor="middle" font-family="'Courier New'" font-size="14" font-weight="700" fill="white">C</text>
+    </g>
+    
+    <!-- T-A pair -->
+    <g transform="translate(0, 140)">
+      <rect x="70" y="0" width="40" height="24" rx="4" fill="#43A047"/>
+      <text x="90" y="17" text-anchor="middle" font-family="'Courier New'" font-size="14" font-weight="700" fill="white">T</text>
+      <line x1="110" y1="12" x2="190" y2="12" stroke="#78909C" stroke-width="3" stroke-dasharray="4,3"/>
+      <rect x="190" y="0" width="40" height="24" rx="4" fill="#E53935"/>
+      <text x="210" y="17" text-anchor="middle" font-family="'Courier New'" font-size="14" font-weight="700" fill="white">A</text>
+    </g>
+    
+    <!-- C-G pair -->
+    <g transform="translate(0, 200)">
+      <rect x="55" y="0" width="40" height="24" rx="4" fill="#FDD835"/>
+      <text x="75" y="17" text-anchor="middle" font-family="'Courier New'" font-size="14" font-weight="700" fill="white">C</text>
+      <line x1="95" y1="12" x2="205" y2="12" stroke="#78909C" stroke-width="3" stroke-dasharray="4,3"/>
+      <rect x="205" y="0" width="40" height="24" rx="4" fill="#1E88E5"/>
+      <text x="225" y="17" text-anchor="middle" font-family="'Courier New'" font-size="14" font-weight="700" fill="white">G</text>
+    </g>
+    
+    <!-- A-T pair -->
+    <g transform="translate(0, 260)">
+      <rect x="70" y="0" width="40" height="24" rx="4" fill="#E53935"/>
+      <text x="90" y="17" text-anchor="middle" font-family="'Courier New'" font-size="14" font-weight="700" fill="white">A</text>
+      <line x1="110" y1="12" x2="190" y2="12" stroke="#78909C" stroke-width="3" stroke-dasharray="4,3"/>
+      <rect x="190" y="0" width="40" height="24" rx="4" fill="#43A047"/>
+      <text x="210" y="17" text-anchor="middle" font-family="'Courier New'" font-size="14" font-weight="700" fill="white">T</text>
+    </g>
+    
+    <!-- Direction labels -->
+    <text x="50" y="-15" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="#1565C0">5'</text>
+    <text x="250" y="-15" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="#7B1FA2">3'</text>
+    <text x="50" y="350" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="#1565C0">3'</text>
+    <text x="250" y="350" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="#7B1FA2">5'</text>
   </g>
-  <text class="label" x="12" y="18">DNA Double Helix (A-T, C-G)</text>
+  
+  <!-- Info Panel -->
+  <g transform="translate(550, 120)" filter="url(#shadow)">
+    <rect width="300" height="320" rx="12" fill="white" stroke="#E0E0E0" stroke-width="1"/>
+    <text x="150" y="35" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="18" font-weight="600" fill="#263238">Key Features</text>
+    <line x1="20" y1="50" x2="280" y2="50" stroke="#E0E0E0" stroke-width="1"/>
+    
+    <!-- Features list -->
+    <g transform="translate(25, 75)">
+      <circle cx="8" cy="0" r="6" fill="#1565C0"/>
+      <text x="25" y="5" font-family="'Segoe UI', Arial" font-size="13" fill="#37474F">Antiparallel strands (5'→3' / 3'→5')</text>
+      
+      <circle cx="8" cy="35" r="6" fill="#E53935"/>
+      <text x="25" y="40" font-family="'Segoe UI', Arial" font-size="13" fill="#37474F">A pairs with T (2 H-bonds)</text>
+      
+      <circle cx="8" cy="70" r="6" fill="#1E88E5"/>
+      <text x="25" y="75" font-family="'Segoe UI', Arial" font-size="13" fill="#37474F">G pairs with C (3 H-bonds)</text>
+      
+      <circle cx="8" cy="105" r="6" fill="#7B1FA2"/>
+      <text x="25" y="110" font-family="'Segoe UI', Arial" font-size="13" fill="#37474F">Right-handed helix (B-form)</text>
+      
+      <circle cx="8" cy="140" r="6" fill="#00897B"/>
+      <text x="25" y="145" font-family="'Segoe UI', Arial" font-size="13" fill="#37474F">Major &amp; minor grooves</text>
+      
+      <circle cx="8" cy="175" r="6" fill="#F57C00"/>
+      <text x="25" y="180" font-family="'Segoe UI', Arial" font-size="13" fill="#37474F">10.5 bp per turn</text>
+      
+      <circle cx="8" cy="210" r="6" fill="#5C6BC0"/>
+      <text x="25" y="215" font-family="'Segoe UI', Arial" font-size="13" fill="#37474F">3.4 nm pitch, 2 nm diameter</text>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 460)">
+    <rect width="800" height="30" rx="6" fill="#ECEFF1"/>
+    <rect x="20" y="8" width="14" height="14" rx="3" fill="#E53935"/>
+    <text x="40" y="19" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">Adenine (A)</text>
+    <rect x="130" y="8" width="14" height="14" rx="3" fill="#43A047"/>
+    <text x="150" y="19" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">Thymine (T)</text>
+    <rect x="240" y="8" width="14" height="14" rx="3" fill="#1E88E5"/>
+    <text x="260" y="19" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">Guanine (G)</text>
+    <rect x="350" y="8" width="14" height="14" rx="3" fill="#FDD835"/>
+    <text x="370" y="19" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">Cytosine (C)</text>
+    <rect x="480" y="8" width="14" height="14" rx="3" fill="#1565C0"/>
+    <text x="500" y="19" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">Backbone 1</text>
+    <rect x="600" y="8" width="14" height="14" rx="3" fill="#7B1FA2"/>
+    <text x="620" y="19" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">Backbone 2</text>
+  </g>
 </svg>

@@ -1,13 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360">
-  <style>
-    .bg{fill:#fff}
-    .frame{fill:#E8F5E9;stroke:#cfd8dc;stroke-width:2}
-    .title{font:700 16px 'Helvetica Neue', Arial, sans-serif; fill:#263238}
-    .caption{font:600 12px 'Helvetica Neue', Arial, sans-serif; fill:#37474f}
-  </style>
-  <rect class="bg" width="100%" height="100%"/>
-  <rect class="frame" x="20" y="40" width="560" height="260" rx="8"/>
-  <text class="title" x="300" y="70" text-anchor="middle">Figure</text>
-  <text class="caption" x="300" y="330" text-anchor="middle">Replace with specific illustration for this chapter</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3949AB"/>
+      <stop offset="100%" style="stop-color:#5C6BC0"/>
+    </linearGradient>
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8EAF6"/>
+      <stop offset="100%" style="stop-color:#C5CAE9"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E0F2F1"/>
+      <stop offset="100%" style="stop-color:#B2DFDB"/>
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF3E0"/>
+      <stop offset="100%" style="stop-color:#FFE0B2"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <marker id="processArrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5C6BC0"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#FAFAFA" rx="12"/>
+  
+  <!-- Header -->
+  <rect width="100%" height="60" fill="url(#headerGrad)" rx="12"/>
+  <rect y="50" width="100%" height="20" fill="url(#headerGrad)"/>
+  <text x="400" y="40" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="24" font-weight="600" fill="white">Bioinformatics Analysis Pipeline</text>
+  
+  <!-- Process Flow Cards -->
+  <g transform="translate(40, 100)">
+    <!-- Card 1 -->
+    <g filter="url(#shadow)">
+      <rect width="200" height="130" rx="10" fill="url(#cardGrad1)"/>
+      <rect width="200" height="8" rx="4" fill="#3949AB"/>
+      <circle cx="100" cy="55" r="28" fill="#5C6BC0"/>
+      <text x="100" y="52" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="24" fill="white">📊</text>
+      <text x="100" y="100" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="#283593">Data Input</text>
+      <text x="100" y="118" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#5C6BC0">Raw sequences, files</text>
+    </g>
+    
+    <!-- Arrow 1 -->
+    <line x1="250" y1="65" x2="290" y2="65" stroke="#5C6BC0" stroke-width="3" marker-end="url(#processArrow)"/>
+    
+    <!-- Card 2 -->
+    <g transform="translate(300, 0)" filter="url(#shadow)">
+      <rect width="200" height="130" rx="10" fill="url(#cardGrad2)"/>
+      <rect width="200" height="8" rx="4" fill="#00897B"/>
+      <circle cx="100" cy="55" r="28" fill="#00897B"/>
+      <text x="100" y="52" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="24" fill="white">⚙️</text>
+      <text x="100" y="100" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="#00695C">Processing</text>
+      <text x="100" y="118" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#00897B">QC, alignment, analysis</text>
+    </g>
+    
+    <!-- Arrow 2 -->
+    <line x1="510" y1="65" x2="550" y2="65" stroke="#5C6BC0" stroke-width="3" marker-end="url(#processArrow)"/>
+    
+    <!-- Card 3 -->
+    <g transform="translate(560, 0)" filter="url(#shadow)">
+      <rect width="180" height="130" rx="10" fill="url(#cardGrad3)"/>
+      <rect width="180" height="8" rx="4" fill="#F57C00"/>
+      <circle cx="90" cy="55" r="28" fill="#F57C00"/>
+      <text x="90" y="52" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="24" fill="white">📈</text>
+      <text x="90" y="100" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="#E65100">Results</text>
+      <text x="90" y="118" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#F57C00">Insights, visualizations</text>
+    </g>
+  </g>
+  
+  <!-- Details Panel -->
+  <g transform="translate(40, 260)">
+    <rect width="720" height="110" rx="10" fill="white" stroke="#E0E0E0" filter="url(#shadow)"/>
+    
+    <g transform="translate(30, 25)">
+      <circle cx="8" cy="0" r="6" fill="#3949AB"/>
+      <text x="22" y="4" font-family="'Segoe UI', Arial" font-size="12" fill="#37474F">Input: FASTQ, FASTA, BAM, VCF, CSV files</text>
+      
+      <circle cx="8" cy="30" r="6" fill="#00897B"/>
+      <text x="22" y="34" font-family="'Segoe UI', Arial" font-size="12" fill="#37474F">Tools: FastQC, BWA, STAR, GATK, samtools, bcftools, R/Python</text>
+      
+      <circle cx="8" cy="60" r="6" fill="#F57C00"/>
+      <text x="22" y="64" font-family="'Segoe UI', Arial" font-size="12" fill="#37474F">Output: Statistical reports, plots, annotated variants, publication figures</text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <g transform="translate(40, 380)">
+    <text x="360" y="0" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" font-style="italic" fill="#9E9E9E">The Serial Bioinformatician | Best Practices in Computational Biology</text>
+  </g>
 </svg>

@@ -1,27 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="220" viewBox="0 0 700 220">
-  <style>
-    .box{fill:#fff;stroke:#90a4ae;stroke-width:2;rx:8}
-    .label{font:700 14px 'Helvetica Neue', Arial, sans-serif; fill:#263238}
-    .arrow{stroke:#3949ab;stroke-width:8;stroke-linecap:round}
-  </style>
-  <rect width="100%" height="100%" fill="#E8F5E9"/>
-  <g transform="translate(20,40)">
-    <rect class="box" x="0" y="0" width="140" height="80"/>
-    <text class="label" x="70" y="48" text-anchor="middle">Sample Prep</text>
-
-    <rect class="box" x="180" y="0" width="140" height="80"/>
-    <text class="label" x="250" y="48" text-anchor="middle">Sequencing</text>
-
-    <rect class="box" x="360" y="0" width="140" height="80"/>
-    <text class="label" x="430" y="48" text-anchor="middle">Basecalling</text>
-
-    <rect class="box" x="540" y="0" width="140" height="80"/>
-    <text class="label" x="610" y="48" text-anchor="middle">Alignment / QC</text>
-
-    <path class="arrow" d="M140 40 L180 40" />
-    <path class="arrow" d="M320 40 L360 40" />
-    <path class="arrow" d="M500 40 L540 40" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 550" width="1000" height="550">
+  <defs>
+    <linearGradient id="sampleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E91E63"/>
+      <stop offset="100%" style="stop-color:#F06292"/>
+    </linearGradient>
+    <linearGradient id="extractGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9C27B0"/>
+      <stop offset="100%" style="stop-color:#BA68C8"/>
+    </linearGradient>
+    <linearGradient id="libGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3F51B5"/>
+      <stop offset="100%" style="stop-color:#7986CB"/>
+    </linearGradient>
+    <linearGradient id="seqGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00897B"/>
+      <stop offset="100%" style="stop-color:#4DB6AC"/>
+    </linearGradient>
+    <linearGradient id="analysisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF5722"/>
+      <stop offset="100%" style="stop-color:#FF8A65"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="flowArrow" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#546E7A"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#FAFAFF" rx="12"/>
+  
+  <!-- Title -->
+  <text x="500" y="45" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="28" font-weight="700" fill="#1A237E">Next-Generation Sequencing Workflow</text>
+  <text x="500" y="75" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" fill="#5C6BC0">From Sample to Insights</text>
+  
+  <!-- Step 1: Sample Collection -->
+  <g transform="translate(60, 130)" filter="url(#shadow)">
+    <rect width="140" height="160" rx="14" fill="url(#sampleGrad)"/>
+    <circle cx="70" cy="50" r="30" fill="white" opacity="0.9"/>
+    <text x="70" y="45" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="24">🧬</text>
+    <text x="70" y="65" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#880E4F">Sample</text>
+    <text x="70" y="105" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">Sample</text>
+    <text x="70" y="122" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">Collection</text>
+    <text x="70" y="145" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#FCE4EC">Blood, Tissue, Cells</text>
   </g>
-  <text x="20" y="20" font-size="12" fill="#37474f">NGS Workflow: from sample to aligned reads</text>
+  
+  <!-- Arrow 1 -->
+  <line x1="210" y1="210" x2="250" y2="210" stroke="#546E7A" stroke-width="3" marker-end="url(#flowArrow)"/>
+  
+  <!-- Step 2: DNA/RNA Extraction -->
+  <g transform="translate(270, 130)" filter="url(#shadow)">
+    <rect width="140" height="160" rx="14" fill="url(#extractGrad)"/>
+    <circle cx="70" cy="50" r="30" fill="white" opacity="0.9"/>
+    <text x="70" y="55" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="22">⚗️</text>
+    <text x="70" y="105" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">Nucleic Acid</text>
+    <text x="70" y="122" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">Extraction</text>
+    <text x="70" y="145" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#F3E5F5">DNA/RNA Isolation</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <line x1="420" y1="210" x2="460" y2="210" stroke="#546E7A" stroke-width="3" marker-end="url(#flowArrow)"/>
+  
+  <!-- Step 3: Library Preparation -->
+  <g transform="translate(480, 130)" filter="url(#shadow)">
+    <rect width="140" height="160" rx="14" fill="url(#libGrad)"/>
+    <circle cx="70" cy="50" r="30" fill="white" opacity="0.9"/>
+    <text x="70" y="55" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="22">📚</text>
+    <text x="70" y="105" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">Library</text>
+    <text x="70" y="122" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">Preparation</text>
+    <text x="70" y="145" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#E8EAF6">Fragment + Adapters</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <line x1="630" y1="210" x2="670" y2="210" stroke="#546E7A" stroke-width="3" marker-end="url(#flowArrow)"/>
+  
+  <!-- Step 4: Sequencing -->
+  <g transform="translate(690, 130)" filter="url(#shadow)">
+    <rect width="140" height="160" rx="14" fill="url(#seqGrad)"/>
+    <circle cx="70" cy="50" r="30" fill="white" opacity="0.9"/>
+    <text x="70" y="55" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="22">🔬</text>
+    <text x="70" y="105" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">Sequencing</text>
+    <text x="70" y="122" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">Platform</text>
+    <text x="70" y="145" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#E0F2F1">Illumina/PacBio/ONT</text>
+  </g>
+  
+  <!-- Arrow 4 (down) -->
+  <line x1="760" y1="300" x2="760" y2="340" stroke="#546E7A" stroke-width="3" marker-end="url(#flowArrow)"/>
+  
+  <!-- Step 5: Data Analysis -->
+  <g transform="translate(480, 360)" filter="url(#shadow)">
+    <rect width="350" height="140" rx="14" fill="url(#analysisGrad)"/>
+    <text x="175" y="35" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="white">Bioinformatics Analysis</text>
+    
+    <!-- Sub-steps -->
+    <g transform="translate(25, 55)">
+      <rect width="90" height="55" rx="8" fill="white" opacity="0.9"/>
+      <text x="45" y="25" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="#BF360C">QC &amp;</text>
+      <text x="45" y="40" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="#BF360C">Trimming</text>
+    </g>
+    <g transform="translate(130, 55)">
+      <rect width="90" height="55" rx="8" fill="white" opacity="0.9"/>
+      <text x="45" y="25" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="#BF360C">Alignment</text>
+      <text x="45" y="40" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="#BF360C">/Assembly</text>
+    </g>
+    <g transform="translate(235, 55)">
+      <rect width="90" height="55" rx="8" fill="white" opacity="0.9"/>
+      <text x="45" y="25" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="#BF360C">Variant</text>
+      <text x="45" y="40" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="#BF360C">Calling</text>
+    </g>
+    
+    <text x="175" y="130" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#FFCCBC">FastQC → BWA/STAR → GATK/DeepVariant</text>
+  </g>
+  
+  <!-- Arrow from analysis to output -->
+  <line x1="480" y1="430" x2="440" y2="430" stroke="#546E7A" stroke-width="3" marker-end="url(#flowArrow)"/>
+  
+  <!-- Output/Results -->
+  <g transform="translate(140, 360)" filter="url(#shadow)">
+    <rect width="280" height="140" rx="14" fill="white" stroke="#546E7A" stroke-width="2"/>
+    <text x="140" y="30" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="16" font-weight="600" fill="#263238">Results &amp; Insights</text>
+    <line x1="20" y1="45" x2="260" y2="45" stroke="#E0E0E0" stroke-width="1"/>
+    
+    <g transform="translate(20, 60)">
+      <circle cx="10" cy="8" r="6" fill="#E91E63"/>
+      <text x="25" y="12" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">Variant Reports (VCF)</text>
+      
+      <circle cx="10" cy="35" r="6" fill="#3F51B5"/>
+      <text x="25" y="39" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">Gene Expression Profiles</text>
+      
+      <circle cx="10" cy="62" r="6" fill="#00897B"/>
+      <text x="25" y="66" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">Genome Assemblies</text>
+      
+      <circle cx="150" cy="8" r="6" fill="#FF5722"/>
+      <text x="165" y="12" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">Clinical Insights</text>
+    </g>
+  </g>
+  
+  <!-- Platforms Panel -->
+  <g transform="translate(60, 340)">
+    <rect width="160" height="90" rx="8" fill="#ECEFF1"/>
+    <text x="80" y="22" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="12" font-weight="600" fill="#37474F">Platforms</text>
+    <text x="80" y="42" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#546E7A">• Illumina (Short-read)</text>
+    <text x="80" y="57" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#546E7A">• PacBio (Long-read)</text>
+    <text x="80" y="72" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#546E7A">• Oxford Nanopore</text>
+    <text x="80" y="87" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#546E7A">• Element Biosciences</text>
+  </g>
+  
+  <!-- Footer Stats -->
+  <g transform="translate(60, 510)">
+    <rect width="880" height="30" rx="6" fill="#E8EAF6"/>
+    <text x="100" y="20" font-family="'Segoe UI', Arial" font-size="11" fill="#3F51B5">Illumina: ~600 Gb/run</text>
+    <text x="300" y="20" font-family="'Segoe UI', Arial" font-size="11" fill="#00897B">PacBio: 15-25 kb reads</text>
+    <text x="500" y="20" font-family="'Segoe UI', Arial" font-size="11" fill="#E91E63">ONT: Real-time sequencing</text>
+    <text x="730" y="20" font-family="'Segoe UI', Arial" font-size="11" font-style="italic" fill="#546E7A">Cost: ~$1,000/genome</text>
+  </g>
 </svg>

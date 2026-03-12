@@ -1,20 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
-  <style>
-    .box{fill:#fff;stroke:#90a4ae;stroke-width:2;rx:8}
-    .label{font:700 14px 'Helvetica Neue', Arial, sans-serif; fill:#263238}
-    .arrow{stroke:#43a047;stroke-width:6;stroke-linecap:round}
-  </style>
-  <rect width="100%" height="100%" fill="#E8F5E9"/>
-  <g transform="translate(30,40)">
-    <rect class="box" x="0" y="0" width="160" height="70"/>
-    <text class="label" x="80" y="42" text-anchor="middle">Data</text>
-    <rect class="box" x="220" y="0" width="160" height="70"/>
-    <text class="label" x="300" y="42" text-anchor="middle">Processing</text>
-    <rect class="box" x="440" y="0" width="120" height="70"/>
-    <text class="label" x="500" y="42" text-anchor="middle">Results</text>
-    <path class="arrow" d="M160 35 L220 35" />
-    <path class="arrow" d="M380 35 L440 35" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450">
+  <defs>
+    <linearGradient id="wfGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565C0"/>
+      <stop offset="100%" style="stop-color:#42A5F5"/>
+    </linearGradient>
+    <linearGradient id="wfGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00897B"/>
+      <stop offset="100%" style="stop-color:#4DB6AC"/>
+    </linearGradient>
+    <linearGradient id="wfGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7B1FA2"/>
+      <stop offset="100%" style="stop-color:#AB47BC"/>
+    </linearGradient>
+    <linearGradient id="wfGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E65100"/>
+      <stop offset="100%" style="stop-color:#FF9800"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#546E7A"/>
+    </marker>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#FAFAFA" rx="12"/>
+  
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="26" font-weight="700" fill="#263238">Bioinformatics Workflow Management</text>
+  <text x="450" y="65" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="13" fill="#607D8B">Reproducible, Scalable Analysis Pipelines</text>
+  
+  <!-- Workflow Diagram -->
+  <g transform="translate(100, 100)">
+    <!-- Stage 1: Raw Data -->
+    <g filter="url(#shadow)">
+      <rect width="130" height="100" rx="10" fill="url(#wfGrad1)"/>
+      <text x="65" y="30" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="13" font-weight="600" fill="white">Raw Data</text>
+      <text x="65" y="50" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#E3F2FD">FASTQ files</text>
+      <text x="65" y="65" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#E3F2FD">Reference genome</text>
+      <text x="65" y="80" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#E3F2FD">Annotations</text>
+    </g>
+    
+    <!-- Arrow 1 -->
+    <line x1="140" y1="50" x2="180" y2="50" stroke="#546E7A" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Stage 2: QC -->
+    <g transform="translate(190, 0)" filter="url(#shadow)">
+      <rect width="130" height="100" rx="10" fill="url(#wfGrad2)"/>
+      <text x="65" y="30" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="13" font-weight="600" fill="white">Quality Control</text>
+      <text x="65" y="50" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#E0F2F1">FastQC</text>
+      <text x="65" y="65" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#E0F2F1">MultiQC</text>
+      <text x="65" y="80" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#E0F2F1">Trimmomatic</text>
+    </g>
+    
+    <!-- Arrow 2 -->
+    <line x1="330" y1="50" x2="370" y2="50" stroke="#546E7A" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Stage 3: Alignment -->
+    <g transform="translate(380, 0)" filter="url(#shadow)">
+      <rect width="130" height="100" rx="10" fill="url(#wfGrad3)"/>
+      <text x="65" y="30" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="13" font-weight="600" fill="white">Alignment</text>
+      <text x="65" y="50" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#F3E5F5">BWA-MEM2</text>
+      <text x="65" y="65" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#F3E5F5">STAR</text>
+      <text x="65" y="80" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#F3E5F5">minimap2</text>
+    </g>
+    
+    <!-- Arrow 3 -->
+    <line x1="520" y1="50" x2="560" y2="50" stroke="#546E7A" stroke-width="2" marker-end="url(#arrow)"/>
+    
+    <!-- Stage 4: Analysis -->
+    <g transform="translate(570, 0)" filter="url(#shadow)">
+      <rect width="130" height="100" rx="10" fill="url(#wfGrad4)"/>
+      <text x="65" y="30" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="13" font-weight="600" fill="white">Analysis</text>
+      <text x="65" y="50" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#FFF3E0">GATK/DeepVariant</text>
+      <text x="65" y="65" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#FFF3E0">DESeq2/edgeR</text>
+      <text x="65" y="80" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" fill="#FFF3E0">Custom scripts</text>
+    </g>
   </g>
-  <text x="18" y="18" font-size="12" fill="#37474f">Reproducible Workflow: scripts, containers, workflow managers</text>
+  
+  <!-- Workflow Managers Panel -->
+  <g transform="translate(100, 230)" filter="url(#shadow)">
+    <rect width="330" height="180" rx="12" fill="white" stroke="#E0E0E0"/>
+    <rect width="330" height="40" rx="12" fill="#37474F"/>
+    <text x="165" y="27" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">Workflow Managers</text>
+    
+    <g transform="translate(20, 60)">
+      <!-- Snakemake -->
+      <g>
+        <rect width="90" height="50" rx="6" fill="#4CAF50"/>
+        <text x="45" y="30" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="white">Snakemake</text>
+        <text x="45" y="45" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="8" fill="#C8E6C9">Python-based</text>
+      </g>
+      
+      <!-- Nextflow -->
+      <g transform="translate(110, 0)">
+        <rect width="90" height="50" rx="6" fill="#00ACC1"/>
+        <text x="45" y="30" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="white">Nextflow</text>
+        <text x="45" y="45" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="8" fill="#B2EBF2">DSL2</text>
+      </g>
+      
+      <!-- WDL -->
+      <g transform="translate(220, 0)">
+        <rect width="90" height="50" rx="6" fill="#7B1FA2"/>
+        <text x="45" y="30" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" font-weight="600" fill="white">WDL</text>
+        <text x="45" y="45" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="8" fill="#E1BEE7">Cromwell</text>
+      </g>
+    </g>
+    
+    <g transform="translate(20, 125)">
+      <text x="0" y="0" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">✓ Reproducibility via containers (Docker/Singularity)</text>
+      <text x="0" y="18" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">✓ Scalable: HPC, cloud, local execution</text>
+      <text x="0" y="36" font-family="'Segoe UI', Arial" font-size="11" fill="#37474F">✓ Version control &amp; dependency management</text>
+    </g>
+  </g>
+  
+  <!-- nf-core Panel -->
+  <g transform="translate(470, 230)" filter="url(#shadow)">
+    <rect width="330" height="180" rx="12" fill="#E3F2FD"/>
+    <rect width="330" height="40" rx="12" fill="#1565C0"/>
+    <text x="165" y="27" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="14" font-weight="600" fill="white">nf-core Pipelines</text>
+    
+    <g transform="translate(20, 55)">
+      <rect width="140" height="25" rx="4" fill="white"/>
+      <text x="70" y="17" text-anchor="middle" font-family="'Courier New'" font-size="10" fill="#1565C0">nf-core/rnaseq</text>
+      
+      <rect x="150" y="0" width="160" height="25" rx="4" fill="white"/>
+      <text x="230" y="17" text-anchor="middle" font-family="'Courier New'" font-size="10" fill="#1565C0">nf-core/sarek</text>
+      
+      <rect y="35" width="140" height="25" rx="4" fill="white"/>
+      <text x="70" y="52" text-anchor="middle" font-family="'Courier New'" font-size="10" fill="#1565C0">nf-core/atacseq</text>
+      
+      <rect x="150" y="35" width="160" height="25" rx="4" fill="white"/>
+      <text x="230" y="52" text-anchor="middle" font-family="'Courier New'" font-size="10" fill="#1565C0">nf-core/ampliseq</text>
+      
+      <rect y="70" width="140" height="25" rx="4" fill="white"/>
+      <text x="70" y="87" text-anchor="middle" font-family="'Courier New'" font-size="10" fill="#1565C0">nf-core/chipseq</text>
+      
+      <rect x="150" y="70" width="160" height="25" rx="4" fill="white"/>
+      <text x="230" y="87" text-anchor="middle" font-family="'Courier New'" font-size="10" fill="#1565C0">nf-core/methylseq</text>
+    </g>
+    
+    <text x="165" y="165" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="10" font-style="italic" fill="#1565C0">100+ community-curated, production-ready pipelines</text>
+  </g>
+  
+  <!-- Footer -->
+  <g transform="translate(100, 420)">
+    <rect width="700" height="25" rx="5" fill="#ECEFF1"/>
+    <text x="350" y="17" text-anchor="middle" font-family="'Segoe UI', Arial" font-size="11" fill="#546E7A">Best Practices: Version control • Containerization • Documentation • Testing • CI/CD</text>
+  </g>
 </svg>
